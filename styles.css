@@ -1,0 +1,62 @@
+parent .form-check {
+    font-size: 20px;
+}  
+
+input[type="text"] {
+    font-size:20px;
+}
+
+input[type="radio"] {
+    font-size: 20px;
+}
+
+.form-control, .form-check-label {
+    font-size: 20px;
+}
+
+ textarea.form-control {
+    font-size: 20px;
+} 
+
+.h1, .h2, h1, h2 {
+    color: #81358a;
+}
+
+p {
+    font-size: 20px;
+}
+
+.bg-image {
+    max-height: 580px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center";
+  }
+
+.list-group-item {
+    font-size: 20px;
+}
+
+  /* Print css */
+#printstyle {
+    background-color: #FF9999;
+    position: relative;
+    z-index: 3;
+
+    text-align: center;
+    margin: 1em;
+    /* text-transform: uppercase; */
+    font-size: 1.2em;
+    font-weight: bold;
+    /* background: #FF9999; */
+    padding: 8px 10px 10px 10px;
+    color: #000 !important;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  /* IE hacks */
+  *+html .nowrap {white-space: normal; display: inline-block;}
+  *+html .toggle input {visibility: visible; height: 0; width: 0; padding: 0; margin:0; top: -1000px;}
+  
