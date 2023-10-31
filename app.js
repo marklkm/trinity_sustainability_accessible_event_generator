@@ -19,6 +19,8 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     const accessRequirements = document.querySelector('input[name="accessRequirements"]:checked').value;
     const quietSpace = document.querySelector('input[name="quietSpace"]:checked').value;
     const eventParking = document.querySelector('input[name="eventParking"]:checked').value;
+    const sensoryEnvironment = document.querySelector('input[name="sensoryEnvironment"]:checked').value;
+    const sensoryInfo = document.querySelector('input[name="sensoryInfo"]:checked').value;
     const eventSlides = document.querySelector('input[name="eventSlides"]:checked').value;
     const eventVideo = document.querySelector('input[name="eventVideo"]:checked').value;
     const eventWaste = document.querySelector('input[name="eventWaste"]:checked').value;
@@ -44,6 +46,8 @@ document.getElementById('submitBtn').addEventListener('click', function() {
         Does the event have a question about accessibility requirements of attendees? ${accessRequirements}
         Designated quiet space? ${quietSpace}
         Disabled Person's Parking near the event? ${eventParking}
+        Have you made provisions to create a sensory-friendly environment? ${sensoryEnvironment}
+        Is event information, instructions, and communications clear, concise, and provided in multiple formats? ${sensoryInfo}
         Are the presentation slides (MS PowerPoint etc.,.) accessible? ${eventSlides}
         Does the event include a video showing or video call? ${eventVideo}
         Will waste be minimised at the event? ${eventWaste}
@@ -173,6 +177,22 @@ function copyToTextarea() {
     for (let i = 0; i < eventParkingEls.length; i++) {
         if (eventParkingEls[i].checked) {
             formData += "Disabled Person's Parking near the event? " + eventParkingEls[i].value + "\n";
+            break;
+        }
+    }
+
+    let sensoryEnvironmentEls = document.getElementsByName("sensoryEnvironment");
+    for (let i = 0; i < sensoryEnvironmentEls.length; i++) {
+        if (sensoryEnvironmentEls[i].checked) {
+            formData += "Have you made provisions to create a sensory-friendly environment? " + sensoryEnvironmentEls[i].value + "\n";
+            break;
+        }
+    }
+
+    let sensoryInfoEls = document.getElementsByName("sensoryInfo");
+    for (let i = 0; i < sensoryInfoEls.length; i++) {
+        if (sensoryInfoEls[i].checked) {
+            formData += "Is event information, instructions, and communications clear, concise, and provided in multiple formats? " + sensoryInfoEls[i].value + "\n";
             break;
         }
     }
