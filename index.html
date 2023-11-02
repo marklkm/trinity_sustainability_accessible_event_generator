@@ -797,6 +797,7 @@
 <script>
   const contrastButton = document.getElementById('toggle-contrast');
   const fontSizeButton = document.getElementById('toggle-font-size');
+  const htmlElement = document.documentElement; // Get the <html> element
   const bodyElement = document.body;
 
   contrastButton.addEventListener('click', () => {
@@ -804,7 +805,7 @@
   });
 
   fontSizeButton.addEventListener('click', () => {
-    bodyElement.classList.toggle('large-font');
+    htmlElement.classList.toggle('large-font');
   });
 </script>
 
