@@ -60,6 +60,10 @@
 <body>
 
   <div class="mb-2 text-center">
+
+    <button id="toggle-contrast" class="mt-3 mb-3 btn btn-primary">Toggle High Contrast</button>
+    <button id="toggle-font-size" class="mt-3 mb-3 btn btn-primary">Toggle Large Font</button>
+    
  
     <img src="jack_kavanagh_wide_banner.png" 
     alt="Jack Kavanagh in a wheelchair surrounded by people walking in Trinity Front Square with the Dining Hall in the background,
@@ -68,6 +72,7 @@
     <h5 class="display-3 fw-bold text-white text-header" style="background-color: #81358a;" id="#top">
       Accessibility &amp; Sustainability Event Generator
     </h5>
+
   </div>
 
   <div class="container mt-5">
@@ -103,7 +108,8 @@
             <!-- Image Column -->
             <div class="col-md-6 mb-3">
                 <img src="neurodivergent_event.png" alt="Abstract illustration featuring a pink silhouette of a person waving, 
-                juxtaposed with a purple overlay of blurry human figures on a grid background, framed by green serrated shapes." class="img-fluid">
+                juxtaposed with a purple overlay of blurry human figures on a grid background, framed by green serrated shapes." class="img-fluid"
+                title="Abstract illustration for Neurodivergent Event." loading="lazy">
             </div>
         </div>
     </div>
@@ -720,7 +726,7 @@
     <!-- Two Card Body -->
     <div class="row mt-5">
       <div class="col-md-6 mt-3">
-          <div class="card">
+          <div class="card text-black">
             <!-- <img src="" class="card-img-top" alt="..."> -->
               <div class="card-body">
                 <h4 class="card-title">Contact Trinity disAbility Service</h4>
@@ -740,10 +746,10 @@
           </div>
       </div>
       <div class="col-md-6 mt-3">
-          <div class="card">
+          <div class="card text-black">
             <!-- <img src="" class="card-img-top" alt="..."> -->
               <div class="card-body">
-                  <h4 class="card-title">Contact Trinity Sustainability</h4>
+                  <h4 class="card-title text-black">Contact Trinity Sustainability</h4>
                   <p class="card-text">For any suggestions, requests or enquiries about sustainability please email sustainability@tcd.ie. </p>
                   <p class="card-text">Visit <a href="Trinity Sustainability Resources" target="_blank" rel="noopener">
                     Trinity Sustainability Resources</a> for more information. </p>
@@ -788,9 +794,25 @@
     }
   </script>
 
+<script>
+  const contrastButton = document.getElementById('toggle-contrast');
+  const fontSizeButton = document.getElementById('toggle-font-size');
+  const bodyElement = document.body;
+
+  contrastButton.addEventListener('click', () => {
+    bodyElement.classList.toggle('high-contrast');
+  });
+
+  fontSizeButton.addEventListener('click', () => {
+    bodyElement.classList.toggle('large-font');
+  });
+</script>
+
   <!-- Add Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1do4A+gf8k5l7l4lMz4i3WDQn1Z7y/JonasIUNsobEU5n4l3M6d/hh6" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD5tr5Szkbe5Ck4Ck4C2DgHf" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
