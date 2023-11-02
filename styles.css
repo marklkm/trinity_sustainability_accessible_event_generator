@@ -1,3 +1,22 @@
+/* Default Styles */
+body {
+    font-size: 20x;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  /* High Contrast Styles */
+  .high-contrast {
+    color: #fff;
+    background-color: #000;
+  }
+  
+  /* Larger Font Styles */
+  .large-font {
+    font-size: 24px;
+  }
+
+
 parent .form-check {
     font-size: 20px;
 }  
