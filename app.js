@@ -53,7 +53,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
         Will waste be minimised at the event? ${eventWaste}
         Are measures being taken to promote sustainable transportation options? ${sustainableTransport}
         Are products and services procured for the event sustainably sourced or produced? ${sustainableSourced}
-        Will the event promote sustainability awareness and education among attendees? ${"promoteAwareness"}
+        Will the event promote sustainability awareness and education among attendees? ${promoteAwareness}
         Any further comments or details? ${comments}
         Please provide contact details for any access enquiries (if not included elsewhere): ${contacts}
        
@@ -74,10 +74,16 @@ document.getElementById('copyBtn').addEventListener('click', function() {
 });
 
 document.getElementById('pdfBtn').addEventListener('click', function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
     const output = document.getElementById('output').innerText;
-    const pdf = new jsPDF();
-    pdf.text(output, 10, 10);
-    pdf.save('event-details.pdf');
+    doc.setFontSize(14); // Set the font size to approximately 18px
+
+    // Wrap text to fit into the PDF page width
+    const lines = doc.splitTextToSize(output, 180); // 180 is the max width of lines in mm
+    doc.text(lines, 10, 10); // 10, 10 is the x, y start position for the text
+    doc.save('event-details.pdf');
 });
 
 document.getElementById('emailBtn').addEventListener('click', function() {
