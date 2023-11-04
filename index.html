@@ -306,38 +306,37 @@
         
 
 
-          <h4 class="mt-3">Hearing Loop? </h4>
-
-          <div class="mb-3">
+        <div class="mb-3">
           <fieldset>
-            <legend>Is a hearing loop provided?</legend>
+            <legend class="mt-3">Hearing Loop Availability</legend>
           
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="hearingLoop" id="yesLoop" value="Yes, hearing loop available" required />
+              <input class="form-check-input" type="radio" name="hearingLoop" id="yesLoop" value="Yes" required />
               <label class="form-check-label" for="yesLoop">Yes, hearing loop available</label>
             </div>
           
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="hearingLoop" id="noLoop" value="No, hearing loop not available" required />
+              <input class="form-check-input" type="radio" name="hearingLoop" id="noLoop" value="No" required />
               <label class="form-check-label" for="noLoop">No, hearing loop not available</label>
             </div>
           
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="hearingLoop" id="advanceLoop" value="Available by request in advance" required />
+              <input class="form-check-input" type="radio" name="hearingLoop" id="advanceLoop" value="AdvanceRequest" required />
               <label class="form-check-label" for="advanceLoop">Available by request in advance</label>
             </div>
           
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="hearingLoop" id="requestLoop" value="By request at the event" required />
+              <input class="form-check-input" type="radio" name="hearingLoop" id="requestLoop" value="EventRequest" required />
               <label class="form-check-label" for="requestLoop">Available by request at the event</label>
             </div>
           
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="hearingLoop" id="unknownLoop" value="Available by request at the event" required />
+              <input class="form-check-input" type="radio" name="hearingLoop" id="unknownLoop" value="Unknown" required />
               <label class="form-check-label" for="unknownLoop">Hearing loop availability unknown</label>
             </div>
           </fieldset>
-          </div>
+        </div>
+        
           
 
 
@@ -600,21 +599,21 @@
             
 
             <fieldset class="mb-3">
-              <legend><h4 class="mt-3">Sustainable Transportation Options</h4></legend>
+              <legend class="mt-3">Sustainable Transportation Options</legend>
               <p>What measures are being taken to promote sustainable transportation options for attendees, such as carpooling, public transit, or shuttle services?</p>
               
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="yesTransport" value="Yes, Sustainable options available" aria-describedby="transportHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableTransport" id="yesTransport" value="Yes, Sustainable options available" required />
                 <label class="form-check-label" for="yesTransport">Sustainable options available</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="noTransport" value="No sustainable options" aria-describedby="transportHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableTransport" id="noTransport" value="No sustainable options" required />
                 <label class="form-check-label" for="noTransport">No sustainable options</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="unknownTransport" value="Sustainability of transportation unknown" aria-describedby="transportHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableTransport" id="unknownTransport" value="Sustainability of transportation unknown" required />
                 <label class="form-check-label" for="unknownTransport">Sustainability of transportation unknown</label>
               </div>
               
@@ -622,6 +621,7 @@
                 Please select an option to indicate the availability of sustainable transportation methods for this event.
               </small>
             </fieldset>
+            
             
 
             <fieldset class="mb-3">
@@ -681,17 +681,18 @@
             <div class="mb-3">
               <h2 class="mt-3">Additional Event Details</h2>
               <h4>Any further comments or details?</h4>
-              <p>These questions are not necessarily complete in terms of providing comprehensive access information. 
+              <p id="detailsDescription">These questions are not necessarily complete in terms of providing comprehensive access information. 
                 Please think about other details you might want to add in the further comments section. 
                 If the event has catering, you might want to include food options.</p>
               
               <label for="comments" class="form-label">Additional Comments:</label>
-              <textarea class="form-control" id="comments" rows="3" aria-describedby="commentsHelp"
+              <textarea class="form-control" id="comments" rows="3" aria-describedby="detailsDescription commentsHelp"
                 placeholder="E.g., specific dietary options, accessibility features, etc."></textarea>
               <div id="commentsHelp" class="form-text">
                 Use this space to provide additional information about the event, such as specific dietary options, accessibility features not covered in the form, or any other relevant details.
               </div>
             </div>
+            
             
             
 
@@ -719,19 +720,26 @@
         </div>
     
     <!-- Textarea to display copied form data -->
-<section class="container mt-4">
-  <textarea class="form-control" id="copiedData" rows="10" placeholder="Copied form data will appear here..."></textarea>
-</section>
-
-<section class="container mt-4">
-<textarea class="form-control" rows="10" id="targetTextArea">
-  Paste your completed form text here.
-</textarea>
-<div class="mt-4">
-<input type="button" class="btn btn-info mt-1" onclick="printTextArea()" value="Print All Text"/>
-</div>
-
-</section>
+    <section class="container mt-4">
+      <label for="copiedData">Copied Form Data</label>
+      <textarea class="form-control" id="copiedData" rows="10" aria-describedby="copiedDataHelp" placeholder="Copied form data will appear here..."></textarea>
+      <small id="copiedDataHelp" class="form-text text-muted">
+        Data copied from the form will be displayed here for review.
+      </small>
+    </section>
+    
+    <section class="container mt-4">
+      <label for="targetTextArea">Paste Completed Form Text</label>
+      <textarea class="form-control" rows="10" id="targetTextArea" aria-describedby="targetTextAreaHelp">
+        Paste your completed form text here.
+      </textarea>
+      <small id="targetTextAreaHelp" class="form-text text-muted">
+        After pasting your form text, you can print it using the button below.
+      </small>
+      <div class="mt-4">
+        <button type="button" class="btn btn-info mt-1" id="printButton">Print All Text</button>
+      </div>
+    </section>
 
     <!-- Two Card Body -->
     <div class="row mt-5">
@@ -791,9 +799,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.min.js"></script>
   <script src="app.js"></script>
 
-  <script type="text/javascript">
-    function printTextArea() {
-      childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
+
+
+
+<script type="text/javascript">
+  document.getElementById('printButton').addEventListener('click', printTextArea);
+
+  function printTextArea() {
+    // Your print logic here
+    childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
       childWindow.document.open();
       childWindow.document.write('<html><head></head><body>');
       childWindow.document.write(document.getElementById('targetTextArea').value.replace(/\n/gi,'<br>'));
@@ -801,8 +815,8 @@
       childWindow.print();
       childWindow.document.close();
       childWindow.close();
-    }
-  </script>
+  }
+</script>
 
 <!-- Accessibility Buttons -->
 <!-- 
