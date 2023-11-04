@@ -269,11 +269,10 @@
         </div>
 
 
-          <h4 class="mt-3 ">Wheelchair accessible toilet?</h4>
-        
-          <div class="mb-3">
+        <div class="mb-3">
           <fieldset>
-          
+            <legend class="mt-3">Wheelchair accessible toilet? <span aria-hidden="true">*</span></legend>
+            
             <div class="form-check">
               <input class="form-check-input" type="radio" name="wheelchairToilets" id="yesToilet" value="Yes, fully wheelchair accessible" required />
               <label class="form-check-label" for="yesToilet">Yes, fully wheelchair accessible</label>
@@ -304,7 +303,8 @@
               <label class="form-check-label" for="unknownToilet">Accessibility unknown</label>
             </div>
           </fieldset>
-          </div>
+        </div>
+        
 
 
           <h4 class="mt-3">Hearing Loop? </h4>
@@ -579,24 +579,25 @@
             
 
             <fieldset class="mb-3">
-              <legend><h4>Will waste be minimised at the event?</h4></legend>
+              <legend class="h4">Will waste be minimised at the event?</legend>
               <p>How will waste be minimised at the event, and what strategies are in place for recycling and composting?</p>
               
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="yesWaste" value="Yes, waste will be minimised at the event" required />
+                <input class="form-check-input" type="radio" name="eventWaste" id="yesWaste" value="Yes" required />
                 <label class="form-check-label" for="yesWaste">Yes, waste will be minimised at the event</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="noWaste" value="No, waste will be minimised at the event" required />
-                <label class="form-check-label" for="noWaste">No, waste will be minimised at the event</label>
+                <input class="form-check-input" type="radio" name="eventWaste" id="noWaste" value="No" required />
+                <label class="form-check-label" for="noWaste">No, waste minimisation is not planned for the event</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="unknownWaste" value="Unknown if waste will be minimised at the event" required />
+                <input class="form-check-input" type="radio" name="eventWaste" id="unknownWaste" value="Unknown" required />
                 <label class="form-check-label" for="unknownWaste">Unknown if waste will be minimised at the event</label>
               </div>
             </fieldset>
+            
             
 
             <fieldset class="mb-3">
@@ -680,18 +681,19 @@
             <!-- Sample textarea for Further Comments with tooltip -->
             <div class="mb-3">
               <h2 class="mt-3">Additional Event Details</h2>
-              <label for="comments" class="form-label">
-                <h4>Any further comments or details?</h4>
-                <p>These questions are not necessarily complete in terms of providing comprehensive access information. 
-                  Please think about other details you might want to add in the further comments section. 
-                  If the event has catering, you might want to include food options.</p>
-              </label>
+              <h4>Any further comments or details?</h4>
+              <p>These questions are not necessarily complete in terms of providing comprehensive access information. 
+                Please think about other details you might want to add in the further comments section. 
+                If the event has catering, you might want to include food options.</p>
+              
+              <label for="comments" class="form-label">Additional Comments:</label>
               <textarea class="form-control" id="comments" rows="3" aria-describedby="commentsHelp"
-                placeholder="Include any additional details or comments here."></textarea>
+                placeholder="E.g., specific dietary options, accessibility features, etc."></textarea>
               <div id="commentsHelp" class="form-text">
                 Use this space to provide additional information about the event, such as specific dietary options, accessibility features not covered in the form, or any other relevant details.
               </div>
             </div>
+            
             
 
             <div class="mb-3">
