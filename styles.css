@@ -72,7 +72,7 @@ p {
 
 /* Print Styles */
 .print-style {
-  background-color: #FF9999; /* Ensure this color has enough contrast */
+  background-color: #ff9999; /* Ensure this color has enough contrast */
   position: relative;
   z-index: 3;
   text-align: center;
@@ -88,59 +88,59 @@ p {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .navbar {
-      position: static; /* If you have a fixed navbar on desktop */
-      display: block;
+    position: static; /* If you have a fixed navbar on desktop */
+    display: block;
   }
 
   .nav-item {
-      display: block;
-      width: 100%;
-      /* Additional styles for full-width nav items */
+    display: block;
+    width: 100%;
+    /* Additional styles for full-width nav items */
   }
 
   .hamburger-icon {
-      display: block; /* Only show the hamburger icon on mobile */
+    display: block; /* Only show the hamburger icon on mobile */
   }
 
   .sidebar,
   .content {
-      width: 100%;
-      margin-top: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .desktop-only {
-      display: none; /* Hide desktop-only elements */
+    display: none; /* Hide desktop-only elements */
   }
 
   .mobile-only {
-      display: block; /* Show mobile-only elements */
+    display: block; /* Show mobile-only elements */
   }
 }
 
 @media screen and (max-width: 600px) {
   body {
-      font-size: 1rem; /* Smaller base font size for mobile */
+    font-size: 1rem; /* Smaller base font size for mobile */
   }
 
   .large-font {
-      font-size: 1.125rem; /* Slightly larger font size for important text */
+    font-size: 1.125rem; /* Slightly larger font size for important text */
   }
 
   .heading-primary,
   .heading-secondary,
   h1,
   h2 {
-      font-size: 1.5rem; /* Adjust heading sizes appropriately */
+    font-size: 1.5rem; /* Adjust heading sizes appropriately */
   }
 
   .bg-image {
-      max-height: 300px; /* Smaller max-height for background images */
+    max-height: 300px; /* Smaller max-height for background images */
   }
 
   .form-control,
   .form-check-label,
   .button {
-      font-size: 1rem; /* Larger font size for touch targets */
-      padding: 12px; /* Larger padding for easier interaction */
+    font-size: 1rem; /* Larger font size for touch targets */
+    padding: 12px; /* Larger padding for easier interaction */
   }
 }
