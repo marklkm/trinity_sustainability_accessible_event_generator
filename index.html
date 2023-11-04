@@ -625,21 +625,21 @@
             
 
             <fieldset class="mb-3">
-              <legend><h4 class="mt-3">Sustainability of Procured Products and Services</h4></legend>
-              <p>How are you ensuring that the products and services procured for the event (e.g., food, decorations, promotional items) are sustainably sourced or produced?</p>
+              <legend class="mt-3">Sustainability of Procured Products and Services</legend>
+              <p>How are you ensuring that the products and services procured for the event (e.g., food, decorations, promotional items) are sustainably sourced or produced? <a href="URL_to_sustainability_standards" target="_blank" rel="noopener">Learn more about our sustainability standards.</a></p>
               
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="yesSourced" value="Yes, sustainably sourced or produced" aria-describedby="sourcedHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableSourced" id="yesSourced" value="Yes" required />
                 <label class="form-check-label" for="yesSourced">Sustainably sourced or produced</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="noSourced" value="No, not sustainably sourced or produced" aria-describedby="sourcedHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableSourced" id="noSourced" value="No" required />
                 <label class="form-check-label" for="noSourced">Not sustainably sourced or produced</label>
               </div>
             
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="unknownSourced" value="Sustainability unknown" aria-describedby="sourcedHelp" required />
+                <input class="form-check-input" type="radio" name="sustainableSourced" id="unknownSourced" value="Unknown" required />
                 <label class="form-check-label" for="unknownSourced">Sustainability unknown</label>
               </div>
               
@@ -647,6 +647,7 @@
                 Please select an option to indicate the sustainability of products and services for this event.
               </small>
             </fieldset>
+            
             
 
 
@@ -677,21 +678,21 @@
 
             <!-- ... Repeat similar structure with tooltips for other fields ... -->
 
+
             <!-- Sample textarea for Further Comments with tooltip -->
-            <div class="mb-3">
-              <h2 class="mt-3">Additional Event Details</h2>
-              <h4>Any further comments or details?</h4>
-              <p id="detailsDescription">These questions are not necessarily complete in terms of providing comprehensive access information. 
-                Please think about other details you might want to add in the further comments section. 
-                If the event has catering, you might want to include food options.</p>
-              
-              <label for="comments" class="form-label">Additional Comments:</label>
-              <textarea class="form-control" id="comments" rows="3" aria-describedby="detailsDescription commentsHelp"
-                placeholder="E.g., specific dietary options, accessibility features, etc."></textarea>
-              <div id="commentsHelp" class="form-text">
-                Use this space to provide additional information about the event, such as specific dietary options, accessibility features not covered in the form, or any other relevant details.
-              </div>
-            </div>
+<div class="mb-3">
+  <h2 class="mt-3">Additional Event Details</h2>
+  <h3>Further Comments or Details</h3>
+  <p id="detailsDescription">These questions may not cover all aspects of event accessibility. Consider adding any additional details that could help attendees, such as catering options, specific accommodations, or transportation information.</p>
+  
+  <label for="comments" class="form-label">Additional Comments</label>
+  <textarea class="form-control" id="comments" rows="3" aria-describedby="detailsDescription commentsHelp"
+    placeholder="Include any special accommodations, dietary needs, or other considerations here."></textarea>
+  <div id="commentsHelp" class="form-text">
+    Provide any extra information that could assist in making the event more accessible and enjoyable for all participants.
+  </div>
+</div>
+
             
             
             
