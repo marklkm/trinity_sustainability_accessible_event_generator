@@ -22,16 +22,49 @@ body {
   top: 10px; /* Position it where it can be seen when focused */
 }
 
-/* High Contrast Styles */
-.high-contrast {
-  color: #fff;
-  background-color: #000;
+#backToTopBtn {
+  z-index: 100; /* Ensure it's above other items */
+  opacity: 0.7; /* Transparency */
+  transition: opacity 0.2s; /* Smooth transition for mouse hover */
 }
 
-/* Larger Font Styles */
-.large-font {
-  font-size: 1.375rem; /* Larger font size in rem */
+#backToTopBtn:hover {
+  opacity: 1; /* Full opacity when hovering */
 }
+
+/* High Contrast Styles */
+/*.high-contrast {
+  color: #fff;
+  background-color: #000;
+}*/
+
+/* Larger Font Styles */
+/*.large-font {
+  font-size: 1.375rem; */ /* Larger font size in rem */
+/*} */
+
+/* Accessibility Buttons */
+  /* Ensure that focus is visible */
+  .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+
+  /* High contrast mode styles */
+  .high-contrast {
+    background-color: #000;
+    color: #fff;
+    /* You would add other high contrast styles here */
+  }
+
+  /* Large font mode styles */
+  .large-font {
+    font-size: 1.25em; /* This increases the font size by 25% */
+  }
+
+  /* Ensure that all text elements scale accordingly */
+  .large-font * {
+    font-size: inherit;
+  }
 
 /* Form Styles */
 .form-check-label,
