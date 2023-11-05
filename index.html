@@ -269,26 +269,26 @@
           <p><strong>NOTE:</strong> Wheelchair access requires flat access (no lip/transition changes), no very steep ramps or narrow doorways, and space for wheelchair users in the room.</p>
       
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventAccess" id="accessWheelchair" value="Wheelchair" required aria-describedby="accessNote" />
+            <input class="form-check-input" type="radio" name="eventAccess" id="accessWheelchair" value="Wheelchair" required aria-describedby="accessNote1" />
             <label class="form-check-label" for="accessWheelchair">Wheelchair Access</label>
           </div>
       
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventAccess" id="stepfreeAccess" value="Step-free access only" required aria-describedby="accessNote" />
+            <input class="form-check-input" type="radio" name="eventAccess" id="stepfreeAccess" value="Step-free access only" required aria-describedby="accessNote1" />
             <label class="form-check-label" for="stepfreeAccess">Step-free access only</label>
           </div>
       
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventAccess" id="noStepfreeAccess" value="No step-free access" required aria-describedby="accessNote" />
+            <input class="form-check-input" type="radio" name="eventAccess" id="noStepfreeAccess" value="No step-free access" required aria-describedby="accessNote1" />
             <label class="form-check-label" for="noStepfreeAccess">No step-free access</label>
           </div>
       
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventAccess" id="unknownAccess" value="Unknown" required aria-describedby="accessNote" />
+            <input class="form-check-input" type="radio" name="eventAccess" id="unknownAccess" value="Unknown" required aria-describedby="accessNote1" />
             <label class="form-check-label" for="unknownAccess">Unknown</label>
           </div>
           
-          <div id="accessNote" class="form-text">
+          <div id="accessNote1" class="form-text">
             Please ensure the selected access option is in line with the provided note on wheelchair access requirements.
           </div>
         </fieldset>
@@ -445,20 +445,20 @@
               <div class="mb-3">
               <fieldset>
                 <legend>Accessibility Requirements Query</legend>
-                <p id="accessNote"><strong>NOTE:</strong> When publicising events ensure that there is a standard accessibility contact statement on all publicity, including print ads, web pages, and information flyers. An example of this statement is: <strong>'Please indicate if you have any access requirements so that we may facilitate you in attending this event'.</strong></p>
+                <p id="accessNote2"><strong>NOTE:</strong> When publicising events ensure that there is a standard accessibility contact statement on all publicity, including print ads, web pages, and information flyers. An example of this statement is: <strong>'Please indicate if you have any access requirements so that we may facilitate you in attending this event'.</strong></p>
               
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="accessRequirements" id="yesRequirements" value="Yes, accessibility requirements are queried" required aria-describedby="accessNote" />
+                  <input class="form-check-input" type="radio" name="accessRequirements" id="yesRequirements" value="Yes, accessibility requirements are queried" required aria-describedby="accessNote2" />
                   <label class="form-check-label" for="yesRequirements">Yes, accessibility requirements are queried</label>
                 </div>
               
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="accessRequirements" id="noRequirements" value="No, accessibility requirements are not queried" required aria-describedby="accessNote" />
+                  <input class="form-check-input" type="radio" name="accessRequirements" id="noRequirements" value="No, accessibility requirements are not queried" required aria-describedby="accessNote2" />
                   <label class="form-check-label" for="noRequirements">No, accessibility requirements are not queried</label>
                 </div>
               
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="accessRequirements" id="unknownRequirements" value="Unknown if accessibility requirements are queried" required aria-describedby="accessNote" />
+                  <input class="form-check-input" type="radio" name="accessRequirements" id="unknownRequirements" value="Unknown if accessibility requirements are queried" required aria-describedby="accessNote2" />
                   <label class="form-check-label" for="unknownRequirements">Unknown if accessibility requirements are queried</label>
                 </div>
               </fieldset>
@@ -961,6 +961,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 </script>
+
 
 
   <!-- Add Bootstrap JS and Popper.js -->
