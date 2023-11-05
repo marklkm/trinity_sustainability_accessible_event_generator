@@ -11,6 +11,10 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const eventLocation = document.getElementById("eventLocation").value;
   const organiserName = document.getElementById("organiserName").value;
   const organiserEmail = document.getElementById("organiserEmail").value;
+  const eventStartTime = document.getElementById("eventStartTime").value;
+  const eventEndTime = document.getElementById("eventEndTime").value;
+  const eventStartDate = document.getElementById("eventStartDate").value;
+  const eventEndDate = document.getElementById("eventEndDate").value;
   const onlineEvent = document.querySelector(
     'input[name="onlineEvent"]:checked'
   ).value;
@@ -72,6 +76,10 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Event location: ${eventLocation}
         Organiser name: ${organiserName}
         Organiser email: ${organiserEmail}
+        Event Start Time: ${eventStartTime}
+        Event End Time: ${eventEndTime}
+        Event Start Date: ${eventStartDate}
+        Event End Date: ${eventEndDate}
         Online event: ${onlineEvent}
         In-Person event: ${inpersonEvent}
         Event accessibility: ${eventAccess}
@@ -149,6 +157,15 @@ function copyToTextarea() {
     "Organiser Email: " +
     document.getElementById("organiserEmail").value +
     "\n";
+  formData +=
+    "Event Start Time: " + document.getElementById("eventStartTime").value + "\n";
+  formData +=
+    "Event End Time: " + document.getElementById("eventEndTime").value + "\n";
+  formData +=
+    "Event Start Date: " + document.getElementById("eventStartDate").value + "\n";
+    formData +=
+    "Event End Date: " + document.getElementById("eventEndDate").value + "\n";
+  
 
   // For radio buttons, you'll need to check which one is selected
   let onlineEventEls = document.getElementsByName("onlineEvent");
