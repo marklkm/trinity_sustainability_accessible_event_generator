@@ -817,6 +817,10 @@
   <!-- Footer -->
   <footer class="mt-5">
     <p class="text-center">&copy; 2023 Trinity Accessibility & Sustainability Event Generator. All rights reserved.</p>
+    <button onclick="topFunction()" id="backToTopBtn" class="btn btn-primary" aria-label="Back to top" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+      <i class="bi bi-arrow-up"></i> Top
+    </button>
+    
 </footer>
   <!-- End Footer -->
 
@@ -876,6 +880,31 @@
   });
 </script>
 -->
+
+<script>
+//Get the button
+var mybutton = document.getElementById("backToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
 
   <!-- Add Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1do4A+gf8k5l7l4lMz4i3WDQn1Z7y/JonasIUNsobEU5n4l3M6d/hh6" crossorigin="anonymous"></script>
