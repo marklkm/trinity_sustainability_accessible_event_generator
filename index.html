@@ -128,6 +128,7 @@
     <h2>Event Details</h2>
     
     <form id="eventForm">
+
       <!-- input for Event Name -->
       <div class="mb-3">
         <label for="eventName" class="form-label">Event Name <span class="text-muted">(required)</span></label>
@@ -157,7 +158,7 @@
         </div>
       </div>
 
-      <!-- input for Event Organiser Email with tooltip -->
+      <!-- input for Event Organiser Email -->
       <div class="mb-3">
         <label for="organiserEmail" class="form-label">Event Organiser Email <span class="text-muted">(required)</span></label>
         <input type="email" placeholder="example@domain.com" class="form-control" id="organiserEmail" aria-describedby="organiserEmailHelp" required />
@@ -165,6 +166,45 @@
           Please enter a valid email address for the event organiser.
         </div>
       </div>
+
+      <!-- input for Event Start Time -->
+      <div class="mb-3">
+        <label for="eventStartTime" class="form-label">Event Start Time <span class="text-muted">(required)</span></label>
+        <input type="time" class="form-control" id="eventStartTime" aria-describedby="eventStartTimeHelp" aria-required="true" required />
+        <div id="eventStartTimeHelp" class="form-text">
+          Enter the start time of the event. This field is required.
+        </div>
+      </div>
+      
+      <!-- input for Event End Time -->
+      <div class="mb-3">
+        <label for="eventEndTime" class="form-label">Event End Time <span class="text-muted">(required)</span></label>
+        <input type="time" class="form-control" id="eventEndTime" aria-describedby="eventEndTimeHelp" aria-required="true" required />
+        <div id="eventEndTimeHelp" class="form-text">
+          Enter the end time of the event. This field is required.
+        </div>
+      </div>
+
+      <!-- input for Event Start Date -->
+      <div class="mb-3">
+        <label for="eventStartDate" class="form-label">Event Start Date <span class="text-muted">(required)</span></label>
+        <input type="date" class="form-control" id="eventStartDate" aria-describedby="eventStartDateHelp" aria-required="true" required pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" />
+        <div id="eventStartDateHelp" class="form-text">
+          Enter the start date of the event in the format MM/DD/YYYY. This field is required.
+        </div>
+      </div>
+      
+        <!-- input for Event End Date -->
+      <div class="mb-3">
+        <label for="eventEndDate" class="form-label">Event End Date <span class="text-muted">(required)</span></label>
+        <input type="date" class="form-control" id="eventEndDate" aria-describedby="eventEndDateHelp" aria-required="true" required pattern="\d{4}-\d{2}-\d{2}" placeholder="yyyy-mm-dd" />
+        <div id="eventEndDateHelp" class="form-text">
+          Enter the end date of the event in the format MM/DD/YYYY. This field is required.
+        </div>
+      </div>
+      
+      
+      
 
       <!-- radio buttons for Online Event with tooltip -->
       <div class="mb-3">
