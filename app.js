@@ -8,6 +8,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 document.getElementById("submitBtn").addEventListener("click", function () {
   const eventName = document.getElementById("eventName").value;
+  const eventDescription = document.getElementById("eventDescription").value;
   const eventLocation = document.getElementById("eventLocation").value;
   const organiserName = document.getElementById("organiserName").value;
   const organiserEmail = document.getElementById("organiserEmail").value;
@@ -73,6 +74,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 
   const output = `
         Event name: ${eventName}
+        Event Description: ${eventDescription}
         Event location: ${eventLocation}
         Organiser name: ${organiserName}
         Organiser email: ${organiserEmail}
@@ -149,6 +151,8 @@ function copyToTextarea() {
   // Get the value from each input field and append to formData
   formData +=
     "Event Name: " + document.getElementById("eventName").value + "\n";
+  formData +=
+    "Event Description: " + document.getElementById("eventDescription").value + "\n";
   formData +=
     "Event Location: " + document.getElementById("eventLocation").value + "\n";
   formData +=
