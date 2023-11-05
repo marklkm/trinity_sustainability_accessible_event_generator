@@ -58,19 +58,11 @@
   <main id="maincontent">
 
     <div class="mb-2 text-center">
-      <!-- Ensure the buttons are functional before uncommenting
-      <button id="toggle-contrast" class="mt-3 mb-3 btn btn-primary">Toggle High Contrast</button>
-      <button id="toggle-font-size" class="mt-3 mb-3 btn btn-primary">Toggle Large Font</button>
-      -->
-   
       <img src="jack_kavanagh_wide_banner.png" alt="Jack Kavanagh in Trinity Front Square." style="width: 100vw; max-width: 100%;" title="Jack Kavanagh" loading="lazy" id="top" />
   </div>
   
-
-
-
-    <div class="container mt-3">
-      <h1 class="text-center">Trinity Accessibility &amp; Sustainability Event Generator</h1>
+    <div class="container mt-3 mb-3">
+      <h1 class="text-center mb-3">Trinity Accessibility &amp; Sustainability Event Generator</h1>
         
       <p>The <strong>Accessibility &amp; Sustainability Event Generator</strong> is designed to provide clear and concise access information for events. 
           Having clear information is very important for an event to be as sustainable, accessible, and inclusive as possible, 
@@ -93,18 +85,21 @@
           <div class="row">
               <!-- Text Column -->
               <div class="col-md-6">
-                  <p>
-                    With an understanding of the needs and experiences of <strong>Neurodivergent</strong> people,
-                     event organisers can start designing event spaces strategically, helping ensure
-                     people receive the maximum benefits of attending while helping to minimise
-                     negative event impacts. Attending an event can be a stressful process for neurodivergent people. 
-                     Neurodiversity is a valuable form of human diversity.
-                  </p>
+                <p>
+                  Individuals or groups wishing to hold events on College property (indoor or outdoor) on or off the main 
+                  campus are required to make an application, normally <strong>two weeks in advance</strong>, at the Enquiries Office, Regent House. 
+                  An electronic application form is available here below for this purpose. Permission to host such events 
+                  is then sought from the Junior Dean. Please refer to the 
+                  <a href="https://www.tcd.ie/Junior_Dean/events/" target="_blank" rel="noopener noreferrer" aria-label="Junior Dean - Events and Parties (opens in a new tab)">     
+                    Junior Dean - Events and Parties
+                  </a> page for more information.
+                </p>
               </div>
+
               <!-- Image Column -->
               <div class="col-md-6 mb-3">
-                  <img src="neurodivergent_event.png" alt="A colorful abstract illustration related to neurodiversity at events." class="img-fluid"
-                  title="Neurodiversity at Events" loading="lazy">
+                  <img src="neurodivergent_event.png" alt="A colorful abstract illustration." class="img-fluid"
+                  title="Events and Parties" loading="lazy">
               </div>
           </div>
       </div>
@@ -830,8 +825,23 @@
   <script src="app.js"></script>
 
 
+  <script>
+    function toggleContrast() {
+      var body = document.body;
+      var isHighContrast = body.classList.toggle('high-contrast');
+      document.getElementById('toggle-contrast').setAttribute('aria-pressed', isHighContrast);
+      document.getElementById('toggle-contrast').textContent = isHighContrast ? 'Disable High Contrast' : 'Enable High Contrast';
+    }
+  
+    function toggleFontSize() {
+      var body = document.body;
+      var isLargeFont = body.classList.toggle('large-font');
+      document.getElementById('toggle-font-size').setAttribute('aria-pressed', isLargeFont);
+      document.getElementById('toggle-font-size').textContent = isLargeFont ? 'Disable Large Font' : 'Enable Large Font';
+    }
+  </script>
 
-
+<!--
 <script type="text/javascript">
   document.getElementById('printButton').addEventListener('click', printTextArea);
 
@@ -847,6 +857,7 @@
       childWindow.close();
   }
 </script>
+-->
 
 <!-- Accessibility Buttons -->
 <!-- 
