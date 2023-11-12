@@ -38,11 +38,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const accessRequirements = document.querySelector(
     'input[name="accessRequirements"]:checked'
   ).value;
-  const quietSpace = document.querySelector(
-    'input[name="quietSpace"]:checked'
-  ).value;
   const eventParking = document.querySelector(
     'input[name="eventParking"]:checked'
+  ).value;
+  const quietSpace = document.querySelector(
+    'input[name="quietSpace"]:checked'
   ).value;
   const sensoryEnvironment = document.querySelector(
     'input[name="sensoryEnvironment"]:checked'
@@ -56,11 +56,17 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const eventVideo = document.querySelector(
     'input[name="eventVideo"]:checked'
   ).value;
-  const eventWaste = document.querySelector(
-    'input[name="eventWaste"]:checked'
+  const singleUseItems = document.querySelector(
+    'input[name="singleUseItems"]:checked'
   ).value;
-  const sustainableTransport = document.querySelector(
-    'input[name="sustainableTransport"]:checked'
+  const zeroWaste = document.querySelector(
+    'input[name="zeroWaste"]:checked'
+  ).value;
+  const veggieApproach = document.querySelector(
+    'input[name="veggieApproach"]:checked'
+  ).value;
+  const transport = document.querySelector(
+    'input[name="transport"]:checked'
   ).value;
   const sustainableSourced = document.querySelector(
     'input[name="sustainableSourced"]:checked'
@@ -76,28 +82,30 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Event name: ${eventName}
         Event Description: ${eventDescription}
         Event location: ${eventLocation}
-        Organiser name: ${organiserName}
-        Organiser email: ${organiserEmail}
+        Event Organiser name: ${organiserName}
+        Event Organiser email: ${organiserEmail}
         Event Start Time: ${eventStartTime}
         Event End Time: ${eventEndTime}
         Event Start Date: ${eventStartDate}
         Event End Date: ${eventEndDate}
-        Online event: ${onlineEvent}
-        In-Person event: ${inpersonEvent}
+        Online event? ${onlineEvent}
+        In-Person event? ${inpersonEvent}
         Event accessibility: ${eventAccess}
         Seating available at the event? ${seatingFacilities} 
         Wheelchair accessible toilets? ${wheelchairToilets}
         Hearing Loop? ${hearingLoop}
         ISL Interpreter? ${islInt}
         Does the event have a question about accessibility requirements of attendees? ${accessRequirements}
-        Designated quiet space? ${quietSpace}
         Disabled Person's Parking near the event? ${eventParking}
+        Have you made provisions for a designated quiet space? ${quietSpace}
         Have you made provisions to create a sensory-friendly environment? ${sensoryEnvironment}
         Is event information, instructions, and communications clear, concise, and provided in multiple formats? ${sensoryInfo}
         Are the presentation slides (MS PowerPoint etc.,.) accessible? ${eventSlides}
         Does the event include a video showing or video call? ${eventVideo}
-        Will waste be minimised at the event? ${eventWaste}
-        Are measures being taken to promote sustainable transportation options? ${sustainableTransport}
+        Will single use items be available at the event? ${singleUseItems}
+        Will the event be a zero waste event? ${zeroWaste}
+        Will the event take a veggie first approach? ${veggieApproach}
+        Will you promote public transport and active travel (walking and cycling) to your event? ${transport}
         Are products and services procured for the event sustainably sourced or produced? ${sustainableSourced}
         Will the event promote sustainability awareness and education among attendees? ${promoteAwareness}
         Any further comments or details? ${comments}
@@ -156,9 +164,9 @@ function copyToTextarea() {
   formData +=
     "Event Location: " + document.getElementById("eventLocation").value + "\n";
   formData +=
-    "Organiser Name: " + document.getElementById("organiserName").value + "\n";
+    "Event Organiser Name: " + document.getElementById("organiserName").value + "\n";
   formData +=
-    "Organiser Email: " +
+    "Event Organiser Email: " +
     document.getElementById("organiserEmail").value +
     "\n";
   formData +=
@@ -175,7 +183,7 @@ function copyToTextarea() {
   let onlineEventEls = document.getElementsByName("onlineEvent");
   for (let i = 0; i < onlineEventEls.length; i++) {
     if (onlineEventEls[i].checked) {
-      formData += "Online Event: " + onlineEventEls[i].value + "\n";
+      formData += "Online Event? " + onlineEventEls[i].value + "\n";
       break;
     }
   }
@@ -183,7 +191,7 @@ function copyToTextarea() {
   let inpersonEventEls = document.getElementsByName("inpersonEvent");
   for (let i = 0; i < inpersonEventEls.length; i++) {
     if (inpersonEventEls[i].checked) {
-      formData += "In-Person Event: " + inpersonEventEls[i].value + "\n";
+      formData += "In-Person Event? " + inpersonEventEls[i].value + "\n";
       break;
     }
   }
@@ -245,14 +253,6 @@ function copyToTextarea() {
     }
   }
 
-  let quietSpaceEls = document.getElementsByName("quietSpace");
-  for (let i = 0; i < quietSpaceEls.length; i++) {
-    if (quietSpaceEls[i].checked) {
-      formData += "Designated quiet space? " + quietSpaceEls[i].value + "\n";
-      break;
-    }
-  }
-
   let eventParkingEls = document.getElementsByName("eventParking");
   for (let i = 0; i < eventParkingEls.length; i++) {
     if (eventParkingEls[i].checked) {
@@ -260,6 +260,14 @@ function copyToTextarea() {
         "Disabled Person's Parking near the event? " +
         eventParkingEls[i].value +
         "\n";
+      break;
+    }
+  }
+
+  let quietSpaceEls = document.getElementsByName("quietSpace");
+  for (let i = 0; i < quietSpaceEls.length; i++) {
+    if (quietSpaceEls[i].checked) {
+      formData += " Have you made provisions for a designated quiet space? " + quietSpaceEls[i].value + "\n";
       break;
     }
   }
@@ -308,25 +316,46 @@ function copyToTextarea() {
     }
   }
 
-  let eventWasteEls = document.getElementsByName("eventWaste");
-  for (let i = 0; i < eventWasteEls.length; i++) {
-    if (eventWasteEls[i].checked) {
+  let singleUseItemsEls = document.getElementsByName("singleUseItems");
+  for (let i = 0; i < singleUseItemsEls.length; i++) {
+    if (singleUseItemsEls[i].checked) {
       formData +=
-        "Will waste be minimised at the event? " +
-        eventWasteEls[i].value +
+        "Will single use items be available at the event? " +
+        singleUseItemsEls[i].value +
         "\n";
       break;
     }
   }
 
-  let sustainableTransportEls = document.getElementsByName(
-    "sustainableTransport"
-  );
-  for (let i = 0; i < sustainableTransportEls.length; i++) {
-    if (sustainableTransportEls[i].checked) {
+  let zeroWasteEls = document.getElementsByName("zeroWaste");
+  for (let i = 0; i < zeroWasteEls.length; i++) {
+    if (zeroWasteEls[i].checked) {
       formData +=
-        "Are measures being taken to promote sustainable transportation options? " +
-        sustainableTransportEls[i].value +
+        "Will the event be a zero waste event? " +
+        zeroWasteEls[i].value +
+        "\n";
+      break;
+    }
+  }
+
+
+  let veggieApproachEls = document.getElementsByName("veggieApproach");
+  for (let i = 0; i < veggieApproachEls.length; i++) {
+    if (veggieApproachEls[i].checked) {
+      formData +=
+        "Will the event take a veggie first approach? " +
+        veggieApproachEls[i].value +
+        "\n";
+      break;
+    }
+  }
+
+  let transportEls = document.getElementsByName("transport");
+  for (let i = 0; i < transportEls.length; i++) {
+    if (transportEls[i].checked) {
+      formData +=
+        "Will you promote public transport and active travel (walking and cycling) to your event? " +
+        transportEls[i].value +
         "\n";
       break;
     }
