@@ -1,693 +1,2018 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VQEDFCEJJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trinity Accessibility and Sustainability Event Generator</title>
-  <!-- Description -->
-  <!-- Keywords -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
+  gtag('config', 'G-8VQEDFCEJJ');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinity Accessibility and Sustainability Event Generator</title>
+    <!-- Description -->
+    <!-- Keywords -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<!-- Navigation Menu -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container">
-    <a class="navbar-brand nav-logo" href="https://www.tcd.ie/" target="_blank" rel="noopener">
-      <img src="trinity_logo.jpeg" alt="Trinity College Dublin, the University of Dublin logo" height="100">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Open menu navigation">
-      <span class="navbar-toggler-icon">
-      </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto ml-auto">
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/study/">Students
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/courses/">Courses
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/research/">Research
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/structure/">Faculties &amp; Schools
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/alumni/">Alumni
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/az/">A-Z
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="https://www.tcd.ie/gaeloifig/gaeilge/index.ga.php">Gaeilge
-          </a>
-        </li>
-      </ul>
+  <!-- Skip to Content Link for better keyboard navigation -->
+  <a href="#maincontent" class="skip-link">Skip to content</a>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a
+        class="navbar-brand nav-logo"
+        href="https://www.tcd.ie/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="Trinity_Main_Logo.jpg"
+          alt="Trinity College Dublin logo"
+          height="100"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- List of navigation links -->
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/study/"
+              >Students</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/courses/"
+              >Courses</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/research/"
+              >Research</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/structure/"
+              >Faculties &amp; Schools</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/alumni/"
+              >Alumni</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.tcd.ie/az/">A-Z</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link mx-2"
+              href="https://www.tcd.ie/gaeloifig/gaeilge/index.ga.php"
+              >Gaeilge</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<body>
-
-  <div class="mb-2 text-center">
- 
-    <img src="jack_kavanagh_wide_banner.png" 
-    alt="Jack Kavanagh in a wheelchair surrounded by people walking in Trinity Front Square with the Dining Hall in the background,
-    and other Trinity buildings under a clear blue sky."
-    style="width: 100vw;" title="Disabled Leader Jack Kavanagh in Trinity Front Square." loading="lazy" />
-    <h5 class="display-3 fw-bold text-white text-header" style="background-color: #81358a;" id="#top">
-      Accessibility &amp; Sustainability Event Generator
-    </h5>
-  </div>
-
-  <div class="container mt-5">
-    <h1>Trinity Accessibility &amp; Sustainability Event Generator</h1>
-    <p>The <strong>Accessibility &amp; Sustainability Event Generator</strong> is designed to provide clear and concise access information for events. 
-      Having clear information is very important for an event to be as sustainable, accessible, and inclusive as possible, 
-      and ensuring that physical and digital spaces are accessible to everyone. It's necessary to create events 
-      that are universally designed - accessible to everyone. No event is truly accessible without the information to say that it is.
-      Ensuring that events are fully accessible is crucial for inclusivity. Fostering a sense of belonging in 
-      event design helps ensure success for all. The Trinity Accessibility &amp; Sustainability Event Generator is a 
-      collaboration between <a href="https://www.tcd.ie/disability/" target="_blank" rel="noopener">Trinity disAbility Service</a> 
-      and <a href="https://twitter.com/shoutformore" target="_blank" rel="noopener">Shout for More</a> - The "Shout for More" initiative aims to 
-      amplify the voices of disabled students, offering them a platform to share feedback on the support and services they receive 
-      from their colleges. As well as a tool for reporting incidents of disability discrimination. 
-      The <a href="https://trinityabilitycoop.com/" target="_blank" rel="noopener">Trinity Ability co_op</a> are also 
-      happy to give advice on how to make your event more accessible and inclusive for both students, and staff. </p>
-
-    <p>Please fill in all the details of your event below. All input fields are required to be filled. </p>
-
-
-    <h2>Event Event Details</h2>
-    <form id="eventForm">
-      <!-- Sample input for Event Name with tooltip -->
-      <div class="mb-3">
-        <label for="eventName" class="form-label">
-          <h4>Event Name</h4>
-        </label>
-        <input type="text" class="form-control" id="eventName" required data-bs-toggle="tooltip"
-          title="Enter Event Name" />
+  <body>
+    <main id="maincontent">
+      <div class="mb-2 text-center">
+        <img
+          src="jack_kavanagh_wide_banner.png"
+          alt="Jack Kavanagh in Trinity Front Square."
+          style="width: 100vw; max-width: 100%"
+          title="Jack Kavanagh"
+          loading="lazy"
+          id="top"
+        />
       </div>
 
-      <!-- Sample input for Event Location with tooltip -->
-      <div class="mb-3">
-        <label for="eventLocation" class="form-label">
-          <h4>Event Location</h4>
-        </label>
-        <input type="text" class="form-control" id="eventLocation" required data-bs-toggle="tooltip"
-          title="Enter Event Location" />
-      </div>
+      <div class="container mt-3 mb-3">
+        <h1 class="text-center mb-3">
+          Trinity Accessibility &amp; Sustainability Event Generator
+        </h1>
 
-      <!-- Sample input for Event Organiser Name with tooltip -->
-      <div class="mb-3">
-        <label for="organiserName" class="form-label">
-          <h4>Event Organiser Name</h4>
-        </label>
-        <input type="text" class="form-control"
-          id="organiserName" required data-bs-toggle="tooltip" title="Enter Event Organiser Name" />
-      </div>
+        <p>
+          The
+          <strong>Accessibility &amp; Sustainability Event Generator</strong> is
+          designed to provide clear and concise access information for events.
+          Having clear information is very important for an event to be as
+          sustainable, accessible, and inclusive as possible, and ensuring that
+          physical and digital spaces are accessible to everyone. No event is
+          truly accessible without the information to say that it is. Ensuring
+          that events are fully accessible is crucial for inclusivity. Fostering
+          a sense of belonging in events ensures success for all.
+        </p>
 
-      <!-- Sample input for Event Organiser Email with tooltip -->
-      <div class="mb-3">
-        <label for="organiserEmail" class="form-label">
-          <h4>Event Organiser Email</h4>
-        </label>
-        <input type="text" placeholder="Please enter a valid email" class="form-control" id="organiserEmail" required
-          data-bs-toggle="tooltip" title="Enter Event Organiser Email" />
-      </div>
+        <p>
+          The Trinity Accessibility &amp; Sustainability Event Generator is a
+          collaboration between
+          <a
+            href="https://www.tcd.ie/disability/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Trinity disAbility Service</a
+          >,
+          <a
+            href="https://www.tcd.ie/provost/sustainability/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Trinity Sustainability</a
+          >
+          and
+          <a
+            href="https://twitter.com/shoutformore"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Shout for More</a
+          >
+          - The "Shout for More" initiative aims to amplify the voices of
+          disabled students, offering them a platform to share feedback on the
+          support and services they receive from their colleges. As well as a
+          tool for reporting incidents of disability discrimination. The
+          <a
+            href="https://trinityabilitycoop.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Trinity Ability co_op</a
+          >
+          are also happy to give advice on how to make your event more
+          accessible and inclusive for both students, and staff.
+        </p>
 
-      <!-- Sample radio buttons for Online Event with tooltip -->
-      <div class="mb-3" data-bs-toggle="tooltip" title="">
-        <label class="form-label">
-          <h4>Online Event</h4>
-          <p>If it's an <strong>Online Event</strong>, please refer to the 
-            <a href="https://www.tcd.ie/disability/services/assistive-tech/technology--accessibility/" target="_blank" rel="noopener">
-              Technology and Accessibility</a> guide for more information.
+        <div class="container mt-5">
+          <div class="row">
+            <!-- Text Column -->
+            <div class="col-md-6">
+              <p>
+                Individuals or groups wishing to hold events on College property
+                (indoor or outdoor) on or off the main campus are required to
+                make an application, normally
+                <strong>two weeks in advance</strong>, at the Enquiries Office,
+                Regent House. An electronic application form is available here
+                below for this purpose. Permission to host such events is then
+                sought from the Junior Dean. Please refer to the
+                <a
+                  href="https://www.tcd.ie/Junior_Dean/events/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Junior Dean - Events and Parties (opens in a new tab)"
+                >
+                  Junior Dean - Events and Parties
+                </a>
+                page for more information.
+              </p>
+            </div>
+
+            <!-- Image Column -->
+            <div class="col-md-6 mb-3">
+              <img
+                src="neurodivergent_event.png"
+                alt="A colorful abstract illustration."
+                class="img-fluid"
+                title="Events and Parties"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p id="form-note">
+          <strong>NOTE:</strong> All input fields are required to be filled.
+        </p>
+
+        <section class="container mt-4">
+          <div class="row">
+            <div class="col-12">
+              <h2>
+                How to Use the Trinity Accessibility &amp; Sustainability Event
+                Generator
+              </h2>
+              <p class="lead">
+                Follow these steps to create your event's accessibility and
+                sustainability statement:
+              </p>
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item">
+                  Fill in the information you have for your event in the
+                  provided fields.
+                </li>
+                <li class="list-group-item">
+                  Click on the
+                  <button class="btn btn-primary" disabled>Submit</button>
+                  button.
+                </li>
+                <li class="list-group-item">
+                  After the completed form is generated, click on the
+                  <button class="btn btn-info" disabled>
+                    Copy to Textarea
+                  </button>
+                  button, and copy the text that appears.
+                </li>
+                <li class="list-group-item">
+                  You can also click on the
+                  <button class="btn btn-secondary" disabled>
+                    Save as PDF
+                  </button>
+                  button, and this will create an 'event-details.pdf' document.
+                </li>
+                <li class="list-group-item">
+                  Click on the
+                  <button class="btn btn-secondary" disabled>
+                    Send to Email
+                  </button>
+                  button, and this will email a copy of the completed form to
+                  your email address..
+                </li>
+              </ol>
+              <p class="mt-3">
+                This tool is designed to make your event more sustainable,
+                inclusive and accessible to all attendees by providing a clear
+                and concise accessibility and sustainability statement.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h2>Event Details</h2>
+
+      <form id="eventForm">
+
+
+          <!-- input for Event Name -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventName" class="form-label"
+              >Event Name (required)</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="eventName"
+              aria-describedby="eventNameHelp"
+              required
+            />
+            <div id="eventNameHelp" class="form-text">
+              Enter the name of the event. This field is required.
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid event name.
+            </div>
+          </div>
+          </form>
+
+          <!-- Event Description -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventDescription" class="form-label"
+              >Event Description
+              <span class="text-muted">(required)</span></label>
+            <textarea
+              class="form-control"
+              id="eventDescription"
+              rows="3"
+              aria-describedby="eventDescriptionHelp"
+              required
+            ></textarea>
+            <div id="eventDescriptionHelp" class="form-text">
+              Provide a brief description of the event. This field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event Location -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventLocation" class="form-label"
+              >Event Location <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="eventLocation"
+              aria-describedby="eventLocationHelp"
+              required
+            />
+            <div id="eventLocationHelp" class="form-text">
+              Enter the location of the event. This field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event Organiser Name  -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="organiserName" class="form-label"
+              >Event Organiser Name
+              <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="organiserName"
+              aria-describedby="organiserNameHelp"
+              required
+            />
+            <div id="organiserNameHelp" class="form-text">
+              Enter the name of the person organising the event. This field is
+              required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event Organiser Email -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="organiserEmail" class="form-label"
+              >Event Organiser Email
+              <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="email"
+              placeholder="your@email.com"
+              class="form-control"
+              id="organiserEmail"
+              aria-describedby="organiserEmailHelp"
+              required
+            />
+            <div id="organiserEmailHelp" class="form-text">
+              Please enter a valid email address for the event organiser.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event Start Time -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventStartTime" class="form-label"
+              >Event Start Time
+              <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="time"
+              class="form-control"
+              id="eventStartTime"
+              aria-describedby="eventStartTimeHelp"
+              aria-required="true"
+              required
+            />
+            <div id="eventStartTimeHelp" class="form-text">
+              Enter the start time of the event. This field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event End Time -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventEndTime" class="form-label"
+              >Event End Time <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="time"
+              class="form-control"
+              id="eventEndTime"
+              aria-describedby="eventEndTimeHelp"
+              aria-required="true"
+              required
+            />
+            <div id="eventEndTimeHelp" class="form-text">
+              Enter the end time of the event. This field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event Start Date -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventStartDate" class="form-label"
+              >Event Start Date
+              <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="eventStartDate"
+              aria-describedby="eventStartDateHelp"
+              aria-required="true"
+              required
+              pattern="\d{4}-\d{2}-\d{2}"
+              placeholder="yyyy-mm-dd"
+            />
+            <div id="eventStartDateHelp" class="form-text">
+              Enter the start date of the event in the format MM/DD/YYYY. This
+              field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- input for Event End Date -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="eventEndDate" class="form-label"
+              >Event End Date <span class="text-muted">(required)</span></label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="eventEndDate"
+              aria-describedby="eventEndDateHelp"
+              aria-required="true"
+              required
+              pattern="\d{4}-\d{2}-\d{2}"
+              placeholder="yyyy-mm-dd"
+            />
+            <div id="eventEndDateHelp" class="form-text">
+              Enter the end date of the event in the format MM/DD/YYYY. This
+              field is required.
+            </div>
+          </div>
+          </form>
+
+          <!-- radio buttons for Online Event with tooltip -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <fieldset>
+              <legend class="form-label h4">Online Event?</legend>
+              <p>
+                If it's an <strong>Online Event</strong>, please refer to the
+                <a
+                  href="https://www.tcd.ie/disability/services/assistive-tech/technology--accessibility/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Technology and Accessibility</a
+                >
+                guide for more information.
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="onlineEvent"
+                  id="onlineYes"
+                  value="Yes"
+                  required
+                  aria-describedby="onlineEventHelp"
+                />
+                <label class="form-check-label" for="onlineYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="onlineEvent"
+                  id="onlineNo"
+                  value="No"
+                  required
+                  aria-describedby="onlineEventHelp"
+                />
+                <label class="form-check-label" for="onlineNo">No</label>
+              </div>
+              <div id="onlineEventHelp" class="form-text">
+                Select 'Yes' if the event is being held online.
+              </div>
+            </fieldset>
+          </div>
+          </form>
+
+          <!-- Sample radio buttons for In-Person Event with tooltip -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <fieldset>
+              <legend class="form-label h4">In-Person Event?</legend>
+              <p>
+                If it is an <strong>In-Person Event</strong>, please refer to
+                the
+                <a
+                  href="https://www.tcd.ie/disability/physical-access-information/building/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Is your Building Accessible?</a
+                >
+                guide for more information.
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inpersonEvent"
+                  id="inpersonYes"
+                  value="Yes"
+                  required
+                  aria-describedby="inpersonEventHelp"
+                />
+                <label class="form-check-label" for="inpersonYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inpersonEvent"
+                  id="inpersonNo"
+                  value="No"
+                  required
+                  aria-describedby="inpersonEventHelp"
+                />
+                <label class="form-check-label" for="inpersonNo">No</label>
+              </div>
+              <div id="inpersonEventHelp" class="form-text">
+                Select 'Yes' if the event will be held in person.
+              </div>
+            </fieldset>
+          </div>
+          </form>
+
+          <h2>Access to the Event</h2>
+          <!-- Sample radio buttons for Access to the Event with tooltip -->
+          <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <fieldset>
+              <legend class="h4">Does the event have:</legend>
+              <p>
+                <strong>NOTE:</strong> Wheelchair access requires flat access
+                (no lip/transition changes), no very steep ramps or narrow
+                doorways, and space for wheelchair users in the room.
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventAccess"
+                  id="accessWheelchair"
+                  value="Wheelchair"
+                  required
+                  aria-describedby="accessNote1"
+                />
+                <label class="form-check-label" for="accessWheelchair"
+                  >Wheelchair Access</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventAccess"
+                  id="stepfreeAccess"
+                  value="Step-free access only"
+                  required
+                  aria-describedby="accessNote1"
+                />
+                <label class="form-check-label" for="stepfreeAccess"
+                  >Step-free access only</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventAccess"
+                  id="noStepfreeAccess"
+                  value="No step-free access"
+                  required
+                  aria-describedby="accessNote1"
+                />
+                <label class="form-check-label" for="noStepfreeAccess"
+                  >No step-free access</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventAccess"
+                  id="unknownAccess"
+                  value="Unknown"
+                  required
+                  aria-describedby="accessNote1"
+                />
+                <label class="form-check-label" for="unknownAccess"
+                  >Unknown</label
+                >
+              </div>
+
+              <div id="accessNote1" class="form-text">
+                Please ensure the selected access option is in line with the
+                provided note on wheelchair access requirements.
+              </div>
+            </fieldset>
+          </div>
+
+          <h2 class="mt-3">Facilities</h2>
+          <!-- Sample radio buttons for Access to the Event with tooltip -->
+          <div class="mb-3">
+            <fieldset>
+              <legend class="h4">Seating Options</legend>
+              <p>
+                Which of the following seating options is available at the
+                event?
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="seatingFacilities"
+                  id="paddedSeating"
+                  value="Yes - padded/comfortable"
+                  required
+                />
+                <label class="form-check-label" for="paddedSeating"
+                  >Yes - padded/comfortable</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="seatingFacilities"
+                  id="basicSeating"
+                  value="Yes - basic chairs"
+                  required
+                />
+                <label class="form-check-label" for="basicSeating"
+                  >Yes - basic chairs</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="seatingFacilities"
+                  id="unknownType"
+                  value="Yes - unknown type"
+                  required
+                />
+                <label class="form-check-label" for="unknownType"
+                  >Yes - unknown type</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="seatingFacilities"
+                  id="noSeating"
+                  value="No seating"
+                  required
+                />
+                <label class="form-check-label" for="noSeating"
+                  >No seating</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="seatingFacilities"
+                  id="unknownSeating"
+                  value="Unknown"
+                  required
+                />
+                <label class="form-check-label" for="unknownSeating"
+                  >Unknown</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="mb-3">
+            <fieldset>
+              <legend class="mt-3">
+                Wheelchair accessible toilet? <span aria-hidden="true">*</span>
+              </legend>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="yesToilet"
+                  value="Yes, fully wheelchair accessible"
+                  required
+                />
+                <label class="form-check-label" for="yesToilet"
+                  >Yes, fully wheelchair accessible</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="noToilet"
+                  value="No, not wheelchair accessible"
+                  required
+                />
+                <label class="form-check-label" for="noToilet"
+                  >No, not wheelchair accessible</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="changingplacesToilet"
+                  value="Yes, with changing places facilities"
+                  required
+                />
+                <label class="form-check-label" for="changingplacesToilet"
+                  >Yes, with changing places facilities</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="accessibleToilet"
+                  value="Yes, accessible toilet"
+                  required
+                />
+                <label class="form-check-label" for="accessibleToilet"
+                  >Yes, accessible toilet</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="partiallyAccessible"
+                  value="Partially accessible toilet"
+                  required
+                />
+                <label class="form-check-label" for="partiallyAccessible"
+                  >Partially accessible toilet</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="wheelchairToilets"
+                  id="unknownToilet"
+                  value="Accessibility unknown"
+                  required
+                />
+                <label class="form-check-label" for="unknownToilet"
+                  >Accessibility unknown</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="mb-3">
+            <fieldset>
+              <legend class="mt-3">Hearing Loop Availability</legend>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hearingLoop"
+                  id="yesLoop"
+                  value="Yes"
+                  required
+                />
+                <label class="form-check-label" for="yesLoop"
+                  >Yes, hearing loop available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hearingLoop"
+                  id="noLoop"
+                  value="No"
+                  required
+                />
+                <label class="form-check-label" for="noLoop"
+                  >No, hearing loop not available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hearingLoop"
+                  id="advanceLoop"
+                  value="Request in advance"
+                  required
+                />
+                <label class="form-check-label" for="advanceLoop"
+                  >Available by request in advance</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hearingLoop"
+                  id="requestLoop"
+                  value="Request at event"
+                  required
+                />
+                <label class="form-check-label" for="requestLoop"
+                  >Available by request at the event</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="hearingLoop"
+                  id="unknownLoop"
+                  value="Unknown"
+                  required
+                />
+                <label class="form-check-label" for="unknownLoop"
+                  >Hearing loop availability unknown</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <section>
+            <h2 class="mt-3">Accessibility Options</h2>
+            <p>
+              <strong>NOTE:</strong> Interpreters should be provided upon
+              request. Ask attendees if they have any accessibility requirements
+              at least two weeks before an event. More information on booking an
+              <a
+                href="https://www.tcd.ie/equality/policy/other-policies/#ISL"
+                target="_blank"
+                rel="noopener"
+              >
+                ISL Interpreter at Trinity</a
+              >.
             </p>
-        </label>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="onlineEvent" id="onlineYes" value="Yes" required />
-          <label class="form-check-label" for="onlineYes">Yes</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="onlineEvent" id="onlineNo" value="No" required />
-          <label class="form-check-label" for="onlineYes">No</label>
-        </div>
-      </div>
 
-      <!-- Sample radio buttons for In-Person Event with tooltip -->
-      <div class="mb-3" data-bs-toggle="tooltip" title="">
-        <label class="form-label">
-          <h4>In-Person Event</h4>
-          <p>If it is an <strong>In-Person Event</strong>, please refer to the 
-            <a href="https://www.tcd.ie/disability/physical-access-information/building/" target="_blank" rel="noopener">
-              Is your Building Accessible?</a> guide for more information.
+            <fieldset class="mb-3">
+              <legend>
+                Irish Sign Language (ISL) Interpretation Availability
+              </legend>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="islInt"
+                  id="yesISL"
+                  value="Yes"
+                  required
+                />
+                <label class="form-check-label" for="yesISL"
+                  >Yes, ISL interpretation available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="islInt"
+                  id="noISL"
+                  value="No"
+                  required
+                />
+                <label class="form-check-label" for="noISL"
+                  >No, ISL interpretation not available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="islInt"
+                  id="advanceISL"
+                  value="Request in advance"
+                  required
+                />
+                <label class="form-check-label" for="advanceISL"
+                  >Available by request in advance</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="islInt"
+                  id="requestISL"
+                  value="Request at event"
+                  required
+                />
+                <label class="form-check-label" for="requestISL"
+                  >Available by request at the event</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="islInt"
+                  id="unknownISL"
+                  value="Unknown"
+                  required
+                />
+                <label class="form-check-label" for="unknownISL"
+                  >ISL interpretation availability unknown</label
+                >
+              </div>
+            </fieldset>
+          </section>
+
+          <div class="mb-3">
+            <fieldset>
+              <legend>Accessibility Requirements Query</legend>
+              <p id="accessNote2">
+                <strong>NOTE:</strong> When publicising events ensure that there
+                is a standard accessibility contact statement on all publicity,
+                including print ads, web pages, and information flyers. An
+                example of this statement is:
+                <strong
+                  >'Please indicate if you have any access requirements so that
+                  we may facilitate you in attending this event'.</strong
+                >
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="accessRequirements"
+                  id="yesRequirements"
+                  value="Yes, accessibility requirements are queried"
+                  required
+                  aria-describedby="accessNote2"
+                />
+                <label class="form-check-label" for="yesRequirements"
+                  >Yes, accessibility requirements are queried</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="accessRequirements"
+                  id="noRequirements"
+                  value="No, accessibility requirements are not queried"
+                  required
+                  aria-describedby="accessNote2"
+                />
+                <label class="form-check-label" for="noRequirements"
+                  >No, accessibility requirements are not queried</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="accessRequirements"
+                  id="unknownRequirements"
+                  value="Unknown if accessibility requirements are queried"
+                  required
+                  aria-describedby="accessNote2"
+                />
+                <label class="form-check-label" for="unknownRequirements"
+                  >Unknown if accessibility requirements are queried</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="mb-3">
+            <fieldset>
+              <legend>Disabled Person's Parking Availability</legend>
+              <p id="parkingInfo">
+                More information on
+                <a
+                  href="https://www.tcd.ie/disability/physical-access-information/accessible-parking-info/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Accessible Campus Parking at Trinity</a
+                >
+                (opens in a new window).
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventParking"
+                  id="yesParking"
+                  value="Yes, disabled person's parking is available"
+                  required
+                  aria-describedby="parkingInfo"
+                />
+                <label class="form-check-label" for="yesParking"
+                  >Yes, disabled person's parking is available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventParking"
+                  id="noParking"
+                  value="No, disabled person's parking is not available"
+                  required
+                  aria-describedby="parkingInfo"
+                />
+                <label class="form-check-label" for="noParking"
+                  >No, disabled person's parking is not available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventParking"
+                  id="advanceParking"
+                  value="Available by request in advance"
+                  required
+                  aria-describedby="parkingInfo"
+                />
+                <label class="form-check-label" for="advanceParking"
+                  >Available by request in advance</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventParking"
+                  id="requestParking"
+                  value="Available by request at the event"
+                  required
+                  aria-describedby="parkingInfo"
+                />
+                <label class="form-check-label" for="requestParking"
+                  >Available by request at the event</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventParking"
+                  id="unknownParking"
+                  value="Parking availability unknown"
+                  required
+                  aria-describedby="parkingInfo"
+                />
+                <label class="form-check-label" for="unknownParking"
+                  >Parking availability unknown</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <h2 class="mt-3">Neurodivergent Individuals</h2>
+          <p>
+            When planning an event that is inclusive of neurodivergent
+            individuals, it's essential to consider their unique needs and
+            preferences. If possible, try to put support mechanisms or
+            accommodations in place, such as providing a designated quiet space, providing clear
+            signage, or having support staff available to assist neurodivergent
+            attendees in navigating and enjoying the event comfortably.
+          </p>
+
+          <!-- Designated Quiet Space -->
+
+          <div class="mb-3">
+            <fieldset>
+              <legend> Have you made provisions for a designated quiet space?</legend>
+              <p id="quietSpaceNote">
+                <strong>NOTE:</strong> Events can be overwhelming for many
+                people. Providing a quiet, sensory-friendly space is important
+                so people can take a break from the main event. Find out more
+                about creating a sensory-friendly environment at the
+                <a
+                  href="https://www.tcd.ie/disability/services/tcdsense.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >TCD Sense Project page</a
+                >
+                (opens in a new window).
+              </p>
+              <p>
+                For information about the sensory environments in different
+                areas of Trinity and physical access information for buildings
+                across campus, visit the
+                <a
+                  href="https://tcdsensemap.ie/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Sensory Map</a
+                >
+                (opens in a new window).
+              </p>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="quietSpace"
+                  id="yesSpace"
+                  value="Yes, a quiet space is available"
+                  required
+                  aria-describedby="quietSpaceNote"
+                />
+                <label class="form-check-label" for="yesSpace"
+                  >Yes, a quiet space is available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="quietSpace"
+                  id="noSpace"
+                  value="No, a quiet space is not available"
+                  required
+                  aria-describedby="quietSpaceNote"
+                />
+                <label class="form-check-label" for="noSpace"
+                  >No, a quiet space is not available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="quietSpace"
+                  id="advanceSpace"
+                  value="Available by request in advance"
+                  required
+                  aria-describedby="quietSpaceNote"
+                />
+                <label class="form-check-label" for="advanceSpace"
+                  >Available by request in advance</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="quietSpace"
+                  id="requestSpace"
+                  value="Available by request at the event"
+                  required
+                  aria-describedby="quietSpaceNote"
+                />
+                <label class="form-check-label" for="requestSpace"
+                  >Available by request at the event</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="quietSpace"
+                  id="unknownSpace"
+                  value="Quiet space availability unknown"
+                  required
+                  aria-describedby="quietSpaceNote"
+                />
+                <label class="form-check-label" for="unknownSpace"
+                  >Quiet space availability unknown</label
+                >
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- End Designated Quiet Space -->
+
+          <fieldset class="mt-3">
+            <legend>Have you made provisions to create a sensory-friendly environment?</legend>
+            <p id="sensoryDesc">
+              Consider factors like lighting, noise levels, and providing quiet
+              spaces, to accommodate attendees who might be sensitive to sensory
+              stimuli.
             </p>
-        </label>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="inpersonEvent" id="inpersonYes" value="Yes" required />
-          <label class="form-check-label" for="inpersonYes">Yes</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="inpersonEvent" id="inpersonNo" value="No" required />
-          <label class="form-check-label" for="inpersonNo">No</label>
-        </div>
-      </div>
 
-      <h2>Access to the Event</h2>
-      <!-- Sample radio buttons for Access to the Event with tooltip -->
-      <div class="mb-3" data-bs-toggle="tooltip" title="">
-        <label class="form-label">
-          <h4>Does the event have:</h4>
-          <p><strong>NOTE:</strong> Wheelchair access requires flat access (no lip/transition changes), no very steep ramps or narrow 
-            doorways as well as space for wheelchair users in the room.</p>
-        </label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryEnvironment"
+                id="yesSensory"
+                value="Yes, provisions made"
+                required
+                aria-describedby="sensoryDesc"
+              />
+              <label class="form-check-label" for="yesSensory"
+                >Yes, provisions made</label
+              >
+            </div>
 
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="eventAccess" id="accessWheelchair" value="Wheelchair"
-            required />
-          <label class="form-check-label" for="accessWheelchair" data-bs-toggle="tooltip" title="">Wheelchair Access</label>
-        </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryEnvironment"
+                id="noSensory"
+                value="No, provisions not made"
+                required
+                aria-describedby="sensoryDesc"
+              />
+              <label class="form-check-label" for="noSensory"
+                >No, provisions not made</label
+              >
+            </div>
 
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="eventAccess" id="stepAccess" value="Step-free access only"
-            required />
-          <label class="form-check-label" for="stepfreeAccess">Step-free access only</label>
-        </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryEnvironment"
+                id="unknownSensory"
+                value="Unknown if provisions made"
+                required
+                aria-describedby="sensoryDesc"
+              />
+              <label class="form-check-label" for="unknownSensory"
+                >Unknown if provisions made</label
+              >
+            </div>
+          </fieldset>
 
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="eventAccess" id="stepfreeAccess"
-            value="No step-free access" required />
-          <label class="form-check-label" for="stepfreeAccess">No step-free access</label>
-        </div>
+          <fieldset class="mt-3">
+            <legend>Is event information, instructions, and communications clear, concise, and provided in multiple formats? </legend>
+            <p id="infoDesc">
+              (e.g., written, visual, verbal) to cater to diverse cognitive
+              processing styles.
+            </p>
 
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="eventAccess" id="unknownAccess" value="Unknown" required />
-          <label class="form-check-label" for="unkownAccess">Unknown</label>
-        </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryInfo"
+                id="yesSensoryinfo"
+                value="Yes, information is clear and in multiple formats"
+                required
+                aria-describedby="infoDesc"
+              />
+              <label class="form-check-label" for="yesSensoryinfo"
+                >Yes, information is clear and in multiple formats</label
+              >
+            </div>
 
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryInfo"
+                id="noSensoryinfo"
+                value="No, information is not in multiple formats"
+                required
+                aria-describedby="infoDesc"
+              />
+              <label class="form-check-label" for="noSensoryinfo"
+                >No, information is not in multiple formats</label
+              >
+            </div>
 
-        <h2 class="mt-3">Facilities</h2>
-        <!-- Sample radio buttons for Access to the Event with tooltip -->
-        <div class="mb-3" data-bs-toggle="tooltip" title="">
-          <label class="form-label">
-            <h4>Which of the following is available?</h4>
-          </label>
-
-          <h4>Seating</h4>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="seatingFacilities" id="paddedSeating"
-              value="Yes - padded/comfortable" required />
-            <label class="form-check-label" for="paddedSeating">Yes - padded/comfortable</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="seatingFacilities" id="basicSeating"
-              value="Yes - basic chairs" required />
-            <label class="form-check-label" for="basicSeating">Yes - basic chairs</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="seatingFacilities" id="unknownType"
-              value="Yes - unknown type" required />
-            <label class="form-check-label" for="unkownType">Yes - unknown type</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="seatingFacilities" id="noSeating" value="No seating"
-              required />
-            <label class="form-check-label" for="noSeating">No seating</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="seatingFacilities" id="unknownSeating" value="Unknown"
-              required />
-            <label class="form-check-label" for="unknownSeating">Unknown</label>
-          </div>
-
-
-          <h4 class="mt-3 ">Wheelchair accessible toilet?</h4>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="yesToilet" value="Yes" required />
-            <label class="form-check-label" for="yesToilet">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="noToilet" value="No" required />
-            <label class="form-check-label" for="noToilet">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="changingplacesToilet"
-              value="Changing places toilet" required />
-            <label class="form-check-label" for="changingplacesToilet">Changing places toilet</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="accessibleToilet"
-              value="Accessible toilet" required />
-            <label class="form-check-label" for="accessibleToilet">Accessible toilet</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="partiallyAccessible"
-              value="Partially accessible toilet" required />
-            <label class="form-check-label" for="partiallyAccessible">Partially accessible toilet</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="wheelchairToilets" id="unknownToilet" value="Unknown"
-              required />
-            <label class="form-check-label" for="unknownToilet">Unknown</label>
-          </div>
-
-
-          <h4 class="mt-3">Hearing Loop? </h4>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hearingLoop" id="yesLoop" value="Yes" required />
-            <label class="form-check-label" for="yesLoop">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hearingLoop" id="noLoop" value="No" required />
-            <label class="form-check-label" for="noLoop">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hearingLoop" id="advanceLoop"
-              value="By request in advance" required />
-            <label class="form-check-label" for="advanceLoop">By request in advance</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hearingLoop" id="requestLoop"
-              value="By request at the event" required />
-            <label class="form-check-label" for="requestLoop">By request at the event</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hearingLoop" id="unknownLoop" value="Unknown" required />
-            <label class="form-check-label" for="unknownLoop">Unknown</label>
-          </div>
-
-
-          <h4 class="mt-3">ISL Interprter?</h4>
-          <p><strong>NOTE:</strong> Interpreters should be provided upon request. Ask attendees if they have any accessibility requirements 
-            at least two weeks before an event.</p>
-            <p>More information on booking an 
-            <a href="https://www.tcd.ie/equality/policy/other-policies/#ISL" target="_blank" rel="noopener">
-              ISL Interpreter at Trinity</a>.</p>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="islInt" id="yesISL" value="Yes" required />
-            <label class="form-check-label" for="yesISL">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="islInt" id="noISL" value="No" required />
-            <label class="form-check-label" for="noISL">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="islInt" id="advanceISL" value="By request in advance"
-              required />
-            <label class="form-check-label" for="advanceISL">By request in advance</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="islInt" id="requestISL" value="By request at the event"
-              required />
-            <label class="form-check-label" for="requestISL">By request at the event</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="islInt" id="unknownISL" value="Unknown" required />
-            <label class="form-check-label" for="unknownISL">Unknown</label>
-          </div>
-
-
-          <h4 class="mt-3">Does the event have a question about accessibility requirements of attendees?</h4>
-          <p><strong>NOTE:</strong> When publicising events ensure that there is a standard accessibility contact statement on all publicity, 
-            including print ads, web pages, and information flyers. An example of this statement 
-            is: 'Please indicate if you have any access requirements so that we may facilitate you in attending this event'.</p>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="accessRequirements" id="yesRequirements" value="Yes"
-              required />
-            <label class="form-check-label" for="yesRequirements">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="accessRequirements" id="noRequirements" value="No"
-              required />
-            <label class="form-check-label" for="noRequirements">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="accessRequirements" id="unknownRequirements"
-              value="Unknown" required />
-            <label class="form-check-label" for="unknownRequirements">Unknown</label>
-          </div>
-
-          <h4 class="mt-3">Designated Quiet Space?</h4>
-            <p><strong>NOTE:</strong> Events can be overwhelming for many people. Providing a quiet, sensory-friendly space is important
-               so people can take a break from the main event. Find out more about creating a sensory-friendly environment
-               at the <a href="https://www.tcd.ie/disability/services/tcdsense.php" target="_blank" rel=""noopener>
-               TCD Sense Project page</a>.</p>
-               <p>TCD Sense have developed a <a href="https://tcdsensemap.ie/" target="_blank" rel="noopener">Sensory Map</a> 
-                which provides information about the sensory environments 
-                in different areas of Trinity. It also provides physical access information for buildings across campus. 
-                 </p>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="quietSpace" id="yesSpace" value="Yes" required />
-            <label class="form-check-label" for="yesSpace">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="quietSpace" id="noSpace" value="No" required />
-            <label class="form-check-label" for="noSpace">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="quietSpace" id="advanceSpace"
-              value="By request in advance" required />
-            <label class="form-check-label" for="advanceSpace">By request in advance</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="quietSpace" id="requestSpace"
-              value="By request at the event" required />
-            <label class="form-check-label" for="requestSpace">By request at the event</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="quietSpace" id="unknownSpace" value="Unknown" required />
-            <label class="form-check-label" for="unknownSpace">Unknown</label>
-          </div>
-
-
-          <h4 class="mt-3">Disabled Person's Parking near the event?</h4>
-          <p>More information on <a href="https://www.tcd.ie/disability/physical-access-information/accessible-parking-info/" 
-            target="_blank" rel="noopener">Accessible Campus Parking </a>at Trinity.</p>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventParking" id="yesParking" value="Yes" required />
-            <label class="form-check-label" for="yesParking">Yes</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventParking" id="noParking" value="No" required />
-            <label class="form-check-label" for="noParking">No</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventParking" id="advanceParking"
-              value="By request in advance" required />
-            <label class="form-check-label" for="advanceParking">By request in advance</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventParking" id="requestParking"
-              value="By request at the event" required />
-            <label class="form-check-label" for="requestParking">By request at the event</label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="eventParking" id="unknownParking" value="Unknown"
-              required />
-            <label class="form-check-label" for="unknownParking">Unknown</label>
-          </div>
-
-
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sensoryInfo"
+                id="unknownSensoryinfo"
+                value="Unknown if information is in multiple formats"
+                required
+                aria-describedby="infoDesc"
+              />
+              <label class="form-check-label" for="unknownSensoryinfo"
+                >Unknown if information is in multiple formats</label
+              >
+            </div>
+          </fieldset>
 
           <h2 class="mt-3">Audio &amp; Visual</h2>
 
           <!-- Sample radio buttons for Access to the Event with tooltip -->
-          <div class="mb-3" data-bs-toggle="tooltip" title="">
-            <label class="form-label">
-              <p>More information on making media accessible can be found 
-                at <a href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/social-media/" target="_blank" rel="noopener">
-                Social Media Accessibility</a>.</p>
-            </label>
+          <div class="mb-3">
+            <p>
+              More information on making media accessible can be found at
+              <a
+                href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/social-media/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Social Media Accessibility</a
+              >
+              (opens in a new window).
+            </p>
 
-            <h4>Are the presentation slides (MS PowerPoint etc.,.) accessible?</h4>
-            <p>Refer to the Guidelines for <a href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/" target="_blank" rel="noopener">
-              Creating Accessible Materials</a>.</p>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventSlides" id="yesSlides" value="Yes" required />
-              <label class="form-check-label" for="yesSlides">Yes</label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventSlides" id="noSlides" value="No" required />
-              <label class="form-check-label" for="noSlides">No</label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventSlides" id="unknownSlides" value="Unknown"
-                required />
-              <label class="form-check-label" for="unknownSlides">Unknown</label>
-            </div>
-
-            <h4 class="mt-3">Does the event include a video showing or video call?</h4>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventVideo" id="yesVideo" value="Yes" required />
-              <label class="form-check-label" for="yesVideo">Yes</label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventVideo" id="noVideo" value="No" required />
-              <label class="form-check-label" for="noVideo">No</label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="eventVideo" id="unknownVideo" value="Unknown"
-                required />
-              <label class="form-check-label" for="unknownVideo">Unknown</label>
-            </div>
-
-
-            <h2 class="mt-3">Sustainability</h2>
-
-            <!-- Sample radio buttons for Access to the Event with tooltip -->
-            <div class="mb-3" data-bs-toggle="tooltip" title="">
-              <label class="form-label">
-                <p>These questions can help guide the planning process and ensure
-                  that the event is not only enjoyable but also environmentally responsible.</p>
-                <p>When planning or evaluating a sustainable event, it's essential to consider 
-                  various aspects to ensure that the event aligns with sustainability principles. Consider <strong>waste management</strong>, 
-                  <strong>transportation</strong>, <strong>consumption</strong> , and how will the event 
-                  promote <strong>sustainability awareness</strong>.</p>
-                  <p>Read more about <a href="https://www.tcd.ie/provost/sustainability/initiatives/#" target="_blank" rel="noopener">
-                    Trinity Sustainability Initiatives</a>.</p>
-              </label>
-
-              <h4>Will waste be minimised at the event?</h4>
-              <p>How will waste be minimised at the event, and what strategies are in place for recycling and composting?</p>
+            <fieldset>
+              <legend>
+                Are the presentation slides (MS PowerPoint etc.) accessible?
+              </legend>
+              <p>
+                Refer to the
+                <a
+                  href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Guidelines for Creating Accessible Materials</a
+                >
+                (opens in a new window).
+              </p>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="yesWaste" value="Yes" required />
-                <label class="form-check-label" for="yesSlides">Yes</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventSlides"
+                  id="yesSlides"
+                  value="Yes, they are accessible"
+                  required
+                />
+                <label class="form-check-label" for="yesSlides"
+                  >Yes, they are accessible</label
+                >
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="noWate" value="No" required />
-                <label class="form-check-label" for="noSlides">No</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventSlides"
+                  id="noSlides"
+                  value="No, they are not accessible"
+                  required
+                />
+                <label class="form-check-label" for="noSlides"
+                  >No, they are not accessible</label
+                >
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="eventWaste" id="unknownWaste" value="Unknown"
-                  required />
-                <label class="form-check-label" for="unknownWaste">Unknown</label>
-              </div>
-
-              <h4 class="mt-3">Are measures being taken to promote sustainable transportation options?</h4>
-              <p>What measures are being taken to promote sustainable transportation options for attendees, 
-                such as carpooling, public transit, or shuttle services?</p>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="yesTransport" value="Yes" required />
-                <label class="form-check-label" for="yesTransport">Yes</label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="noTransport" value="No" required />
-                <label class="form-check-label" for="noTransport">No</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventSlides"
+                  id="noRequiredSlides"
+                  value="Presentation slides are not required"
+                  required
+                />
+                <label class="form-check-label" for="noRequiredSlides"
+                  >Presentation slides are not required</label
+                >
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableTransport" id="unknownTransport" value="Unknown"
-                  required />
-                <label class="form-check-label" for="unknownTransport">Unknown</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventSlides"
+                  id="unknownSlides"
+                  value="Unknown if the slides are accessible"
+                  required
+                />
+                <label class="form-check-label" for="unknownSlides"
+                  >Unknown if the slides are accessible</label
+                >
               </div>
+            </fieldset>
 
-              <h4 class="mt-3">Are products and services procured for the event sustainably sourced or produced?</h4>
-                <p>How are you ensuring that the products and services procured for the event (e.g., food, decorations, 
-                  promotional items) are sustainably sourced or produced?</p>
+            <fieldset class="mt-3">
+              <legend>
+                Does the event include a video showing or video call?
+              </legend>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventVideo"
+                  id="yesVideo"
+                  value="Yes, it includes a video"
+                  required
+                />
+                <label class="form-check-label" for="yesVideo"
+                  >Yes, it includes a video</label
+                >
+              </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="yesSourced" value="Yes" required />
-                <label class="form-check-label" for="yesSourced">Yes</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventVideo"
+                  id="noVideo"
+                  value="No, it does not include a video"
+                  required
+                />
+                <label class="form-check-label" for="noVideo"
+                  >No, it does not include a video</label
+                >
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="noSourced" value="No" required />
-                <label class="form-check-label" for="noSourced">No</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="eventVideo"
+                  id="unknownVideo"
+                  value="Unknown if the event includes a video"
+                  required
+                />
+                <label class="form-check-label" for="unknownVideo"
+                  >Unknown if the event includes a video</label
+                >
               </div>
+            </fieldset>
+          </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="sustainableSourced" id="unknownSourced" value="Unknown"
-                  required />
-                <label class="form-check-label" for="unknownSourced">Unknown</label>
-              </div>
+          <h2 class="mt-3">Sustainability</h2>
 
+          
 
-              <h4 class="mt-3">Will the event promote sustainability awareness and education among attendees?</h4>
-              <p>How will the event promote sustainability awareness and education among attendees, and how will their 
-                feedback be collected to improve future sustainability efforts?</p>
+          <!-- Sample radio buttons for Access to the Event with tooltip -->
+          <section class="mb-3">
+            <!--<h2>Planning for a Sustainable Event</h2>-->
+            <p>
+              These questions can help guide the planning process and ensure
+              that the event is not only enjoyable but also environmentally
+              responsible.
+            </p>
+            <p>
+              When planning or evaluating a sustainable event, it's essential to
+              consider various aspects to ensure that the event aligns with
+              sustainability principles. Consider
+              <strong>waste management</strong>,
+              <strong>transportation</strong>, <strong>consumption</strong>, and
+              how the event will promote
+              <strong>sustainability awareness</strong>.
+            </p>
+            <p>
+              Read more about
+              <a
+                href="https://www.tcd.ie/provost/sustainability/initiatives/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Trinity Sustainability Initiatives (opens in a new window)"
+                >Trinity Sustainability Initiatives</a
+              >.
+            </p>
+          </section>
+
+          <!-- New Section added questions -->
+
+          <div class="container mt-4">
+            <!-- Single Use Items Section -->
+            <fieldset class="mb-3">
+                <legend>Single Use Items</legend>
+                <p>Will single use items be available at the event? i.e. coffee cups, plates, water bottles, gift wrapping, plastic bags.</p>
+                
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="singleUseYes" name="singleUseItems" value="yes" required>
+                    <label class="form-check-label" for="singleUseYes">Yes, single use items will be available for customers at the event.</label>
+                </div>
+
+    
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="singleUseNo" name="singleUseItems" value="no">
+                    <label class="form-check-label" for="singleUseNo">No, the event will be 100% reusable.</label>
+                </div>
+
+            </fieldset>
+    
+            <!-- Reduce Section -->
+            <fieldset class="mb-3">
+                <legend>Reduce</legend>
+                <p>Will the event be a zero waste event? (How will waste be minimised at the event, and what strategies are in place for recycling and composting?)</p>
+                
+                <div class="mb-3 form-check">
+                    <input type="radio" class="form-check-input" id="zeroWasteYes" name="zeroWaste" value="yes" required>
+                    <label class="form-check-label" for="zeroWasteYes">Yes, it will be 100% zero waste.</label>
+                </div>
+    
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="zeroWasteNo" name="zeroWaste" value="no">
+                    <label class="form-check-label" for="zeroWasteNo">No, there will be waste generated.</label>
+                </div>
+
+            </fieldset>
+    
+            <!-- Food Section -->
+            <fieldset class="mb-3">
+                <legend>Food</legend>
+                <p>Will the event take a veggie first approach? 100% vegetarian or vegan</p>
+                
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="veggieYes" name="veggieApproach" value="yes" required>
+                    <label class="form-check-label" for="veggieYes">Yes</label>
+                </div>
+    
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="veggieNo" name="veggieApproach" value="no">
+                    <label class="form-check-label" for="veggieNo">No</label>
+                </div>
+
+            </fieldset>
+    
+            <!-- Transport Section -->
+            <fieldset class="mb-3">
+                <legend>Transport</legend>
+                <p>Will you promote public transport and active travel (walking and cycling) to your event?</p>
+                
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="transportYes" name="transport" value="yes" required>
+                    <label class="form-check-label" for="transportYes">Yes, we will promote sustainable travel options to our event (walking, cycling and public transport).</label>
+                </div>
+    
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="transportNo" name="transport" value="no">
+                    <label class="form-check-label" for="transportNo">No</label>
+
+            </fieldset>
+        </div>
+          <!-- End -->
+      
+              
+
+          <fieldset class="mb-3">
+            <legend class="mt-3">
+              Sustainability of Procured Products and Services
+            </legend>
+            <p>
+              How are you ensuring that the products and services procured for
+              the event (e.g., food, decorations, promotional items) are
+              sustainably sourced or produced?
+              <a
+                href="URL_to_sustainability_standards"
+                target="_blank"
+                rel="noopener"
+                >Learn more about our sustainability standards.</a
+              >
+            </p>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="promoteAwareness" id="yesSourced" value="Yes" required />
-              <label class="form-check-label" for="yesAwareness">Yes</label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sustainableSourced"
+                id="yesSourced"
+                value="Yes"
+                required
+              />
+              <label class="form-check-label" for="yesSourced"
+                >Sustainably sourced or produced</label
+              >
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="promoteAwareness" id="noAwareness" value="No" required />
-              <label class="form-check-label" for="noAwareness">No</label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sustainableSourced"
+                id="noSourced"
+                value="No"
+                required
+              />
+              <label class="form-check-label" for="noSourced"
+                >Not sustainably sourced or produced</label
+              >
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="promoteAwareness" id="unknownAwareness" value="Unknown"
-                required />
-              <label class="form-check-label" for="unknownAwareness">Unknown</label>
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sustainableSourced"
+                id="unknownSourced"
+                value="Unknown"
+                required
+              />
+              <label class="form-check-label" for="unknownSourced"
+                >Sustainability unknown</label
+              >
             </div>
 
+            <small id="sourcedHelp" class="form-text text-muted">
+              Please select an option to indicate the sustainability of products
+              and services for this event.
+            </small>
+          </fieldset>
 
+          <fieldset class="mb-3">
+            <legend class="mt-3">Sustainability Awareness and Education</legend>
+            <p>
+              How will the event promote sustainability awareness and education
+              among attendees, and how will their feedback be collected to
+              improve future sustainability efforts?
+            </p>
 
-
-
-
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="promoteAwareness"
+                id="yesAwareness"
+                value="Yes"
+                required
+              />
+              <label class="form-check-label" for="yesAwareness"
+                >Yes, activities and information to promote sustainability
+                awareness will be included</label
+              >
             </div>
 
-            <!-- ... Repeat similar structure with tooltips for other fields ... -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="promoteAwareness"
+                id="noAwareness"
+                value="No"
+                required
+              />
+              <label class="form-check-label" for="noAwareness"
+                >No, there are no plans to promote sustainability
+                awareness</label
+              >
+            </div>
 
-            <!-- Sample textarea for Further Comments with tooltip -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="promoteAwareness"
+                id="unknownAwareness"
+                value="Unknown"
+                required
+              />
+              <label class="form-check-label" for="unknownAwareness"
+                >It is unknown if sustainability awareness will be
+                promoted</label
+              >
+            </div>
+
+            <small id="awarenessHelp" class="form-text text-muted">
+              Select 'Yes' if the event will include activities or information
+              to promote sustainability awareness, such as workshops,
+              informational booths, or educational materials.
+            </small>
+          </fieldset>
+
+          <!-- ... Repeat similar structure with tooltips for other fields ... -->
+
+          <!-- Sample textarea for Further Comments with tooltip -->
+          <div class="mb-3">
             <h2 class="mt-3">Additional Event Details</h2>
-            <div class="mb-3">
-              <label for="comments" class="form-label">
-                <h4>Any further comments or details?</h4>
-                <p>These questions are not necessarily complete in terms of providing comprehensive access information. 
-                  Please think about other details you might want to add in the further comments section. 
-                  If the event has catering, you might want to include food options.</p>
-              </label>
-              <textarea class="form-control" id="comments" data-bs-toggle="tooltip"
-                title=""></textarea>
-            </div>
+            <h3>Further Comments or Details</h3>
+            <p id="detailsDescription">
+              These questions may not cover all aspects of event accessibility.
+              Consider adding any additional details that could help attendees,
+              such as catering options, specific accommodations, or
+              transportation information.
+            </p>
 
-            <div class="mb-3">
-              <label for="contacts" class="form-label">
-                <h4>Please provide contact details for any access enquiries (if not included elsewhere):</h4>
-              </label>
-              <textarea class="form-control" id="contacts" data-bs-toggle="tooltip"
-                title=""></textarea>
+            <label for="comments" class="form-label">Additional Comments</label>
+            <textarea
+              class="form-control"
+              id="comments"
+              rows="3"
+              aria-describedby="detailsDescription commentsHelp"
+              placeholder="Include any special accommodations, dietary needs, or other considerations here."
+            ></textarea>
+            <div id="commentsHelp" class="form-text">
+              Provide any extra information that could assist in making the
+              event more accessible and enjoyable for all participants.
             </div>
+          </div>
 
-            <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
-            <button type="button" class="btn btn-warning" id="clearBtn">Clear All Fields</button>
-        </form>
+          <div class="mb-3">
+            <label for="contacts" class="form-label">
+              <h4>
+                Please provide contact details for any access enquiries (if not
+                included elsewhere):
+              </h4>
+            </label>
+            <textarea
+              class="form-control"
+              id="contacts"
+              rows="3"
+              aria-describedby="contactsHelp"
+              placeholder="Enter contact details here."
+            ></textarea>
+            <div id="contactsHelp" class="form-text">
+              Include email addresses, phone numbers, or other contact
+              information for accessibility inquiries.
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="submitBtn">
+            Submit
+          </button>
+          
+          <button type="button" class="btn btn-warning" id="clearBtn">
+            Clear All Fields
+          </button>
+          
+      </form>
+
+
         <div class="mt-4" id="output"></div>
         <div class="mt-4">
-          <button type="button" class="btn btn-info mt-1" onclick="copyToTextarea()">Copy to Textarea</button>
-            <button class="btn btn-secondary mt-1" id="copyBtn">Copy to Clipboard</button>
-            <button class="btn btn-secondary mt-1" id="pdfBtn">Save as PDF</button>
-            <button class="btn btn-secondary mt-1" id="emailBtn">Send to Email</button>
+          <button
+            type="button"
+            class="btn btn-info mt-1"
+            onclick="copyToTextarea()"
+          >
+            Copy to Textarea
+          </button>
+          <button class="btn btn-secondary mt-1" id="copyBtn">
+            Copy to Clipboard
+          </button>
+          <button class="btn btn-secondary mt-1" id="pdfBtn">
+            Save as PDF
+          </button>
+          <button class="btn btn-secondary mt-1" id="emailBtn">
+            Send to Email
+          </button>
         </div>
-    
-    <!-- Textarea to display copied form data -->
-<section class="container mt-4">
-  <textarea class="form-control" id="copiedData" rows="10" placeholder="Copied form data will appear here..."></textarea>
-</section>
 
-<section class="container mt-4">
-<textarea rows="20" cols="50" id="targetTextArea">
-  Paste your completed form text here.
-</textarea>
-<div class="mt-4">
-<input type="button" class="btn btn-info mt-1" onclick="printTextArea()" value="Print All Text"/>
-</div>
+        <!-- Textarea to display copied form data -->
+        <section class="container mt-4">
+          <label for="copiedData">Copied Form Data</label>
+          <textarea
+            class="form-control"
+            id="copiedData"
+            rows="10"
+            aria-describedby="copiedDataHelp"
+            placeholder="Copied form data will appear here..."
+          ></textarea>
+          <small id="copiedDataHelp" class="form-text text-muted">
+            Data copied from the form will be displayed here for review.
+          </small>
+        </section>
 
-</section>
+        <!--
+        <section class="container mt-4">
+          <label for="targetTextArea">Paste Completed Form Text</label>
+          <textarea
+            class="form-control"
+            rows="10"
+            id="targetTextArea"
+            aria-describedby="targetTextAreaHelp"
+          >
+        Paste your completed form text here.
+      </textarea
+          >
+          <small id="targetTextAreaHelp" class="form-text text-muted">
+            After pasting your form text, you can print it using the button
+            below.
+          </small>
+          <div class="mt-4">
+            <button type="button" class="btn btn-info mt-1" id="printButton">
+              Print All Text
+            </button>
+          </div>
+        </section>
+      -->
 
-    <!-- Two Card Body -->
-    <div class="row mt-5">
-      <div class="col-md-6 mt-3">
-          <div class="card">
-            <!-- <img src="" class="card-img-top" alt="..."> -->
+        <!-- Two Card Body -->
+        <div class="row mt-5">
+          <div class="col-md-6 mt-3">
+            <div class="card text-black">
               <div class="card-body">
                 <h4 class="card-title">Contact Trinity disAbility Service</h4>
-                <p class="card-text">Trinity disAbility Service <br />
-                  Trinity disAbility Hub <br />
-                  Printing House Square <br />
-                  Trinity College Dublin <br />
-                  Dublin D02 DP29</p>
+                <address class="card-text">
+                  Trinity disAbility Service<br />
+                  Trinity disAbility Hub<br />
+                  Printing House Square<br />
+                  Trinity College Dublin<br />
+                  Dublin D02 DP29
+                </address>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Email: askds@tcd.ie</li>
-                  <li class="list-group-item">Phone: +353 1 896 3111</li>
-                  <li class="list-group-item">Website: <a href="https://www.tcd.ie/disability/" target="_blank" rel="noopener">
-                    www.tcd.ie/disability</a></li>
+                  <li class="list-group-item">
+                    Email: <a href="mailto:askds@tcd.ie">askds@tcd.ie</a>
+                  </li>
+                  <li class="list-group-item">
+                    Website:
+                    <a
+                      href="https://www.tcd.ie/disability/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Trinity disAbility Service Website</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    Twitter:
+                    <a
+                      href="https://twitter.com/TCDAbility"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@TCDAbility</a
+                    >
+                  </li>
                 </ul>
               </div>
+            </div>
           </div>
-      </div>
-      <div class="col-md-6 mt-3">
-          <div class="card">
-            <!-- <img src="" class="card-img-top" alt="..."> -->
+          <div class="col-md-6 mt-3">
+            <div class="card text-black">
               <div class="card-body">
-                  <h4 class="card-title">Contact Trinity Sustainability</h4>
-                  <p class="card-text">For any suggestions, requests or enquiries about sustainability please email sustainability@tcd.ie. </p>
-                  <p class="card-text">Visit <a href="Trinity Sustainability Resources" target="_blank" rel="noopener">
-                    Trinity Sustainability Resources</a> for more information. </p>
-                    <p class="card-text">View <a href="https://www.tcd.ie/provost/sustainability/strategic-plan/" target="_blank" rel="noopener">
-                      Trinity Sustainability Sustainability Plan</a>.</p>
-
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Email: askds@tcd.ie</li>
-                    <li class="list-group-item">Phone: +353 1 896 3111</li>
-                    <li class="list-group-item">Website: <a href="https://www.tcd.ie/provost/sustainability/" target="_blank" rel="noopener">
-                      www.tcd.ie/provost/sustainability</a></li>
-                  </ul>
+                <h4 class="card-title">Contact Trinity Sustainability</h4>
+                <p class="card-text">
+                  For any suggestions, requests, or enquiries about
+                  sustainability, please email
+                  <a href="mailto:sustainability@tcd.ie"
+                    >sustainability@tcd.ie</a
+                  >.
+                </p>
+                <p class="card-text">
+                  Visit the
+                  <a
+                    href="https://www.tcd.ie/provost/sustainability/resources/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Trinity Sustainability Resources</a
+                  >
+                  for more information.
+                </p>
+                <p class="card-text">
+                  View the
+                  <a
+                    href="https://www.tcd.ie/provost/sustainability/strategic-plan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Trinity Sustainability Strategic Plan</a
+                  >.
+                </p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Website:
+                    <a
+                      href="https://www.tcd.ie/provost/sustainability/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Trinity Sustainability Website</a
+                    >
+                  </li>
+                  <li class="list-group-item">
+                    Twitter:
+                    <a
+                      href="https://twitter.com/TrinitySustain1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@TrinitySustain1</a
+                    >
+                  </li>
+                </ul>
               </div>
+            </div>
           </div>
+        </div>
+
+        <section class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <!-- Custom styles to ensure contrast ratio -->
+              <div
+                class="alert alert-success"
+                role="alert"
+                style="
+                  color: #004085;
+                  background-color: #e2f3fd;
+                  border-color: #b8daff;
+                "
+              >
+                <h4 class="alert-heading" style="color: #004085">
+                  Accessibility Commitment
+                </h4>
+                <p>
+                  This website has been evaluated with the
+                  <a
+                    href="https://wave.webaim.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="color: #0056b3"
+                    >WAVE Web Accessibility Evaluation Tool</a
+                  >, and no errors were detected. We are committed to
+                  maintaining a high level of accessibility.
+                </p>
+                <hr />
+                <p class="mb-0">
+                  If you encounter any accessibility barriers, please
+                  <a href="mailto:askds@tcd.ie" style="color: #0056b3"
+                    >email us for assistance or feedback</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
       </div>
-  </div>
 
+      <!-- Footer -->
+      <footer class="mt-5">
+        <p class="text-center">
+          &copy; 2023 Trinity Accessibility & Sustainability Event Generator.
+          All rights reserved.
+        </p>
+        <button
+          onclick="topFunction()"
+          id="backToTopBtn"
+          class="btn btn-primary"
+          aria-label="Back to top"
+          style="display: none; position: fixed; bottom: 20px; right: 20px"
+        >
+          <i class="bi bi-arrow-up"></i> Top
+        </button>
+      </footer>
+      <!-- End Footer -->
 
-  </div>
+      <script>
+        function toggleContrast() {
+          var body = document.body;
+          var isHighContrast = body.classList.toggle("high-contrast");
+          document
+            .getElementById("toggle-contrast")
+            .setAttribute("aria-pressed", isHighContrast);
+          document.getElementById("toggle-contrast").textContent =
+            isHighContrast ? "Disable High Contrast" : "Enable High Contrast";
+        }
 
-  <!-- Footer -->
-  <footer class="mt-5">
-    <p class="text-center">&copy; 2023 Trinity Accessibility & Sustainability Event Generator. All rights reserved.</p>
-</footer>
-  <!-- End Footer -->
+        function toggleFontSize() {
+          var body = document.body;
+          var isLargeFont = body.classList.toggle("large-font");
+          document
+            .getElementById("toggle-font-size")
+            .setAttribute("aria-pressed", isLargeFont);
+          document.getElementById("toggle-font-size").textContent = isLargeFont
+            ? "Disable Large Font"
+            : "Enable Large Font";
+        }
+      </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.min.js"></script>
-  <script src="app.js"></script>
+      <!--
+<script type="text/javascript">
+  document.getElementById('printButton').addEventListener('click', printTextArea);
 
-  <script type="text/javascript">
-    function printTextArea() {
-      childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
+  function printTextArea() {
+    // Your print logic here
+    childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
       childWindow.document.open();
       childWindow.document.write('<html><head></head><body>');
       childWindow.document.write(document.getElementById('targetTextArea').value.replace(/\n/gi,'<br>'));
@@ -695,8 +2020,72 @@
       childWindow.print();
       childWindow.document.close();
       childWindow.close();
-    }
-  </script>
-</body>
+  }
+</script>
+-->
 
+      <!-- Accessibility Buttons -->
+      <!-- 
+<script>
+  const contrastButton = document.getElementById('toggle-contrast');
+  const fontSizeButton = document.getElementById('toggle-font-size');
+  const htmlElement = document.documentElement; 
+  const bodyElement = document.body;
+
+  contrastButton.addEventListener('click', () => {
+    bodyElement.classList.toggle('high-contrast');
+  });
+
+  fontSizeButton.addEventListener('click', () => {
+    htmlElement.classList.toggle('large-font');
+  });
+</script>
+-->
+
+      <script>
+        //Get the button
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+      </script>
+
+      <script src="app.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD5tr5Szkbe5Ck4Ck4C2DgHf"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+      <!--<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>-->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.9/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </main>
+  </body>
 </html>

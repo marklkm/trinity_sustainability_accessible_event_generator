@@ -1,62 +1,179 @@
-parent .form-check {
-    font-size: 20px;
-}  
-
-input[type="text"] {
-    font-size:20px;
+/* Default Styles */
+body {
+  font-size: 1.25rem; /* Base font size in rem for scalability */
+  color: #333;
+  background-color: #fff;
 }
 
-input[type="radio"] {
-    font-size: 20px;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000; /* Choose a high-contrast background color */
+  color: #fff; /* Choose a high-contrast text color */
+  padding: 8px 16px;
+  z-index: 100; /* Ensure it's above other elements */
+  text-decoration: none;
+  font-weight: bold; /* Make it stand out */
+  transition: top 0.3s;
 }
 
-.form-control, .form-check-label {
-    font-size: 20px;
+.skip-link:focus {
+  top: 10px; /* Position it where it can be seen when focused */
 }
 
- textarea.form-control {
-    font-size: 20px;
-} 
-
-.h1, .h2, h1, h2 {
-    color: #81358a;
+#backToTopBtn {
+  z-index: 100; /* Ensure it's above other items */
+  opacity: 0.7; /* Transparency */
+  transition: opacity 0.2s; /* Smooth transition for mouse hover */
 }
 
+#backToTopBtn:hover {
+  opacity: 1; /* Full opacity when hovering */
+}
+
+/* High Contrast Styles */
+/*.high-contrast {
+  color: #fff;
+  background-color: #000;
+}*/
+
+/* Larger Font Styles */
+/*.large-font {
+  font-size: 1.375rem; */ /* Larger font size in rem */
+/*} */
+
+/* Accessibility Buttons */
+  /* Ensure that focus is visible */
+  .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+
+  /* High contrast mode styles */
+  .high-contrast {
+    background-color: #000;
+    color: #fff;
+    /* You would add other high contrast styles here */
+  }
+
+  /* Large font mode styles */
+  .large-font {
+    font-size: 1.25em; /* This increases the font size by 25% */
+  }
+
+  /* Ensure that all text elements scale accordingly */
+  .large-font * {
+    font-size: inherit;
+  }
+
+/* Form Styles */
+.form-check-label,
+.form-control {
+  font-size: 1.25rem; /* Consistent form element font size */
+}
+
+/* Headings */
+.heading-primary,
+.heading-secondary,
+h1,
+h2 {
+  color: #81358a; /* Ensure this color has enough contrast */
+}
+
+/* Paragraphs */
 p {
-    font-size: 20px;
+  font-size: 1.25rem;
 }
 
+/* Background Images */
 .bg-image {
-    max-height: 580px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    font-family: "object-fit: cover; object-position: center";
-  }
-
-.list-group-item {
-    font-size: 20px;
+  max-height: 580px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-  /* Print css */
-#printstyle {
-    background-color: #FF9999;
-    position: relative;
-    z-index: 3;
+/* List Items */
+.list-group-item {
+  font-size: 1.25rem;
+  line-height: 1.5; /* Adjust line height for better visual alignment */
+  padding: 0.375rem 0.75rem; /* Slightly reduced padding */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Align items vertically */
+  justify-content: start; /* Align content to the start */
+}
 
-    text-align: center;
-    margin: 1em;
-    /* text-transform: uppercase; */
-    font-size: 1.2em;
-    font-weight: bold;
-    /* background: #FF9999; */
-    padding: 8px 10px 10px 10px;
-    color: #000 !important;
-    vertical-align: middle;
-    display: inline-block;
+/* Print Styles */
+.print-style {
+  background-color: #ff9999; /* Ensure this color has enough contrast */
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 1em;
+  font-size: 1.2rem; /* Slightly larger font size for print */
+  font-weight: bold;
+  padding: 0.5rem;
+  color: #000; /* Avoid !important to allow user overrides */
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    position: static; /* If you have a fixed navbar on desktop */
+    display: block;
   }
-  
-  /* IE hacks */
-  *+html .nowrap {white-space: normal; display: inline-block;}
-  *+html .toggle input {visibility: visible; height: 0; width: 0; padding: 0; margin:0; top: -1000px;}
-  
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    /* Additional styles for full-width nav items */
+  }
+
+  .hamburger-icon {
+    display: block; /* Only show the hamburger icon on mobile */
+  }
+
+  .sidebar,
+  .content {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .desktop-only {
+    display: none; /* Hide desktop-only elements */
+  }
+
+  .mobile-only {
+    display: block; /* Show mobile-only elements */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1rem; /* Smaller base font size for mobile */
+  }
+
+  .large-font {
+    font-size: 1.125rem; /* Slightly larger font size for important text */
+  }
+
+  .heading-primary,
+  .heading-secondary,
+  h1,
+  h2 {
+    font-size: 1.5rem; /* Adjust heading sizes appropriately */
+  }
+
+  .bg-image {
+    max-height: 300px; /* Smaller max-height for background images */
+  }
+
+  .form-control,
+  .form-check-label,
+  .button {
+    font-size: 1rem; /* Larger font size for touch targets */
+    padding: 12px; /* Larger padding for easier interaction */
+  }
+}
