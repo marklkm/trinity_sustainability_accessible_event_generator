@@ -149,8 +149,8 @@ document.getElementById("emailBtn").addEventListener("click", function () {
 });
 
 document.getElementById("clearBtn").addEventListener("click", function () {
-  document.getElementById("eventForm").reset();
-  document.getElementById("output").innerText = "";
+  // Refresh the page
+  location.reload();
 });
 
 function copyToTextarea() {
