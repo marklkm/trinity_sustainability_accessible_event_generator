@@ -117,20 +117,22 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 });
 
 (function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
+  "use strict";
+  var forms = document.querySelectorAll(".needs-validation");
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         }
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
 
 document.getElementById("copyBtn").addEventListener("click", function () {
   const output = document.getElementById("output");
@@ -165,8 +167,8 @@ document.getElementById("emailBtn").addEventListener("click", function () {
 });
 
 document.getElementById("clearBtn").addEventListener("click", function () {
-  document.getElementById("eventForm").reset();
-  document.getElementById("output").innerText = "";
+  // Refresh the page
+  location.reload();
 });
 
 function copyToTextarea() {
@@ -176,24 +178,31 @@ function copyToTextarea() {
   formData +=
     "Event Name: " + document.getElementById("eventName").value + "\n";
   formData +=
-    "Event Description: " + document.getElementById("eventDescription").value + "\n";
+    "Event Description: " +
+    document.getElementById("eventDescription").value +
+    "\n";
   formData +=
     "Event Location: " + document.getElementById("eventLocation").value + "\n";
   formData +=
-    "Event Organiser Name: " + document.getElementById("organiserName").value + "\n";
+    "Event Organiser Name: " +
+    document.getElementById("organiserName").value +
+    "\n";
   formData +=
     "Event Organiser Email: " +
     document.getElementById("organiserEmail").value +
     "\n";
   formData +=
-    "Event Start Time: " + document.getElementById("eventStartTime").value + "\n";
+    "Event Start Time: " +
+    document.getElementById("eventStartTime").value +
+    "\n";
   formData +=
     "Event End Time: " + document.getElementById("eventEndTime").value + "\n";
   formData +=
-    "Event Start Date: " + document.getElementById("eventStartDate").value + "\n";
-    formData +=
+    "Event Start Date: " +
+    document.getElementById("eventStartDate").value +
+    "\n";
+  formData +=
     "Event End Date: " + document.getElementById("eventEndDate").value + "\n";
-  
 
   // For radio buttons, you'll need to check which one is selected
   let onlineEventEls = document.getElementsByName("onlineEvent");
@@ -283,7 +292,10 @@ function copyToTextarea() {
   let quietSpaceEls = document.getElementsByName("quietSpace");
   for (let i = 0; i < quietSpaceEls.length; i++) {
     if (quietSpaceEls[i].checked) {
-      formData += " Have you made provisions for a designated quiet space? " + quietSpaceEls[i].value + "\n";
+      formData +=
+        " Have you made provisions for a designated quiet space? " +
+        quietSpaceEls[i].value +
+        "\n";
       break;
     }
   }
@@ -347,13 +359,10 @@ function copyToTextarea() {
   for (let i = 0; i < zeroWasteEls.length; i++) {
     if (zeroWasteEls[i].checked) {
       formData +=
-        "Will the event be a zero waste event? " +
-        zeroWasteEls[i].value +
-        "\n";
+        "Will the event be a zero waste event? " + zeroWasteEls[i].value + "\n";
       break;
     }
   }
-
 
   let veggieApproachEls = document.getElementsByName("veggieApproach");
   for (let i = 0; i < veggieApproachEls.length; i++) {
