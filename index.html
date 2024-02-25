@@ -26,7 +26,7 @@
     <div class="container">
       <a
         class="navbar-brand nav-logo"
-        href="https://www.tcd.ie/"
+        href="index.html"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -86,6 +86,13 @@
             >
           </li>
         </ul>
+        <form class="d-flex" role="search" id="searchForm">
+          <label for="navbarSearch" class="visually-hidden">Search</label>
+          <input class="form-control me-2" type="search" placeholder="Search this Page" aria-label="Search" id="navbarSearch">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        
+        
       </div>
     </div>
   </nav>
@@ -1853,6 +1860,14 @@
                       >@TCDAbility</a
                     >
                   </li>
+                  <li class="list-group-item">
+                    Linktree
+                    <a
+                      href="https://linktr.ee/TrinityDS"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >linktr.ee/TrinityDS</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -2027,7 +2042,71 @@
           });
         });
         </script>
+     
+     
+     <!-- Search Box -->
+
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchForm = document.getElementById('searchForm');
+        const mainContent = document.getElementById('maincontent');
         
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent the default form submission
+          const searchQuery = document.getElementById('navbarSearch').value.trim().toLowerCase();
+          
+          if (!searchQuery) return; // Do nothing if the search query is empty
+          
+          // Clear previous highlights
+          clearHighlights();
+          
+          // Create a regex from the search query for case-insensitive matching
+          const searchRegex = new RegExp(searchQuery, 'gi');
+          
+          // Clone mainContent to work on a copy
+          const contentCopy = mainContent.cloneNode(true);
+          
+          // Search and highlight matches in the content copy
+          highlightMatches(contentCopy, searchRegex);
+          
+          // Replace the original content with the modified copy
+          mainContent.parentNode.replaceChild(contentCopy, mainContent);
+        });
+        
+        function clearHighlights() {
+          // Function to clear previous highlights
+          const highlighted = document.querySelectorAll('.highlight');
+          highlighted.forEach(function(node) {
+            node.parentNode.replaceChild(document.createTextNode(node.textContent), node);
+          });
+        }
+        
+        function highlightMatches(node, regex) {
+          // Function to highlight matches
+          const span = document.createElement('span');
+          span.className = 'highlight';
+          span.style.backgroundColor = 'yellow';
+          
+          const nodes = node.childNodes;
+          for (let i = 0; i < nodes.length; i++) {
+            const currentNode = nodes[i];
+            
+            if (currentNode.nodeType === 3) { // Text node
+              const match = currentNode.data.match(regex);
+              if (match) {
+                const highlightedText = currentNode.data.replace(regex, `<span class="highlight" style="background-color: yellow;">$&</span>`);
+                const fragment = document.createRange().createContextualFragment(highlightedText);
+                currentNode.parentNode.replaceChild(fragment, currentNode);
+                continue;
+              }
+            } else if (currentNode.nodeType === 1) { // Element node
+              highlightMatches(currentNode, regex); // Recursive call for child nodes
+            }
+          }
+        }
+      });
+      </script>
+      
 
       <!--
 <script type="text/javascript">
