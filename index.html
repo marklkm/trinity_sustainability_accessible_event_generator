@@ -91,7 +91,7 @@
   </nav>
 
   <body>
-    <main id="maincontent">
+    <main id="maincontent" tabindex="-1">
       <div class="mb-2 text-center">
         <img
           src="jack_kavanagh_wide_banner.png"
@@ -1948,6 +1948,22 @@
         </button>
       </footer>
       <!-- End Footer -->
+
+      <!-- Skip to content -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var skipLink = document.querySelector('.skip-link');
+          skipLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.setAttribute('tabindex', '-1');
+              target.focus();
+            }
+          });
+        });
+        </script>
+        
 
       <script>
         function toggleContrast() {
