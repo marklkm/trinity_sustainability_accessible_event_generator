@@ -1949,6 +1949,34 @@
       </footer>
       <!-- End Footer -->
 
+
+      <!-- Empty label field alert -->
+      <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+          var form = document.getElementById('eventForm');
+          var requiredFields = form.querySelectorAll('[required]');
+          var emptyFields = [];
+          
+          requiredFields.forEach(function(field) {
+            if (!field.value.trim()) {
+              // Get the corresponding label text for the input field
+              var label = form.querySelector('label[for="' + field.id + '"]');
+              var labelText = label ? label.textContent : field.id;
+              emptyFields.push(labelText.trim());
+            }
+          });
+          
+          if (emptyFields.length > 0) {
+            alert("Please fill in all required fields. The following fields are empty: " + emptyFields.join(', '));
+          } else {
+            // All required fields are filled, proceed with form submission or further processing
+            alert("All required fields are filled. Form ready to be submitted!");
+            // form.submit(); // Uncomment this line if you want to submit the form
+          }
+        });
+        </script>
+        
+
       <!--  Clearing Fields After Form Submission -->
       <script>
       document.getElementById('eventForm').addEventListener('submit', function(event) {
