@@ -1949,6 +1949,21 @@
       </footer>
       <!-- End Footer -->
 
+      <!--  Clearing Fields After Form Submission -->
+      <script>
+      document.getElementById('eventForm').addEventListener('submit', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+      
+        // Your form submission logic here
+      
+        // Clear the form
+        this.reset();
+      });
+
+    </script>
+      
+
       <!-- Skip to content -->
       <script>
         document.addEventListener('DOMContentLoaded', function() {
