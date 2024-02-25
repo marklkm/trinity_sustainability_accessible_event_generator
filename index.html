@@ -92,6 +92,20 @@
 
   <body>
     <main id="maincontent" tabindex="-1">
+     
+      <section aria-label="Accessibility Options">
+        <div class="container text-center my-4">
+          <h2 class="h5">Accessibility Options</h2>
+          <button id="toggleContrast" class="btn btn-secondary" aria-pressed="false">Toggle High Contrast</button>
+          <button id="toggleFontSize" class="btn btn-secondary" aria-pressed="false">Increase Font Size</button>
+        </div>
+      </section>
+      
+      <main id="maincontent">
+        <!-- Your main content goes here -->
+      </main>
+      
+      
       <div class="mb-2 text-center">
         <img
           src="jack_kavanagh_wide_banner.png"
@@ -2015,29 +2029,6 @@
         </script>
         
 
-      <script>
-        function toggleContrast() {
-          var body = document.body;
-          var isHighContrast = body.classList.toggle("high-contrast");
-          document
-            .getElementById("toggle-contrast")
-            .setAttribute("aria-pressed", isHighContrast);
-          document.getElementById("toggle-contrast").textContent =
-            isHighContrast ? "Disable High Contrast" : "Enable High Contrast";
-        }
-
-        function toggleFontSize() {
-          var body = document.body;
-          var isLargeFont = body.classList.toggle("large-font");
-          document
-            .getElementById("toggle-font-size")
-            .setAttribute("aria-pressed", isLargeFont);
-          document.getElementById("toggle-font-size").textContent = isLargeFont
-            ? "Disable Large Font"
-            : "Enable Large Font";
-        }
-      </script>
-
       <!--
 <script type="text/javascript">
   document.getElementById('printButton').addEventListener('click', printTextArea);
@@ -2073,6 +2064,33 @@
   });
 </script>
 -->
+
+
+<!-- Accessibility Buttons Contrast and Text Size -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleContrastBtn = document.getElementById('toggleContrast');
+    const toggleFontSizeBtn = document.getElementById('toggleFontSize');
+    const mainContent = document.getElementById('maincontent'); // Get the maincontent element
+    const body = document.body;
+  
+    toggleContrastBtn.addEventListener('click', function() {
+      body.classList.toggle('high-contrast');
+      this.textContent = body.classList.contains('high-contrast') ? 'Normal Contrast' : 'Toggle High Contrast';
+      this.setAttribute('aria-pressed', body.classList.contains('high-contrast'));
+    });
+  
+    toggleFontSizeBtn.addEventListener('click', function() {
+      mainContent.classList.toggle('large-font'); // Toggle class on maincontent
+      this.textContent = mainContent.classList.contains('large-font') ? 'Normal Font Size' : 'Increase Font Size';
+      this.setAttribute('aria-pressed', mainContent.classList.contains('large-font'));
+    });
+  });
+  </script>
+  
+
+
      
     <script>
 

@@ -50,21 +50,25 @@ body {
   }
 
   /* High contrast mode styles */
-  .high-contrast {
-    background-color: #000;
-    color: #fff;
-    /* You would add other high contrast styles here */
-  }
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
 
-  /* Large font mode styles */
-  .large-font {
-    font-size: 1.25em; /* This increases the font size by 25% */
-  }
+.high-contrast a {
+  color: #fd0;
+}
 
-  /* Ensure that all text elements scale accordingly */
-  .large-font * {
-    font-size: inherit;
-  }
+/* Large Font Size Mode */
+#maincontent.large-font, 
+#maincontent.large-font p, 
+#maincontent.large-font a, 
+#maincontent.large-font li, 
+#maincontent.large-font span { /* Add other selectors as needed */
+  font-size: 2rem; /* Adjust size as needed */
+}
+
 
 /* Form Styles */
 .form-check-label,
