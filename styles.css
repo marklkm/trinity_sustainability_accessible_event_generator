@@ -181,3 +181,15 @@ p {
     padding: 12px; /* Larger padding for easier interaction */
   }
 }
+
+
+/*  Search Box */
+/* Custom styles for higher contrast */
+.btn-success {
+  background-color: #007bff; /* Adjust color for better contrast */
+  color: #ffffff; /* Ensure text color provides sufficient contrast */
+}
+
+.btn-success:hover {
+  background-color: #0056b3; /* Darker shade for hover state */
+}
