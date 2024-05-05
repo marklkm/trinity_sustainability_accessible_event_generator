@@ -15,81 +15,73 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <style>
+      .navbar .form-control {
+    max-width: 200px; /* Limit the width of the search box */
+}
+
+.navbar .btn-outline-success {
+    color: #4CAF50; /* Custom color for the button text */
+    border-color: #4CAF50; /* Custom border color */
+}
+
+    </style>
 
   </head>
 
   <!-- Skip to Content Link for better keyboard navigation -->
   <a href="#maincontent" class="skip-link">Skip to content</a>
 
-  <!-- Navigation Menu -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
-      <a
-        class="navbar-brand nav-logo"
-        href="index.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="Trinity_Main_Logo.jpg"
-          alt="Trinity College Dublin logo"
-          height="100"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto">
-          <!-- List of navigation links -->
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/study/"
-              >Students</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/courses/"
-              >Courses</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/research/"
-              >Research</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/structure/"
-              >Faculties &amp; Schools</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/alumni/"
-              >Alumni</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-2" href="https://www.tcd.ie/az/">A-Z</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link mx-2"
-              href="https://www.tcd.ie/gaeloifig/gaeilge/index.ga.php"
-              >Gaeilge</a
-            >
-          </li>
-        </ul>
-        
-      </div>
+<!-- Navigation Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand nav-logo" href="index.html" target="_blank" rel="noopener noreferrer">
+      <img src="Trinity_Main_Logo.jpg" alt="Trinity College Dublin logo" height="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <!-- List of navigation links -->
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/study/">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/courses/">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/research/">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/structure//">Faculties &amp; Schools</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/alumni/">Alumni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/az/">A-Z</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="https://www.tcd.ie/gaeloifig/gaeilge/index.ga.php">Gaelige</a>
+        </li>
+      </ul>
+      <!-- Search form -->
+      <form class="d-flex ms-auto" action="https://www.tcd.ie/search/q/" method="GET">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="tcdsearchq">
+        <button class="btn btn-primary" type="submit">
+            <i class="bi bi-search"></i>
+        </button>
+    </form>
+    
+
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <body>
     <main id="maincontent" tabindex="-1">
@@ -2040,6 +2032,7 @@
      
      <!-- Search Box -->
 
+     <!-- 
      <script>
       document.addEventListener('DOMContentLoaded', function() {
         const searchForm = document.getElementById('searchForm');
@@ -2100,43 +2093,9 @@
         }
       });
       </script>
+
+    -->
       
-
-      <!--
-<script type="text/javascript">
-  document.getElementById('printButton').addEventListener('click', printTextArea);
-
-  function printTextArea() {
-    // Your print logic here
-    childWindow = window.open('','childWindow','location=yes, menubar=yes, toolbar=yes');
-      childWindow.document.open();
-      childWindow.document.write('<html><head></head><body>');
-      childWindow.document.write(document.getElementById('targetTextArea').value.replace(/\n/gi,'<br>'));
-      childWindow.document.write('</body></html>');
-      childWindow.print();
-      childWindow.document.close();
-      childWindow.close();
-  }
-</script>
--->
-
-      <!-- Accessibility Buttons -->
-      <!-- 
-<script>
-  const contrastButton = document.getElementById('toggle-contrast');
-  const fontSizeButton = document.getElementById('toggle-font-size');
-  const htmlElement = document.documentElement; 
-  const bodyElement = document.body;
-
-  contrastButton.addEventListener('click', () => {
-    bodyElement.classList.toggle('high-contrast');
-  });
-
-  fontSizeButton.addEventListener('click', () => {
-    htmlElement.classList.toggle('large-font');
-  });
-</script>
--->
 
 
 <!-- Accessibility Buttons Contrast and Text Size -->
