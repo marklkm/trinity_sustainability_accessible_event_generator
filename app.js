@@ -19,6 +19,9 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const onlineEvent = document.querySelector(
     'input[name="onlineEvent"]:checked'
   ).value;
+  const eventRecording = document.querySelector(
+    'input[name="eventRecording"]:checked'
+  ).value;
   const inpersonEvent = document.querySelector(
     'input[name="inpersonEvent"]:checked'
   ).value;
@@ -89,6 +92,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Event Start Date: ${eventStartDate}
         Event End Date: ${eventEndDate}
         Online event? ${onlineEvent}
+        Event Recording ${eventRecording}
         In-Person event? ${inpersonEvent}
         Event accessibility: ${eventAccess}
         Seating available at the event? ${seatingFacilities} 
@@ -209,6 +213,14 @@ function copyToTextarea() {
   for (let i = 0; i < onlineEventEls.length; i++) {
     if (onlineEventEls[i].checked) {
       formData += "Online Event? " + onlineEventEls[i].value + "\n";
+      break;
+    }
+  }
+
+  let eventRecordingEls = document.getElementsByName("eventRecording");
+  for (let i = 0; i < eventRecordingEls.length; i++) {
+    if (eventRecordingEls[i].checked) {
+      formData += "Event Recording " + eventRecordingEls[i].value + "\n";
       break;
     }
   }
