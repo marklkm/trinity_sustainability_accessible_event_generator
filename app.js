@@ -77,8 +77,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const promoteAwareness = document.querySelector(
     'input[name="promoteAwareness"]:checked'
   ).value;
-  const comments = document.getElementById("comments").value;
-  const contacts = document.getElementById("contacts").value;
+  const comments =
+    document.getElementById("comments").value || "No comments provided";
+  const contacts =
+    document.getElementById("contacts").value ||
+    "No additional contacts provided";
   // ... Fetch other fields similarly ...
 
   const output = `
@@ -91,20 +94,20 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Event End Time: ${eventEndTime}
         Event Start Date: ${eventStartDate}
         Event End Date: ${eventEndDate}
-        Online event? ${onlineEvent}
+        Online event: ${onlineEvent}
         Event Recording ${eventRecording}
-        In-Person event? ${inpersonEvent}
+        In-Person event: ${inpersonEvent}
         Event accessibility: ${eventAccess}
-        Seating available at the event? ${seatingFacilities} 
-        Wheelchair accessible toilets? ${wheelchairToilets}
-        Hearing Loop? ${hearingLoop}
-        ISL Interpreter? ${islInt}
+        Seating available at the event: ${seatingFacilities} 
+        Wheelchair accessible toilets: ${wheelchairToilets}
+        Hearing Loop: ${hearingLoop}
+        ISL Interpreter: ${islInt}
         Does the event have a question about accessibility requirements of attendees? ${accessRequirements}
-        Disabled Person's Parking near the event? ${eventParking}
-        Have you made provisions for a designated quiet space? ${quietSpace}
-        Have you made provisions to create a sensory-friendly environment? ${sensoryEnvironment}
+        Disabled Person's Parking near the event: ${eventParking}
+        Designated quiet space: ${quietSpace}
+        Sensory-friendly environment: ${sensoryEnvironment}
         Is event information, instructions, and communications clear, concise, and provided in multiple formats? ${sensoryInfo}
-        Are the presentation slides (MS PowerPoint etc.,.) accessible? ${eventSlides}
+        Are the presentation slides accessible? ${eventSlides}
         Does the event include a video showing or video call? ${eventVideo}
         Will single use items be available at the event? ${singleUseItems}
         Will the event be a zero waste event? ${zeroWaste}
@@ -141,7 +144,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 document.getElementById("copyBtn").addEventListener("click", function () {
   const output = document.getElementById("output");
   const textArea = document.createElement("textarea");
-  textArea.value = output.innerText;
+  textArea.value = output.innerText; // Use innerText or textContent to avoid copying HTML tags
   document.body.appendChild(textArea);
   textArea.select();
   document.execCommand("copy");
@@ -154,12 +157,81 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
   const doc = new jsPDF();
 
   const output = document.getElementById("output").innerText;
-  doc.setFontSize(14); // Set the font size to approximately 18px
 
-  // Wrap text to fit into the PDF page width
-  const lines = doc.splitTextToSize(output, 180); // 180 is the max width of lines in mm
-  doc.text(lines, 10, 10); // 10, 10 is the x, y start position for the text
-  doc.save("event-details.pdf");
+  // Handle image upload
+  const imageInput = document.getElementById("eventImage");
+  const file = imageInput.files[0];
+
+  const lineHeight = 10; // Height of a single line in the PDF
+  const pageHeight = doc.internal.pageSize.height; // Get page height of the PDF
+  const marginTop = 10; // Top margin
+  const marginBottom = 10; // Bottom margin
+  const textWidth = 180; // Max width for the text lines (A4 width - margins)
+  let yPosition = 20; // Starting y position for the text
+
+  if (file && file.type === "image/png") {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const imgData = event.target.result;
+
+      // Add image to the top of the PDF (x: 10, y: 10, width: 180mm, height: proportional to image)
+      doc.addImage(imgData, "PNG", 10, marginTop, 180, 80); // Adjust the size if needed
+
+      // Set yPosition to just below the image
+      yPosition = 100;
+
+      // Add "Event Details" heading after the image
+      doc.setFontSize(22);
+      doc.text("Event Details", 10, yPosition);
+
+      // Increase yPosition to leave space after the heading
+      yPosition += 20;
+
+      // Set font size for the body text
+      doc.setFontSize(14);
+
+      // Split the text to fit into the page width
+      const lines = doc.splitTextToSize(output, textWidth); // 180 is the max width of lines in mm
+
+      // Loop through each line and add text, handling page breaks if necessary
+      for (let i = 0; i < lines.length; i++) {
+        if (yPosition + lineHeight > pageHeight - marginBottom) {
+          // Add a new page if the text goes beyond the page height
+          doc.addPage();
+          yPosition = marginTop; // Reset yPosition for the new page
+        }
+        doc.text(lines[i], 10, yPosition);
+        yPosition += lineHeight; // Move yPosition down for the next line
+      }
+
+      // Save the PDF with the event details and image
+      doc.save("event-details.pdf");
+    };
+    reader.readAsDataURL(file);
+  } else {
+    // If no image is uploaded, just print the text
+    const lines = doc.splitTextToSize(output, textWidth);
+
+    // Add "Event Details" heading
+    doc.setFontSize(22);
+    doc.text("Event Details", 10, yPosition);
+    yPosition += 20;
+
+    doc.setFontSize(14);
+
+    // Loop through each line and add text, handling page breaks if necessary
+    for (let i = 0; i < lines.length; i++) {
+      if (yPosition + lineHeight > pageHeight - marginBottom) {
+        doc.addPage();
+        yPosition = marginTop; // Reset yPosition for the new page
+      }
+      doc.text(lines[i], 10, yPosition);
+      yPosition += lineHeight;
+    }
+
+    // Save the PDF
+    doc.save("event-details.pdf");
+  }
 });
 
 document.getElementById("emailBtn").addEventListener("click", function () {
@@ -212,7 +284,7 @@ function copyToTextarea() {
   let onlineEventEls = document.getElementsByName("onlineEvent");
   for (let i = 0; i < onlineEventEls.length; i++) {
     if (onlineEventEls[i].checked) {
-      formData += "Online Event? " + onlineEventEls[i].value + "\n";
+      formData += "Online Event: " + onlineEventEls[i].value + "\n";
       break;
     }
   }
@@ -228,7 +300,7 @@ function copyToTextarea() {
   let inpersonEventEls = document.getElementsByName("inpersonEvent");
   for (let i = 0; i < inpersonEventEls.length; i++) {
     if (inpersonEventEls[i].checked) {
-      formData += "In-Person Event? " + inpersonEventEls[i].value + "\n";
+      formData += "In-Person Event: " + inpersonEventEls[i].value + "\n";
       break;
     }
   }
@@ -256,7 +328,7 @@ function copyToTextarea() {
   for (let i = 0; i < wheelchairToiletsEls.length; i++) {
     if (seatingFacilitiesEls[i].checked) {
       formData +=
-        "Wheelchair accessible toilets? " +
+        "Wheelchair accessible toilets: " +
         wheelchairToiletsEls[i].value +
         "\n";
       break;
