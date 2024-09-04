@@ -415,7 +415,7 @@
                 <label class="form-check-label" for="onlineNo">No</label>
               </div>
               <div id="onlineEventHelp" class="form-text">
-                Select 'Yes' if the event is being held online or hybrid.
+                Select 'Yes' if the event is being held online or hybrid. Required answer.
               </div>
             </fieldset>
           </div>
@@ -517,6 +517,10 @@
                             >Unknown</label
                           >
                         </div>
+
+                        <div id="eventRecordingHelp" class="form-text">
+                          Required answer.
+                        </div>
           
                       </fieldset>
                     </div>
@@ -570,14 +574,14 @@
                 <label class="form-check-label" for="inpersonNo">No</label>
               </div>
               <div id="inpersonEventHelp" class="form-text">
-                Select 'Yes' if the event will be held in person.
+                Required answer.
               </div>
 
             </fieldset>
           </div>
 
 
-          <h2>Access to the Event</h2>
+          <h2>Event Accessibility (Wheelchair Accessibility)</h2>
           <!-- Sample radio buttons for Access to the Event with tooltip -->
           <p>
             <strong>NOTE:</strong> Wheelchair access requires flat access
@@ -586,7 +590,7 @@
           </p>
           <div class="mb-3">
             <fieldset>
-              <legend class="h4">Does the event have:</legend>
+              <legend class="h4">Is the event accessible?</legend>
     
 
               <div class="form-check">
@@ -595,12 +599,12 @@
                   type="radio"
                   name="eventAccess"
                   id="accessWheelchair"
-                  value="Wheelchair"
+                  value="Wheelchair accessible"
                   required
                   aria-describedby="accessNote1"
                 />
                 <label class="form-check-label" for="accessWheelchair"
-                  >Wheelchair Access</label
+                  >Wheelchair accessible</label
                 >
               </div>
 
@@ -648,11 +652,11 @@
                   >Unknown</label
                 >
               </div>
-
-              <div id="accessNote1" class="form-text">
-                Please ensure the selected access option is in line with the
-                provided note on wheelchair access requirements.
+              <div id="eventAccessHelp" class="form-text">
+                Required answer. 
               </div>
+
+
             </fieldset>
           </div>
 
@@ -735,6 +739,11 @@
                   >Unknown</label
                 >
               </div>
+
+              <div id="seatingFacilitiesHelp" class="form-text">
+                Required answer. 
+              </div>
+              
             </fieldset>
           </div>
 
@@ -743,6 +752,15 @@
               <legend class="mt-3">
                 Wheelchair accessible toilet:
               </legend>
+              <p>
+                <strong>NOTE:</strong> Read more about 
+                <a
+                  href="https://www.tcd.ie/disability/physical-access-information/enabled-toilets/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Enabled Toilets</a> in Trinity<span class="text-danger"> (Opens in a new window)</span>.
+              </p> 
 
               <div class="form-check">
                 <input
@@ -754,7 +772,7 @@
                   required
                 />
                 <label class="form-check-label" for="yesToilet"
-                  >Yes, fully wheelchair accessible</label
+                  >Yes, fully wheelchair accessible (designed for full wheelchair access)</label
                 >
               </div>
 
@@ -768,7 +786,7 @@
                   required
                 />
                 <label class="form-check-label" for="noToilet"
-                  >No, not wheelchair accessible</label
+                  >No, not wheelchair accessible (standard bathroom without any special modifications for people with mobility impairments)</label
                 >
               </div>
 
@@ -782,7 +800,8 @@
                   required
                 />
                 <label class="form-check-label" for="changingplacesToilet"
-                  >Yes, with changing places facilities</label
+                  >Yes, with changing places facilities (specially designed toilets for individuals with 
+                  profound disabilities who need additional space and specialised equipment such as a hoist system)</label
                 >
               </div>
 
@@ -796,7 +815,7 @@
                   required
                 />
                 <label class="form-check-label" for="accessibleToilet"
-                  >Yes, accessible toilet</label
+                  >Yes, accessible toilet (meets general accessibility guidelines but may not be fully wheelchair-friendly)</label
                 >
               </div>
 
@@ -810,7 +829,8 @@
                   required
                 />
                 <label class="form-check-label" for="partiallyAccessible"
-                  >Partially accessible toilet</label
+                  >Partially accessible toilet (offers some accessibility features, like grab bars or a raised toilet but lacks comprehensive accessibility, 
+                  such as insufficient space for a wheelchair to navigate)</label
                 >
               </div>
 
@@ -824,9 +844,13 @@
                   required
                 />
                 <label class="form-check-label" for="unknownToilet"
-                  >Accessibility unknown</label
+                  >Wheelchair accessibility unknown</label
                 >
               </div>
+              <div id="wheelchairToiletsHelp" class="form-text">
+                Required answer. 
+              </div>
+              
             </fieldset>
           </div>
 
@@ -913,6 +937,10 @@
                 <label class="form-check-label" for="unknownLoop"
                   >Hearing loop availability unknown</label
                 >
+              </div>
+
+              <div id="hearingLoopHelp" class="form-text">
+                Required answer. 
               </div>
             </fieldset>
           </div>
@@ -1006,6 +1034,10 @@
                   >ISL interpretation availability unknown</label
                 >
               </div>
+
+              <div id="islIntHelp" class="form-text">
+                Required answer. 
+              </div>
             </fieldset>
           </section>
 
@@ -1066,6 +1098,10 @@
                 <label class="form-check-label" for="unknownRequirements"
                   >Unknown if accessibility requirements are queried</label
                 >
+              </div>
+
+              <div id="accessRequirementsHelp" class="form-text">
+                Required answer. 
               </div>
             </fieldset>
           </div>
@@ -1157,6 +1193,10 @@
                 <label class="form-check-label" for="unknownParking"
                   >Parking availability unknown</label
                 >
+              </div>
+
+              <div id="eventParkingHelp" class="form-text">
+                Required answer. 
               </div>
             </fieldset>
           </div>
@@ -1267,6 +1307,10 @@
                   >Quiet space availability unknown</label
                 >
               </div>
+
+              <div id="quietSpaceHelp" class="form-text">
+                Required answer. 
+              </div>
             </fieldset>
           </div>
 
@@ -1324,6 +1368,10 @@
                 >Unknown if provisions made</label
               >
             </div>
+
+            <div id="sensoryEnvironmentHelp" class="form-text">
+              Required answer. 
+            </div>
           </fieldset>
 
           <fieldset class="mt-3">
@@ -1376,6 +1424,10 @@
               <label class="form-check-label" for="unknownSensoryinfo"
                 >Unknown if information is in multiple formats</label
               >
+            </div>
+
+            <div id="sensoryInfoHelp" class="form-text">
+              Required answer. 
             </div>
           </fieldset>
 
@@ -1461,6 +1513,11 @@
                   >Unknown if the presentation slides are accessible</label
                 >
               </div>
+
+
+            <div id="eventSlidesHelp" class="form-text">
+              Required answer. 
+            </div>
             </fieldset>
 
             <fieldset class="mt-3">
@@ -1508,6 +1565,10 @@
                   >Unknown if the event includes a video</label
                 >
               </div>
+
+              <div id="eventVideoHelp" class="form-text">
+                Required answer. 
+              </div>
             </fieldset>
           </div>
 
@@ -1525,14 +1586,22 @@
               <strong>waste management</strong>,
               <strong>transportation</strong>, <strong>consumption</strong>, and
               how the event will promote
-              <strong>sustainability awareness</strong>.     Read more about
+              <strong>sustainability awareness</strong>. Read more about
               <a
-                href="https://www.tcd.ie/sustainability/initiatives//"
+                href="https://www.tcd.ie/sustainability/initiatives/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Trinity Sustainability Initiatives (opens in a new window)"
                 >Trinity Sustainability Initiatives</a
-              > <span class="text-danger">(Opens in a new window)</span>.
+              > <span class="text-danger">(Opens in a new window)</span>. There are also
+              <a
+              href="https://www.tcd.ie/sustainability/resources/sustainable-event-guidelines/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Trinity Sustinable Event Guidelines (opens in a new window)"
+              >TCD Sustainable Event Guidelines</a
+            > <span class="text-danger">(Opens in a new window)</span> that provides guidance on how to plan and execute events in an environmentally 
+              friendly way.
             </p>
           </section>
 
@@ -1555,6 +1624,10 @@
                     <label class="form-check-label" for="singleUseNo">No, the event will be 100% reusable.</label>
                 </div>
 
+                <div id="singleUseItemsHelp" class="form-text">
+                  Required answer. 
+                </div>
+
             </fieldset>
     
             <!-- Reduce Section -->
@@ -1572,12 +1645,16 @@
                     <label class="form-check-label" for="zeroWasteNo">No, there will be waste generated.</label>
                 </div>
 
+                <div id="zeroWasteHelp" class="form-text">
+                  Required answer. 
+                </div>
+
             </fieldset>
     
             <!-- Food Section -->
             <fieldset class="mb-3">
                 <legend>Food</legend>
-                <p>Will the event take a veggie first approach? 100% vegan or vegetarian</p>
+                <p>Will the event take a veggie first approach? </p>
                 
                 <div class="form-check">
                     <input type="radio" class="form-check-input" id="vegan" name="veggieApproach" value="100% vegan" required>
@@ -1594,7 +1671,41 @@
                   <label class="form-check-label" for="neithervv">Neither</label>
               </div>
 
+              <div id="veggieApproachHelp" class="form-text">
+                Required answer. 
+              </div>
+
             </fieldset>
+
+            <fieldset class="mb-3">
+      
+              <p>Gluten free options availability: </p>
+              
+              <div class="form-check">
+                  <input type="radio" class="form-check-input" id="glutenFreeYes" name="glutenFree" value="Yes, gluten free options available" required>
+                  <label class="form-check-label" for="glutenFreeYes">Yes, gluten free options available</label>
+              </div>
+  
+              <div class="form-check">
+                  <input type="radio" class="form-check-input" id="glutenFreeNo" name="glutenFree" value="No, gluten free options are not available">
+                  <label class="form-check-label" for="glutenFreeNo">No, gluten free options are not available</label>
+              </div>
+
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="glutenFreeRequest" name="glutenFree" value="Available by request in advance">
+                <label class="form-check-label" for="glutenFreeRequest">Available by request in advance</label>
+            </div>
+
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="glutenFreeUnknown" name="glutenFree" value="Unknown">
+              <label class="form-check-label" for="glutenFreeUnknown">Unknown</label>
+          </div>
+
+            <div id="veggieApproachHelp" class="form-text">
+              Required answer. 
+            </div>
+
+          </fieldset>
     
             <!-- Transport Section -->
             <fieldset class="mb-3">
@@ -1611,6 +1722,10 @@
                     <label class="form-check-label" for="transportNo">No</label>
                 </div>
 
+                <div id="transportHelp" class="form-text">
+                  Required answer. 
+                </div>
+
             </fieldset>
         </div>
           <!-- End -->
@@ -1621,16 +1736,23 @@
             <legend class="mt-3">
               Sustainability of Procured Products and Services
             </legend>
+            <p><strong>NOTE: </strong> A number of   <a
+              href="https://www.tcd.ie/sustainability/resources/guides/"
+              target="_blank"
+              rel="noopener"
+              >Sustainability Guides</a
+            > <span class="text-danger">(Opens in a new window)</span> have been created to share helpful 
+            information about how to conserve resources, reduce waste and recycle on campus. As well as 
+        informtation about 
+            <a
+            href="https://www.tcd.ie/sustainability/initiatives/sustainable-procurement/"
+            target="_blank"
+            rel="noopener"
+            >Sustainable Procurement</a
+          > <span class="text-danger">(Opens in a new window)</span>. </p>
             <p>
-              How are you ensuring that the products and services procured for
-              the event (e.g., food, decorations, promotional items) are
-              sustainably sourced or produced?
-              <a
-                href="https://www.tcd.ie/sustainability/"
-                target="_blank"
-                rel="noopener"
-                >Learn more about our sustainability standards</a
-              > <span class="text-danger">(Opens in a new window)</span>.
+              Are products and services procured for the event sustainably sourced or
+produced? (e.g., food, decorations, promotional items)?
             </p>
 
             <div class="form-check">
@@ -1653,7 +1775,7 @@
                 type="radio"
                 name="sustainableSourced"
                 id="noSourced"
-                value="No"
+                value="Not sustainably sourced or produced"
                 required
               />
               <label class="form-check-label" for="noSourced"
@@ -1667,7 +1789,7 @@
                 type="radio"
                 name="sustainableSourced"
                 id="unknownSourced"
-                value="Unknown"
+                value="Sustainability unknown"
                 required
               />
               <label class="form-check-label" for="unknownSourced"
@@ -1675,16 +1797,15 @@
               >
             </div>
 
-            <small id="sourcedHelp" class="form-text text-muted">
-              Please select an option to indicate the sustainability of products
-              and services for this event.
-            </small>
+            <div id="sustainableSourcedHelp" class="form-text">
+              Required answer. 
+            </div>
           </fieldset>
 
           <fieldset class="mb-3">
             <legend class="mt-3">Sustainability Awareness and Education</legend>
             <p>
-              How will the event promote sustainability awareness and education
+              Will the event promote sustainability awareness and education
               among attendees, and how will their feedback be collected to
               improve future sustainability efforts?
             </p>
@@ -1695,12 +1816,13 @@
                 type="radio"
                 name="promoteAwareness"
                 id="yesAwareness"
-                value="Yes"
+                value="Yes, activities and information to promote sustainability
+                awareness will be included and feedback will be collected."
                 required
               />
               <label class="form-check-label" for="yesAwareness"
                 >Yes, activities and information to promote sustainability
-                awareness will be included, yes, feedback will be collected.</label
+                awareness will be included and feedback will be collected.</label
               >
             </div>
 
@@ -1710,7 +1832,8 @@
                 type="radio"
                 name="promoteAwareness"
                 id="noAwareness"
-                value="No"
+                value="No, there are no plans to promote sustainability
+                awareness"
                 required
               />
               <label class="form-check-label" for="noAwareness"
@@ -1725,13 +1848,18 @@
                 type="radio"
                 name="promoteAwareness"
                 id="unknownAwareness"
-                value="Unknown"
+                value="It is unknown if sustainability awareness will be
+                promoted"
                 required
               />
               <label class="form-check-label" for="unknownAwareness"
                 >It is unknown if sustainability awareness will be
                 promoted</label
               >
+            </div>
+
+            <div id="promoteAwarenessHelp" class="form-text">
+              Required answer. 
             </div>
 
             <small id="awarenessHelp" class="form-text text-muted">
@@ -1754,7 +1882,7 @@
               transportation information.
             </p>
 
-            <label for="comments" class="form-label">Additional Comments</label>
+            <label for="comments" class="form-label">Additional Comments (Optional)</label>
             <textarea
               class="form-control"
               id="comments"
@@ -1784,7 +1912,7 @@
             ></textarea>
             <div id="contactsHelp" class="form-text">
               Include email addresses, phone numbers, or other contact
-              information for accessibility inquiries.
+              information for accessibility inquiries. Optional.
             </div>
           </div>
 
@@ -1792,8 +1920,8 @@
             <!-- Image upload input -->
   <div class="mb-3">
     <label for="eventImage" class="form-label">Upload Event Image (PNG Only)</label>
-    <input type="file" class="form-control" id="eventImage" accept="image/png" required />
-    <small class="form-text text-muted">Upload an image to include at the top of the PDF.</small>
+    <input type="file" class="form-control" id="eventImage" accept="image/png" />
+    <small class="form-text text-muted">Upload an image to include at the top of the PDF (Optional).</small>
   </div>
 
           <button type="button" class="btn btn-primary" id="submitBtn">

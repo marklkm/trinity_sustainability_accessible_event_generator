@@ -68,6 +68,9 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const veggieApproach = document.querySelector(
     'input[name="veggieApproach"]:checked'
   ).value;
+  const glutenFree = document.querySelector(
+    'input[name="glutenFree"]:checked'
+  ).value;
   const transport = document.querySelector(
     'input[name="transport"]:checked'
   ).value;
@@ -85,19 +88,19 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   // ... Fetch other fields similarly ...
 
   const output = `
-        Event name: ${eventName}
+        Event Name: ${eventName}
         Event Description: ${eventDescription}
-        Event location: ${eventLocation}
+        Event Location: ${eventLocation}
         Event Organiser name: ${organiserName}
         Event Organiser email: ${organiserEmail}
         Event Start Time: ${eventStartTime}
         Event End Time: ${eventEndTime}
         Event Start Date: ${eventStartDate}
         Event End Date: ${eventEndDate}
-        Online event: ${onlineEvent}
+        Online Event: ${onlineEvent}
         Event Recording ${eventRecording}
-        In-Person event: ${inpersonEvent}
-        Event accessibility: ${eventAccess}
+        In-Person Event: ${inpersonEvent}
+        Event Accessibility (Wheelchair Accessibility): ${eventAccess}
         Seating available at the event: ${seatingFacilities} 
         Wheelchair accessible toilets: ${wheelchairToilets}
         Hearing Loop: ${hearingLoop}
@@ -111,13 +114,13 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Does the event include a video showing or video call? ${eventVideo}
         Will single use items be available at the event? ${singleUseItems}
         Will the event be a zero waste event? ${zeroWaste}
+        Gluten free options availability: ${glutenFree}
         Will the event take a veggie first approach? ${veggieApproach}
         Will you promote public transport and active travel (walking and cycling) to your event? ${transport}
         Are products and services procured for the event sustainably sourced or produced? ${sustainableSourced}
         Will the event promote sustainability awareness and education among attendees? ${promoteAwareness}
         Any further comments or details? ${comments}
         Please provide contact details for any access enquiries (if not included elsewhere): ${contacts}
-       
     `;
 
   document.getElementById("output").innerText = output;
@@ -308,7 +311,10 @@ function copyToTextarea() {
   let eventAccessEls = document.getElementsByName("eventAccess");
   for (let i = 0; i < eventAccessEls.length; i++) {
     if (eventAccessEls[i].checked) {
-      formData += "Event accessibility: " + eventAccessEls[i].value + "\n";
+      formData +=
+        "Event accessibility (Wheelchair Accessibility): " +
+        eventAccessEls[i].value +
+        "\n";
       break;
     }
   }
@@ -455,6 +461,15 @@ function copyToTextarea() {
         "Will the event take a veggie first approach? " +
         veggieApproachEls[i].value +
         "\n";
+      break;
+    }
+  }
+
+  let glutenFreeEls = document.getElementsByName("glutenFreeEls");
+  for (let i = 0; i < glutenFreeEls.length; i++) {
+    if (glutenFreeEls[i].checked) {
+      formData +=
+        "GLuten free options availability: " + glutenFreeEls[i].value + "\n";
       break;
     }
   }
