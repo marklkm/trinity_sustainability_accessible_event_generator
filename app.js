@@ -100,15 +100,15 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Online Event: ${onlineEvent}
         Event Recording ${eventRecording}
         In-Person Event: ${inpersonEvent}
-        Event Accessibility (Wheelchair Accessibility): ${eventAccess}
-        Seating available at the event: ${seatingFacilities} 
-        Wheelchair accessible toilets: ${wheelchairToilets}
-        Hearing Loop: ${hearingLoop}
-        ISL Interpreter: ${islInt}
-        Does the event have a question about accessibility requirements of attendees? ${accessRequirements}
-        Disabled Person's Parking near the event: ${eventParking}
-        Designated quiet space: ${quietSpace}
-        Sensory-friendly environment: ${sensoryEnvironment}
+        Is the event accessible? ${eventAccess}
+        Is seating available at the event? ${seatingFacilities} 
+        Wheelchair accessible toilet: ${wheelchairToilets}
+        Hearing Loop Availability: ${hearingLoop}
+        Irish Sign Language (ISL) Interpretation Availability? ${islInt}
+        Accessibility Requirements: ${accessRequirements}
+        Disabled Person's Parking Availability: ${eventParking}
+        Are there provisions for a designated quiet space? ${quietSpace}
+        Have you made provisions to create a sensory-friendly environment? ${sensoryEnvironment}
         Is event information, instructions, and communications clear, concise, and provided in multiple formats? ${sensoryInfo}
         Are the presentation slides accessible? ${eventSlides}
         Does the event include a video showing or video call? ${eventVideo}
@@ -311,10 +311,7 @@ function copyToTextarea() {
   let eventAccessEls = document.getElementsByName("eventAccess");
   for (let i = 0; i < eventAccessEls.length; i++) {
     if (eventAccessEls[i].checked) {
-      formData +=
-        "Event accessibility (Wheelchair Accessibility): " +
-        eventAccessEls[i].value +
-        "\n";
+      formData += "Is the event accessible? " + eventAccessEls[i].value + "\n";
       break;
     }
   }
@@ -323,7 +320,7 @@ function copyToTextarea() {
   for (let i = 0; i < seatingFacilitiesEls.length; i++) {
     if (seatingFacilitiesEls[i].checked) {
       formData +=
-        "Seating available at the event? " +
+        "Is seating available at the event? " +
         seatingFacilitiesEls[i].value +
         "\n";
       break;
@@ -334,9 +331,7 @@ function copyToTextarea() {
   for (let i = 0; i < wheelchairToiletsEls.length; i++) {
     if (seatingFacilitiesEls[i].checked) {
       formData +=
-        "Wheelchair accessible toilets: " +
-        wheelchairToiletsEls[i].value +
-        "\n";
+        "Wheelchair accessible toilet: " + wheelchairToiletsEls[i].value + "\n";
       break;
     }
   }
@@ -344,7 +339,8 @@ function copyToTextarea() {
   let hearingLoopEls = document.getElementsByName("hearingLoop");
   for (let i = 0; i < hearingLoopEls.length; i++) {
     if (hearingLoopEls[i].checked) {
-      formData += "Hearing Loop? " + hearingLoopEls[i].value + "\n";
+      formData +=
+        "Hearing Loop Availability: " + hearingLoopEls[i].value + "\n";
       break;
     }
   }
@@ -352,7 +348,10 @@ function copyToTextarea() {
   let islIntEls = document.getElementsByName("islInt");
   for (let i = 0; i < islIntEls.length; i++) {
     if (islIntEls[i].checked) {
-      formData += "ISL Interpreter? " + islIntEls[i].value + "\n";
+      formData +=
+        "Irish Sign Language (ISL) Interpretation Availability? " +
+        islIntEls[i].value +
+        "\n";
       break;
     }
   }
@@ -361,9 +360,7 @@ function copyToTextarea() {
   for (let i = 0; i < accessRequirementsEls.length; i++) {
     if (accessRequirementsEls[i].checked) {
       formData +=
-        "Does the event have a question about accessibility requirements of attendees? " +
-        accessRequirementsEls[i].value +
-        "\n";
+        "Accessibility Requirements: " + accessRequirementsEls[i].value + "\n";
       break;
     }
   }
@@ -383,7 +380,7 @@ function copyToTextarea() {
   for (let i = 0; i < quietSpaceEls.length; i++) {
     if (quietSpaceEls[i].checked) {
       formData +=
-        " Have you made provisions for a designated quiet space? " +
+        "Are there provisions for a designated quiet space? " +
         quietSpaceEls[i].value +
         "\n";
       break;
