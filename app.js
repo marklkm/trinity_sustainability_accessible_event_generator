@@ -81,10 +81,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     'input[name="promoteAwareness"]:checked'
   ).value;
   const comments =
-    document.getElementById("comments").value || "No comments provided";
+    document.getElementById("comments").value ||
+    "No additional comments provided";
   const contacts =
     document.getElementById("contacts").value ||
-    "No additional contacts provided";
+    "No additional contact details provided";
   // ... Fetch other fields similarly ...
 
   const output = `
