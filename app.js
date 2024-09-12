@@ -88,6 +88,25 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
   // ... Fetch other fields similarly ...
 
+  if (
+    !eventName ||
+    !eventDescription ||
+    !eventLocation ||
+    !organiserName ||
+    !eventStartTime ||
+    !eventEndTime ||
+    !eventStartDate ||
+    !eventEndDate ||
+    !onlineEvent ||
+    !eventRecording ||
+    !inpersonEvent ||
+    !eventAccess
+  ) {
+    alert("Please fill out all required fields.");
+  } else {
+    alert("Form submitted successfully!");
+  }
+
   const output = `
         Event Name: ${eventName}
         Event Description: ${eventDescription}
