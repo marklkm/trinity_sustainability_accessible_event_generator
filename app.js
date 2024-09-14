@@ -7,86 +7,220 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 });
 
 document.getElementById("submitBtn").addEventListener("click", function () {
-  const eventName = document.getElementById("eventName").value;
-  const eventDescription = document.getElementById("eventDescription").value;
-  const eventLocation = document.getElementById("eventLocation").value;
-  const organiserName = document.getElementById("organiserName").value;
-  const organiserEmail = document.getElementById("organiserEmail").value;
-  const eventStartTime = document.getElementById("eventStartTime").value;
-  const eventEndTime = document.getElementById("eventEndTime").value;
-  const eventStartDate = document.getElementById("eventStartDate").value;
-  const eventEndDate = document.getElementById("eventEndDate").value;
-  const onlineEvent = document.querySelector(
+  const eventName =
+    document.getElementById("eventName").value || "Not Selected";
+  const eventDescription =
+    document.getElementById("eventDescription").value || "Not Selected";
+  const eventLocation =
+    document.getElementById("eventLocation").value || "Not Selected";
+  const organiserName =
+    document.getElementById("organiserName").value || "Not Selected";
+  const organiserEmail =
+    document.getElementById("organiserEmail").value || "Not Selected";
+  const eventStartTime =
+    document.getElementById("eventStartTime").value || "Not Selected";
+  const eventEndTime =
+    document.getElementById("eventEndTime").value || "Not Selected";
+  const eventStartDate =
+    document.getElementById("eventStartDate").value || "Not Selected";
+  const eventEndDate =
+    document.getElementById("eventEndDate").value || "Not Selected";
+
+  // Radio buttons: Add null checks
+  const onlineEventElement = document.querySelector(
     'input[name="onlineEvent"]:checked'
-  ).value;
-  const eventRecording = document.querySelector(
+  );
+  const onlineEvent = onlineEventElement ? onlineEventElement.value : null;
+
+  const eventRecordingElement = document.querySelector(
     'input[name="eventRecording"]:checked'
-  ).value;
-  const inpersonEvent = document.querySelector(
+  );
+  const eventRecording = eventRecordingElement
+    ? eventRecordingElement.value
+    : null;
+
+  const inpersonEventElement = document.querySelector(
     'input[name="inpersonEvent"]:checked'
-  ).value;
-  const eventAccess = document.querySelector(
+  );
+  const inpersonEvent = inpersonEventElement
+    ? inpersonEventElement.value
+    : null;
+
+  const eventAccessElement = document.querySelector(
     'input[name="eventAccess"]:checked'
-  ).value;
-  const seatingFacilities = document.querySelector(
+  );
+  const eventAccess = eventAccessElement ? eventAccessElement.value : null;
+
+  const seatingFacilitiesElement = document.querySelector(
     'input[name="seatingFacilities"]:checked'
-  ).value;
-  const wheelchairToilets = document.querySelector(
+  );
+  const seatingFacilities = seatingFacilitiesElement
+    ? seatingFacilitiesElement.value
+    : null;
+
+  const wheelchairToiletsElement = document.querySelector(
     'input[name="wheelchairToilets"]:checked'
-  ).value;
-  const hearingLoop = document.querySelector(
+  );
+  const wheelchairToilets = wheelchairToiletsElement
+    ? wheelchairToiletsElement.value
+    : null;
+
+  const hearingLoopElement = document.querySelector(
     'input[name="hearingLoop"]:checked'
-  ).value;
-  const islInt = document.querySelector('input[name="islInt"]:checked').value;
-  const accessRequirements = document.querySelector(
+  );
+  const hearingLoop = hearingLoopElement ? hearingLoopElement.value : null;
+
+  const islIntElement = document.querySelector('input[name="islInt"]:checked');
+  const islInt = islIntElement ? islIntElement.value : null;
+
+  const accessRequirementsElement = document.querySelector(
     'input[name="accessRequirements"]:checked'
-  ).value;
-  const eventParking = document.querySelector(
+  );
+  const accessRequirements = accessRequirementsElement
+    ? accessRequirementsElement.value
+    : null;
+
+  const eventParkingElement = document.querySelector(
     'input[name="eventParking"]:checked'
-  ).value;
-  const quietSpace = document.querySelector(
+  );
+  const eventParking = eventParkingElement ? eventParkingElement.value : null;
+
+  const quietSpaceElement = document.querySelector(
     'input[name="quietSpace"]:checked'
-  ).value;
-  const sensoryEnvironment = document.querySelector(
+  );
+  const quietSpace = quietSpaceElement ? quietSpaceElement.value : null;
+
+  const sensoryEnvironmentElement = document.querySelector(
     'input[name="sensoryEnvironment"]:checked'
-  ).value;
-  const sensoryInfo = document.querySelector(
+  );
+  const sensoryEnvironment = sensoryEnvironmentElement
+    ? sensoryEnvironmentElement.value
+    : null;
+
+  const sensoryInfoElement = document.querySelector(
     'input[name="sensoryInfo"]:checked'
-  ).value;
-  const eventSlides = document.querySelector(
+  );
+  const sensoryInfo = sensoryInfoElement ? sensoryInfoElement.value : null;
+
+  const eventSlidesElement = document.querySelector(
     'input[name="eventSlides"]:checked'
-  ).value;
-  const eventVideo = document.querySelector(
+  );
+  const eventSlides = eventSlidesElement ? eventSlidesElement.value : null;
+
+  const eventVideoElement = document.querySelector(
     'input[name="eventVideo"]:checked'
-  ).value;
-  const singleUseItems = document.querySelector(
+  );
+  const eventVideo = eventVideoElement ? eventVideoElement.value : null;
+
+  const singleUseItemsElement = document.querySelector(
     'input[name="singleUseItems"]:checked'
-  ).value;
-  const zeroWaste = document.querySelector(
+  );
+  const singleUseItems = singleUseItemsElement
+    ? singleUseItemsElement.value
+    : null;
+
+  const zeroWasteElement = document.querySelector(
     'input[name="zeroWaste"]:checked'
-  ).value;
-  const veggieApproach = document.querySelector(
+  );
+  const zeroWaste = zeroWasteElement ? zeroWasteElement.value : null;
+
+  const veggieApproachElement = document.querySelector(
     'input[name="veggieApproach"]:checked'
-  ).value;
-  const glutenFree = document.querySelector(
+  );
+  const veggieApproach = veggieApproachElement
+    ? veggieApproachElement.value
+    : null;
+
+  const glutenFreeElement = document.querySelector(
     'input[name="glutenFree"]:checked'
-  ).value;
-  const transport = document.querySelector(
+  );
+  const glutenFree = glutenFreeElement ? glutenFreeElement.value : null;
+
+  const transportElement = document.querySelector(
     'input[name="transport"]:checked'
-  ).value;
-  const sustainableSourced = document.querySelector(
+  );
+  const transport = transportElement ? transportElement.value : null;
+
+  const sustainableSourcedElement = document.querySelector(
     'input[name="sustainableSourced"]:checked'
-  ).value;
-  const promoteAwareness = document.querySelector(
+  );
+  const sustainableSourced = sustainableSourcedElement
+    ? sustainableSourcedElement.value
+    : null;
+
+  const promoteAwarenessElement = document.querySelector(
     'input[name="promoteAwareness"]:checked'
-  ).value;
+  );
+  const promoteAwareness = promoteAwarenessElement
+    ? promoteAwarenessElement.value
+    : null;
+
   const comments =
     document.getElementById("comments").value ||
     "No additional comments provided";
   const contacts =
     document.getElementById("contacts").value ||
     "No additional contact details provided";
-  // ... Fetch other fields similarly ...
+
+  const output = `
+        Event Name: ${eventName}
+        Event Description: ${eventDescription}
+        Event Location: ${eventLocation}
+        Event Organiser name: ${organiserName}
+        Event Organiser email: ${organiserEmail}
+        Event Start Time: ${eventStartTime}
+        Event End Time: ${eventEndTime}
+        Event Start Date: ${eventStartDate}
+        Event End Date: ${eventEndDate}
+        Online Event: ${onlineEvent || "Not selected"}
+        Event Recording: ${eventRecording || "Not selected"}
+        In-Person Event: ${inpersonEvent || "Not selected"}
+        Is the event accessible? ${eventAccess || "Not selected"}
+        Is seating available at the event? ${
+          seatingFacilities || "Not selected"
+        }
+        Wheelchair accessible toilet: ${wheelchairToilets || "Not selected"}
+        Hearing Loop Availability: ${hearingLoop || "Not selected"}
+        Irish Sign Language (ISL) Interpretation Availability? ${
+          islInt || "Not selected"
+        }
+        Accessibility Requirements: ${accessRequirements || "Not selected"}
+        Disabled Person's Parking Availability: ${
+          eventParking || "Not selected"
+        }
+        Are there provisions for a designated quiet space? ${
+          quietSpace || "Not selected"
+        }
+        Will provisions be made to create a sensory-friendly environment? ${
+          sensoryEnvironment || "Not selected"
+        }
+        Is event information clear, concise, and provided in multiple formats? ${
+          sensoryInfo || "Not selected"
+        }
+        Are the presentation slides accessible? ${eventSlides || "Not selected"}
+        Does the event include a video showing or video call? ${
+          eventVideo || "Not selected"
+        }
+        Will single-use items be available at the event? ${
+          singleUseItems || "Not selected"
+        }
+        Will the event be a zero waste event? ${zeroWaste || "Not selected"}
+        Gluten-free options availability: ${glutenFree || "Not selected"}
+        Will the event take a veggie first approach? ${
+          veggieApproach || "Not selected"
+        }
+        Will you promote public transport and active travel (walking and cycling) to your event? ${
+          transport || "Not selected"
+        }
+        Are products and services procured for the event sustainably sourced or produced? ${
+          sustainableSourced || "Not selected"
+        }
+        Will the event promote sustainability awareness and education among attendees? ${
+          promoteAwareness || "Not selected"
+        }
+        Any further comments or details? ${comments}
+        Please provide contact details for any access enquiries (if not included elsewhere): ${contacts}
+    `;
 
   if (
     !eventName ||
@@ -100,69 +234,32 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !onlineEvent ||
     !eventRecording ||
     !inpersonEvent ||
-    !eventAccess
+    !eventAccess ||
+    !seatingFacilities ||
+    !wheelchairToilets ||
+    !hearingLoop ||
+    !accessRequirements ||
+    !eventParking ||
+    !quietSpace ||
+    !sensoryEnvironment ||
+    !sensoryInfo ||
+    !eventSlides ||
+    !eventVideo ||
+    !singleUseItems ||
+    !zeroWaste ||
+    !veggieApproach ||
+    !glutenFree ||
+    !transport ||
+    !sustainableSourced ||
+    !promoteAwareness
   ) {
     alert("Please fill out all required fields.");
   } else {
     alert("Form submitted successfully!");
   }
 
-  const output = `
-        Event Name: ${eventName}
-        Event Description: ${eventDescription}
-        Event Location: ${eventLocation}
-        Event Organiser name: ${organiserName}
-        Event Organiser email: ${organiserEmail}
-        Event Start Time: ${eventStartTime}
-        Event End Time: ${eventEndTime}
-        Event Start Date: ${eventStartDate}
-        Event End Date: ${eventEndDate}
-        Online Event: ${onlineEvent}
-        Event Recording ${eventRecording}
-        In-Person Event: ${inpersonEvent}
-        Is the event accessible? ${eventAccess}
-        Is seating available at the event? ${seatingFacilities} 
-        Wheelchair accessible toilet: ${wheelchairToilets}
-        Hearing Loop Availability: ${hearingLoop}
-        Irish Sign Language (ISL) Interpretation Availability? ${islInt}
-        Accessibility Requirements: ${accessRequirements}
-        Disabled Person's Parking Availability: ${eventParking}
-        Are there provisions for a designated quiet space? ${quietSpace}
-        Have you made provisions to create a sensory-friendly environment? ${sensoryEnvironment}
-        Is event information, instructions, and communications clear, concise, and provided in multiple formats? ${sensoryInfo}
-        Are the presentation slides accessible? ${eventSlides}
-        Does the event include a video showing or video call? ${eventVideo}
-        Will single use items be available at the event? ${singleUseItems}
-        Will the event be a zero waste event? ${zeroWaste}
-        Gluten free options availability: ${glutenFree}
-        Will the event take a veggie first approach? ${veggieApproach}
-        Will you promote public transport and active travel (walking and cycling) to your event? ${transport}
-        Are products and services procured for the event sustainably sourced or produced? ${sustainableSourced}
-        Will the event promote sustainability awareness and education among attendees? ${promoteAwareness}
-        Any further comments or details? ${comments}
-        Please provide contact details for any access enquiries (if not included elsewhere): ${contacts}
-    `;
-
   document.getElementById("output").innerText = output;
 });
-
-(function () {
-  "use strict";
-  var forms = document.querySelectorAll(".needs-validation");
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
 
 document.getElementById("copyBtn").addEventListener("click", function () {
   const output = document.getElementById("output");
@@ -175,6 +272,8 @@ document.getElementById("copyBtn").addEventListener("click", function () {
   alert("Event details copied to clipboard!");
 });
 
+// PDF button
+
 document.getElementById("pdfBtn").addEventListener("click", function () {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
@@ -185,74 +284,60 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
   const imageInput = document.getElementById("eventImage");
   const file = imageInput.files[0];
 
-  const lineHeight = 10; // Height of a single line in the PDF
-  const pageHeight = doc.internal.pageSize.height; // Get page height of the PDF
-  const marginTop = 10; // Top margin
-  const marginBottom = 10; // Bottom margin
-  const textWidth = 180; // Max width for the text lines (A4 width - margins)
-  let yPosition = 20; // Starting y position for the text
+  const lineHeight = 10;
+  const pageHeight = doc.internal.pageSize.height;
+  const marginTop = 10;
+  const marginBottom = 10;
+  const textWidth = 180;
+  let yPosition = 20;
 
   if (file && file.type === "image/png") {
     const reader = new FileReader();
     reader.onload = function (event) {
       const imgData = event.target.result;
 
-      // Add image to the top of the PDF (x: 10, y: 10, width: 180mm, height: proportional to image)
-      doc.addImage(imgData, "PNG", 10, marginTop, 180, 80); // Adjust the size if needed
+      doc.addImage(imgData, "PNG", 10, marginTop, 180, 80);
 
-      // Set yPosition to just below the image
       yPosition = 100;
 
-      // Add "Event Details" heading after the image
       doc.setFontSize(22);
       doc.text("Event Details", 10, yPosition);
-
-      // Increase yPosition to leave space after the heading
       yPosition += 20;
 
-      // Set font size for the body text
       doc.setFontSize(14);
 
-      // Split the text to fit into the page width
-      const lines = doc.splitTextToSize(output, textWidth); // 180 is the max width of lines in mm
+      const lines = doc.splitTextToSize(output, textWidth);
 
-      // Loop through each line and add text, handling page breaks if necessary
       for (let i = 0; i < lines.length; i++) {
         if (yPosition + lineHeight > pageHeight - marginBottom) {
-          // Add a new page if the text goes beyond the page height
           doc.addPage();
-          yPosition = marginTop; // Reset yPosition for the new page
+          yPosition = marginTop;
         }
         doc.text(lines[i], 10, yPosition);
-        yPosition += lineHeight; // Move yPosition down for the next line
+        yPosition += lineHeight;
       }
 
-      // Save the PDF with the event details and image
       doc.save("event-details.pdf");
     };
     reader.readAsDataURL(file);
   } else {
-    // If no image is uploaded, just print the text
     const lines = doc.splitTextToSize(output, textWidth);
 
-    // Add "Event Details" heading
     doc.setFontSize(22);
     doc.text("Event Details", 10, yPosition);
     yPosition += 20;
 
     doc.setFontSize(14);
 
-    // Loop through each line and add text, handling page breaks if necessary
     for (let i = 0; i < lines.length; i++) {
       if (yPosition + lineHeight > pageHeight - marginBottom) {
         doc.addPage();
-        yPosition = marginTop; // Reset yPosition for the new page
+        yPosition = marginTop;
       }
       doc.text(lines[i], 10, yPosition);
       yPosition += lineHeight;
     }
 
-    // Save the PDF
     doc.save("event-details.pdf");
   }
 });
