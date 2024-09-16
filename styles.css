@@ -179,8 +179,7 @@ p {
     max-height: 300px; /* Smaller max-height for background images */
   }
 
-  .form-control,
-  .form-check-label,
+
   .button {
     font-size: 1rem; /* Larger font size for touch targets */
     padding: 12px; /* Larger padding for easier interaction */
@@ -197,4 +196,32 @@ p {
 
 .btn-success:hover {
   background-color: #0056b3; /* Darker shade for hover state */
+}
+
+
+/* Radio buttons for mobile devices */
+/* Ensure radio buttons and labels are aligned horizontally on all devices */
+.form-check {
+  display: flex;
+  align-items: center; /* Align radio buttons and text vertically */
+  margin-bottom: 0.75rem; /* Add spacing between form groups */
+}
+
+.form-check-input {
+  margin-right: 0.5rem; /* Space between the radio button and the label */
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+  .form-check {
+    flex-direction: row; /* Align radio buttons and text in a row on mobile */
+  }
+
+  .form-check-input {
+    margin-right: 0.5rem; /* Space between radio buttons and label on mobile */
+  }
+
+  .form-check-label {
+    font-size: 1rem; /* Adjust font size for readability on small screens */
+  }
 }
