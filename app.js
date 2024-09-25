@@ -191,9 +191,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         Are there provisions for a designated quiet space? ${
           quietSpace || "Not selected"
         }
-        Will provisions be made to create a sensory-friendly environment? ${
-          sensoryEnvironment || "Not selected"
-        }
         Is event information clear, concise, and provided in multiple formats? ${
           sensoryInfo || "Not selected"
         }
@@ -241,7 +238,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !accessRequirements ||
     !eventParking ||
     !quietSpace ||
-    !sensoryEnvironment ||
     !sensoryInfo ||
     !eventSlides ||
     !eventVideo ||
@@ -262,14 +258,17 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 });
 
 document.getElementById("copyBtn").addEventListener("click", function () {
-  const output = document.getElementById("output");
-  const textArea = document.createElement("textarea");
-  textArea.value = output.innerText; // Use innerText or textContent to avoid copying HTML tags
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textArea);
-  alert("Event details copied to clipboard!");
+  const output = document.getElementById("output").innerText; // Use innerText or textContent to avoid copying HTML tags
+
+  // Modern way to copy to clipboard
+  navigator.clipboard
+    .writeText(output)
+    .then(function () {
+      alert("Event details copied to clipboard!");
+    })
+    .catch(function (err) {
+      console.error("Failed to copy: ", err);
+    });
 });
 
 // PDF button
