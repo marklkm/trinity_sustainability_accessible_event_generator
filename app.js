@@ -351,8 +351,30 @@ document.getElementById("emailBtn").addEventListener("click", function () {
 });
 
 document.getElementById("clearBtn").addEventListener("click", function () {
-  // Refresh the page
-  location.reload();
+  // Get all input elements
+  let inputs = document.querySelectorAll("input");
+
+  // Loop through each input and clear its value or reset its state
+  inputs.forEach(function (input) {
+    if (input.type === "radio" || input.type === "checkbox") {
+      // Uncheck radio buttons and checkboxes
+      input.checked = false;
+    } else {
+      // Clear the value for other input types (e.g., text, number, etc.)
+      input.value = "";
+    }
+  });
+
+  // Optionally clear textareas and select elements as well
+  let textareas = document.querySelectorAll("textarea");
+  textareas.forEach(function (textarea) {
+    textarea.value = "";
+  });
+
+  let selects = document.querySelectorAll("select");
+  selects.forEach(function (select) {
+    select.selectedIndex = 0;
+  });
 });
 
 function copyToTextarea() {
