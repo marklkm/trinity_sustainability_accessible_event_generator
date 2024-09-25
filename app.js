@@ -90,13 +90,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   );
   const quietSpace = quietSpaceElement ? quietSpaceElement.value : null;
 
-  const sensoryEnvironmentElement = document.querySelector(
-    'input[name="sensoryEnvironment"]:checked'
-  );
-  const sensoryEnvironment = sensoryEnvironmentElement
-    ? sensoryEnvironmentElement.value
-    : null;
-
   const sensoryInfoElement = document.querySelector(
     'input[name="sensoryInfo"]:checked'
   );
@@ -163,60 +156,76 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
 
   const output = `
-        Event Name: ${eventName}
-        Event Description: ${eventDescription}
-        Event Location: ${eventLocation}
-        Event Organiser name: ${organiserName}
-        Event Organiser email: ${organiserEmail}
-        Event Start Time: ${eventStartTime}
-        Event End Time: ${eventEndTime}
-        Event Start Date: ${eventStartDate}
-        Event End Date: ${eventEndDate}
-        Online Event: ${onlineEvent || "Not selected"}
-        Event Recording: ${eventRecording || "Not selected"}
-        In-Person Event: ${inpersonEvent || "Not selected"}
-        Is the event accessible? ${eventAccess || "Not selected"}
-        Is seating available at the event? ${
+       <span class="bold-label">Event Name:</span> ${eventName}<br>
+        <strong>Event Description:</strong> ${eventDescription}<br>
+        <strong>Event Location:</strong> ${eventLocation}<br>
+        <strong>Event Organiser name:</strong> ${organiserName}<br>
+        <strong>Event Organiser email:</strong> ${organiserEmail}<br>
+        <strong>Event Start Time:</strong> ${eventStartTime}<br>
+        <strong>Event End Time:</strong> ${eventEndTime}<br>
+        <strong>Event Start Date:</strong> ${eventStartDate}<br>
+        <strong>Event End Date:</strong> ${eventEndDate}<br>
+        <strong>Online Event:</strong> ${onlineEvent || "Not selected"}<br>
+        <strong>Event Recording:</strong> ${
+          eventRecording || "Not selected"
+        }<br>
+        <strong>In-Person Event:</strong> ${inpersonEvent || "Not selected"}<br>
+        <strong>Is the event accessible?</strong> ${
+          eventAccess || "Not selected"
+        }<br>
+        <strong>Is seating available at the event?</strong> ${
           seatingFacilities || "Not selected"
-        }
-        Wheelchair accessible toilet: ${wheelchairToilets || "Not selected"}
-        Hearing Loop Availability: ${hearingLoop || "Not selected"}
-        Irish Sign Language (ISL) Interpretation Availability? ${
+        }<br>
+        <strong>Wheelchair accessible toilet:</strong> ${
+          wheelchairToilets || "Not selected"
+        }<br>
+        <strong>Hearing Loop Availability:</strong> ${
+          hearingLoop || "Not selected"
+        }<br>
+        <strong>Irish Sign Language (ISL) Interpretation Availability?</strong> ${
           islInt || "Not selected"
-        }
-        Accessibility Requirements: ${accessRequirements || "Not selected"}
-        Disabled Person's Parking Availability: ${
+        }<br>
+        <strong>Accessibility Requirements:</strong> ${
+          accessRequirements || "Not selected"
+        }<br>
+        <strong>Disabled Person's Parking Availability:</strong> ${
           eventParking || "Not selected"
-        }
-        Are there provisions for a designated quiet space? ${
+        }<br>
+        <strong>Are there provisions for a designated quiet space?</strong> ${
           quietSpace || "Not selected"
-        }
-        Is event information clear, concise, and provided in multiple formats? ${
+        }<br>
+        <strong>Is event information clear, concise, and provided in multiple formats?</strong> ${
           sensoryInfo || "Not selected"
-        }
-        Are the presentation slides accessible? ${eventSlides || "Not selected"}
-        Does the event include a video showing or video call? ${
+        }<br>
+        <strong>Are the presentation slides accessible?</strong> ${
+          eventSlides || "Not selected"
+        }<br>
+        <strong>Does the event include a video showing or video call?</strong> ${
           eventVideo || "Not selected"
-        }
-        Will single-use items be available at the event? ${
+        }<br>
+        <strong>Will single-use items be available at the event?</strong> ${
           singleUseItems || "Not selected"
-        }
-        Will the event be a zero waste event? ${zeroWaste || "Not selected"}
-        Gluten-free options availability: ${glutenFree || "Not selected"}
-        Will the event take a veggie first approach? ${
+        }<br>
+        <strong>Will the event be a zero waste event?</strong> ${
+          zeroWaste || "Not selected"
+        }<br>
+        <strong>Gluten-free options availability:</strong> ${
+          glutenFree || "Not selected"
+        }<br>
+        <strong>Will the event take a veggie first approach?</strong> ${
           veggieApproach || "Not selected"
-        }
-        Will you promote public transport and active travel (walking and cycling) to your event? ${
+        }<br>
+        <strong>Will you promote public transport and active travel to your event?</strong> ${
           transport || "Not selected"
-        }
-        Are products and services procured for the event sustainably sourced or produced? ${
+        }<br>
+        <strong>Are products procured for the event sustainably sourced or produced?</strong> ${
           sustainableSourced || "Not selected"
-        }
-        Will the event promote sustainability awareness and education among attendees? ${
+        }<br>
+        <strong>Will the event promote sustainability awareness and education among attendees?</strong> ${
           promoteAwareness || "Not selected"
-        }
-        Any further comments or details? ${comments}
-        Please provide contact details for any access enquiries (if not included elsewhere): ${contacts}
+        }<br>
+        <strong>Any further comments or details?</strong> ${comments}<br>
+        <strong>Please provide contact details for any access enquiries (if not included elsewhere):</strong> ${contacts}<br>
     `;
 
   if (
@@ -254,7 +263,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     alert("Form submitted successfully!");
   }
 
-  document.getElementById("output").innerText = output;
+  document.getElementById("output").innerHTML = output;
 });
 
 document.getElementById("copyBtn").addEventListener("click", function () {
@@ -285,10 +294,75 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   const lineHeight = 10;
   const pageHeight = doc.internal.pageSize.height;
+  const pageWidth = doc.internal.pageSize.width;
+  const marginLeft = 10;
+  const marginRight = 10;
   const marginTop = 10;
   const marginBottom = 10;
-  const textWidth = 180;
+  const textWidth = pageWidth - marginLeft - marginRight;
   let yPosition = 20;
+
+  const boldTextArray = [
+    "Event Name:",
+    "Event Description:",
+    "Event Location:",
+    "Event Organiser name:",
+    "Event Organiser email:",
+    "Event Start Time:",
+    "Event End Time:",
+    "Event Start Date:",
+    "Event End Date:",
+    "Online Event:",
+    "Event Recording:",
+    "In-Person Event:",
+    "Is the event accessible?",
+    "Is seating available at the event?",
+    "Wheelchair accessible toilet:",
+    "Hearing Loop Availability:",
+    "Irish Sign Language (ISL) Interpretation Availability?",
+    "Accessibility Requirements:",
+    "Disabled Person's Parking Availability:",
+    "Are there provisions for a designated quiet space?",
+    "Is event information clear, concise, and provided in multiple formats?",
+    "Are the presentation slides accessible?",
+    "Does the event include a video showing or video call?",
+    "Will single-use items be available at the event?",
+    "Will the event be a zero waste event?",
+    "Gluten-free options availability:",
+    "Will the event take a veggie first approach?",
+    "Will you promote public transport and active travel to your event?",
+    "Are products procured for the event sustainably sourced or produced?",
+    "Will the event promote sustainability awareness and education among attendees?",
+    "Any further comments or details?",
+    "Please provide contact details for any access enquiries (if not included elsewhere):",
+  ];
+
+  function addTextWithBold(doc, text, yPosition) {
+    const parts = text.split(
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Gluten-free options availability:|Will the event take a veggie first approach\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries \(if not included elsewhere\):)/
+    );
+
+    parts.forEach((part, index) => {
+      const wrappedLines = doc.splitTextToSize(part, textWidth); // Automatically split text to fit width
+      wrappedLines.forEach((line) => {
+        if (yPosition + lineHeight > pageHeight - marginBottom) {
+          doc.addPage();
+          yPosition = marginTop; // Reset yPosition at the top of a new page
+        }
+
+        if (boldTextArray.includes(line)) {
+          doc.setFont("Helvetica", "bold");
+        } else {
+          doc.setFont("Helvetica", "normal");
+        }
+
+        doc.text(line, marginLeft, yPosition);
+        yPosition += lineHeight;
+      });
+    });
+
+    return yPosition;
+  }
 
   if (file && file.type === "image/png") {
     const reader = new FileReader();
@@ -300,42 +374,24 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
       yPosition = 100;
 
       doc.setFontSize(22);
-      doc.text("Event Details", 10, yPosition);
+      doc.text("Event Details", marginLeft, yPosition);
       yPosition += 20;
 
       doc.setFontSize(14);
 
-      const lines = doc.splitTextToSize(output, textWidth);
-
-      for (let i = 0; i < lines.length; i++) {
-        if (yPosition + lineHeight > pageHeight - marginBottom) {
-          doc.addPage();
-          yPosition = marginTop;
-        }
-        doc.text(lines[i], 10, yPosition);
-        yPosition += lineHeight;
-      }
+      yPosition = addTextWithBold(doc, output, yPosition);
 
       doc.save("event-details.pdf");
     };
     reader.readAsDataURL(file);
   } else {
-    const lines = doc.splitTextToSize(output, textWidth);
-
     doc.setFontSize(22);
-    doc.text("Event Details", 10, yPosition);
+    doc.text("Event Details", marginLeft, yPosition);
     yPosition += 20;
 
     doc.setFontSize(14);
 
-    for (let i = 0; i < lines.length; i++) {
-      if (yPosition + lineHeight > pageHeight - marginBottom) {
-        doc.addPage();
-        yPosition = marginTop;
-      }
-      doc.text(lines[i], 10, yPosition);
-      yPosition += lineHeight;
-    }
+    yPosition = addTextWithBold(doc, output, yPosition);
 
     doc.save("event-details.pdf");
   }
@@ -601,7 +657,7 @@ function copyToTextarea() {
   for (let i = 0; i < transportEls.length; i++) {
     if (transportEls[i].checked) {
       formData +=
-        "Will you promote public transport and active travel (walking and cycling) to your event? " +
+        "Will you promote public transport and active travel to your event? " +
         transportEls[i].value +
         "\n";
       break;
