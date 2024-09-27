@@ -1551,6 +1551,72 @@
               <span class="opens-new-window">(Opens in a new window)</span>.
             </p>
 
+            <!-- Audio description availability -->
+
+            <fieldset>
+              <legend>Audio description availability:</legend>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="audioDescription"
+                  id="yesAudioDescription"
+                  value="Yes, audio description available"
+                  required
+                />
+                <label class="form-check-label" for="yesAudioDescription"
+                  >Yes, audio description available</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="audioDescription"
+                  id="noAudioDescription"
+                  value="No, audio description not available "
+                  required
+                />
+                <label class="form-check-label" for="noAudioDescription"
+                  >No, audio description not available
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="audioDescription"
+                  id="requestAudioDescription"
+                  value="Available on request"
+                  required
+                />
+                <label class="form-check-label" for="requestAudioDescription"
+                  >Available on request</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="audioDescription"
+                  id="unknownAudioDescription"
+                  value="Audio description availability unknown "
+                  required
+                />
+                <label class="form-check-label" for="unknownAudioDescription"
+                  >Audio description availability unknown
+                </label>
+              </div>
+
+              <div id="eventSlidesHelp" class="form-text">Required answer.</div>
+            </fieldset>
+
+            <!-- End of audio description availability -->
+
             <fieldset>
               <legend>
                 Are the presentation slides (MS PowerPoint etc.) accessible?
@@ -2158,10 +2224,7 @@
 
           <div class="mb-3">
             <label for="contacts" class="form-label">
-              <h4>
-                Please provide contact details for any access enquiries (if not
-                included elsewhere):
-              </h4>
+              <h4>Please provide contact details for any access enquiries:</h4>
             </label>
             <textarea
               class="form-control"

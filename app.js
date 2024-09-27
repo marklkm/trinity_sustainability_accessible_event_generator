@@ -95,6 +95,13 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   );
   const sensoryInfo = sensoryInfoElement ? sensoryInfoElement.value : null;
 
+  const audioDescriptionElement = document.querySelector(
+    'input[name="audioDescription"]:checked'
+  );
+  const audioDescription = audioDescriptionElement
+    ? audioDescriptionElement.value
+    : null;
+
   const eventSlidesElement = document.querySelector(
     'input[name="eventSlides"]:checked'
   );
@@ -197,6 +204,9 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         <strong>Is event information clear, concise, and provided in multiple formats?</strong> ${
           sensoryInfo || "Not selected"
         }<br>
+                <strong>Audio description availability:</strong> ${
+                  audioDescription || "Not selected"
+                }<br>
         <strong>Are the presentation slides accessible?</strong> ${
           eventSlides || "Not selected"
         }<br>
@@ -225,7 +235,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
           promoteAwareness || "Not selected"
         }<br>
         <strong>Any further comments or details?</strong> ${comments}<br>
-        <strong>Please provide contact details for any access enquiries (if not included elsewhere):</strong> ${contacts}<br>
+        <strong>Please provide contact details for any access enquiries:</strong> ${contacts}<br>
     `;
 
   if (
@@ -248,6 +258,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !eventParking ||
     !quietSpace ||
     !sensoryInfo ||
+    !audioDescription ||
     !eventSlides ||
     !eventVideo ||
     !singleUseItems ||
@@ -324,6 +335,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Disabled Person's Parking Availability:",
     "Are there provisions for a designated quiet space?",
     "Is event information clear, concise, and provided in multiple formats?",
+    "Audio description availability:",
     "Are the presentation slides accessible?",
     "Does the event include a video showing or video call?",
     "Will single-use items be available at the event?",
@@ -334,12 +346,12 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Are products procured for the event sustainably sourced or produced?",
     "Will the event promote sustainability awareness and education among attendees?",
     "Any further comments or details?",
-    "Please provide contact details for any access enquiries (if not included elsewhere):",
+    "Please provide contact details for any access enquiries:",
   ];
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Gluten-free options availability:|Will the event take a veggie first approach\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries \(if not included elsewhere\):)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Gluten-free options availability:|Will the event take a veggie first approach\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
@@ -591,6 +603,17 @@ function copyToTextarea() {
     }
   }
 
+  let audioDescriptionEls = document.getElementsByName("audioDescription");
+  for (let i = 0; i < audioDescriptionEls.length; i++) {
+    if (audioDescriptionEls[i].checked) {
+      formData +=
+        "Audio description availability: " +
+        audioDescriptionEls[i].value +
+        "\n";
+      break;
+    }
+  }
+
   let eventSlidesEls = document.getElementsByName("eventSlides");
   for (let i = 0; i < eventSlidesEls.length; i++) {
     if (eventSlidesEls[i].checked) {
@@ -691,7 +714,7 @@ function copyToTextarea() {
     document.getElementById("comments").value +
     "\n";
   formData +=
-    "Please provide contact details for any access enquiries (if not included elsewhere): " +
+    "Please provide contact details for any access enquiries: " +
     document.getElementById("contacts").value +
     "\n";
 
