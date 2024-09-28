@@ -126,30 +126,37 @@
             >
           </li>
         </ul>
-        <!-- Search form -->
-        <form
-          class="d-flex ms-auto"
-          action="https://www.tcd.ie/search/q/"
-          method="GET"
-        >
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            name="tcdsearchq"
-          />
-          <button
-            class="btn btn-primary"
-            type="submit"
-            aria-label="Perform search"
-          >
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
       </div>
     </div>
   </nav>
+
+  <!-- Search Form Below Navigation Links and Aligned Right -->
+  <div class="container">
+    <form
+      class="d-flex ms-auto mt-3"
+      action="https://www.tcd.ie/search/q/"
+      method="GET"
+      style="max-width: 300px"
+      <!--
+      Shortened
+      width
+      of
+      search
+      box
+      --
+    >
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        name="tcdsearchq"
+      />
+      <button class="btn btn-primary" type="submit" aria-label="Perform search">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+  </div>
 
   <body>
     <main id="maincontent" tabindex="-1">
