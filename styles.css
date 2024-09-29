@@ -1,7 +1,7 @@
 /* Default Styles */
 body {
-  font-size: 1.25rem; /* Base font size in rem for scalability */
-  color: #333;
+  font-size: 2rem; /* Base font size in rem for scalability */
+  color: #000;
   background-color: #fff;
 }
 
@@ -51,7 +51,7 @@ body {
 
   /* High contrast mode styles */
 /* High Contrast Mode */
-/* High Contrast Mode */
+
 .high-contrast {
   background-color: #000;
   color: #fff;
@@ -120,7 +120,12 @@ body {
   color: #000;
 }
 
+/* for the high contrast */
+/* High Contrast Mode */
 
+
+
+/* ------- */
 
 /* Headings */
 .heading-primary,
@@ -128,6 +133,7 @@ body {
 h1,
 h2 {
   color: #0569b9; /* Ensure this color has enough contrast */
+  font-size: 2rem;
 }
 
 /* Paragraphs */
