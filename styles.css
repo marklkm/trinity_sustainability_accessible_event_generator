@@ -51,13 +51,28 @@ body {
 
   /* High contrast mode styles */
 /* High Contrast Mode */
+/* High Contrast Mode */
 .high-contrast {
   background-color: #000;
   color: #fff;
 }
 
 .high-contrast a {
-  color: #fd0;
+  color: #ffcc00; /* Yellow for high contrast links */
+}
+
+.high-contrast .list-group-item {
+  background-color: #333; /* Dark background for list items */
+  color: #fff; /* White text */
+}
+
+.high-contrast .heading-primary {
+  color: #00ff00; /* Bright green headings */
+}
+
+.high-contrast .btn-success {
+  background-color: #ffcc00; /* High contrast button */
+  color: #000;
 }
 
 /* Large Font Size Mode */
@@ -71,7 +86,6 @@ body {
 #maincontent.large-font span, 
 #maincontent.large-font .form-text { /* Add other selectors as needed */
   font-size: 2rem; /* Adjust size as needed */
-  color: #000;
 }
 
 

@@ -137,13 +137,6 @@
       action="https://www.tcd.ie/search/q/"
       method="GET"
       style="max-width: 300px"
-      <!--
-      Shortened
-      width
-      of
-      search
-      box
-      --
     >
       <input
         class="form-control me-2"
@@ -2549,6 +2542,19 @@
           );
         });
       });
+    </script>
+
+    <script>
+      // JavaScript to toggle high contrast mode
+      document
+        .getElementById("toggleHighContrast")
+        .addEventListener("click", function () {
+          const body = document.body;
+          const isHighContrast = body.classList.toggle("high-contrast");
+
+          // Update aria-pressed attribute
+          this.setAttribute("aria-pressed", isHighContrast);
+        });
     </script>
 
     <script>
