@@ -89,7 +89,6 @@ body {
 #maincontent.large-font button, /* Targeting button elements */
 #maincontent.large-font .btn { /* Targeting Bootstrap buttons */
   font-size: 2rem; /* Adjust size as needed */
-  padding: 1rem 2rem; /* Increase button padding for larger size */
 }
 
 
