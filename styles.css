@@ -84,14 +84,25 @@ body {
 #maincontent.large-font legend, 
 #maincontent.large-font textarea, 
 #maincontent.large-font span, 
-#maincontent.large-font .form-text { /* Add other selectors as needed */
+#maincontent.large-font .form-text, 
+#maincontent.large-font .form-control,
+#maincontent.large-font button, /* Targeting button elements */
+#maincontent.large-font .btn { /* Targeting Bootstrap buttons */
   font-size: 2rem; /* Adjust size as needed */
+  padding: 1rem 2rem; /* Increase button padding for larger size */
 }
+
 
 
 .bold-label {
   font-weight: bold;
 }
+
+/* Increase font size for the specific input with class form-control */
+.form-control {
+  font-size: 2rem;
+}
+
 
 /* span color for opens in new window text */
 .opens-new-window {
