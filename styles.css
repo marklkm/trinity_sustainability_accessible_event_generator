@@ -97,12 +97,6 @@ body {
   font-weight: bold;
 }
 
-/* Increase font size for the specific input with class form-control */
-.form-control {
-  font-size: 2rem;
-}
-
-
 /* span color for opens in new window text */
 .opens-new-window {
   color: #dc128e;
