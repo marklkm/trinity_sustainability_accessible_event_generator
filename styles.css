@@ -65,6 +65,8 @@ body {
 #maincontent.large-font p, 
 #maincontent.large-font a, 
 #maincontent.large-font li, 
+#maincontent.large-font label, 
+#maincontent.large-font legend, 
 #maincontent.large-font span { /* Add other selectors as needed */
   font-size: 2rem; /* Adjust size as needed */
 }
