@@ -85,9 +85,7 @@ body {
 #maincontent.large-font textarea, 
 #maincontent.large-font span, 
 #maincontent.large-font .form-text, 
-#maincontent.large-font .form-control,
-#maincontent.large-font button, /* Targeting button elements */
-#maincontent.large-font .btn { /* Targeting Bootstrap buttons */
+#maincontent.large-font .form-control { /* Targeting Bootstrap buttons */
   font-size: 2rem; /* Adjust size as needed */
 }
 
