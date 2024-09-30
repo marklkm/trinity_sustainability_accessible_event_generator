@@ -93,11 +93,11 @@ body {
 #maincontent.large-font .heading-primary,
 #maincontent.large-font .heading-secondary,
 #maincontent.large-font h1,
-#maincontent.large-font h2 {
-  color: #dc128e;
-  font-size: 2rem;
+#maincontent.large-font h2,
+#maincontent.large-font .text-secondary {
+  color: #dc128e !important; /* Correct placement of !important */
+  font-size: 2rem !important; /* Apply !important to font size as well if needed */
 }
-
 
 
 .bold-label {
