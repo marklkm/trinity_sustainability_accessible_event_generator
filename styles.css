@@ -90,6 +90,14 @@ body {
   background-color: #000;
 }
 
+#maincontent.large-font .heading-primary,
+#maincontent.large-font .heading-secondary,
+#maincontent.large-font h1,
+#maincontent.large-font h2 {
+  color: #dc128e;
+  font-size: 2rem;
+}
+
 
 
 .bold-label {
@@ -207,12 +215,7 @@ p {
     font-size: 1.125rem; /* Slightly larger font size for important text */
   }
 
-  .heading-primary,
-  .heading-secondary,
-  h1,
-  h2 {
-    font-size: 1.5rem; /* Adjust heading sizes appropriately */
-  }
+
 
   .bg-image {
     max-height: 300px; /* Smaller max-height for background images */
