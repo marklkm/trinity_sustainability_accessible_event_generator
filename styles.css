@@ -78,7 +78,6 @@ body {
 /* Large Font Size Mode */
 #maincontent.large-font, 
 #maincontent.large-font p, 
-#maincontent.large-font a, 
 #maincontent.large-font li, 
 #maincontent.large-font label, 
 #maincontent.large-font legend, 
@@ -87,6 +86,8 @@ body {
 #maincontent.large-font .form-text, 
 #maincontent.large-font .form-control { /* Targeting Bootstrap buttons */
   font-size: 2rem; /* Adjust size as needed */
+  color: #ffffff;
+  background-color: #000;
 }
 
 
@@ -108,7 +109,7 @@ body {
 /* Increase specificity */
 #maincontent .form-text {
   font-size: 1.25rem;
-  color: #000;
+  color: #dc128e;
 }
 
 /* for the high contrast */
