@@ -2525,8 +2525,9 @@
         const mainContent = document.getElementById("maincontent"); // Get the maincontent element
         const body = document.body;
 
+        // Toggle High Contrast
         toggleContrastBtn.addEventListener("click", function () {
-          body.classList.toggle("high-contrast");
+          body.classList.toggle("high-contrast"); // Toggle high contrast on the body
           this.textContent = body.classList.contains("high-contrast")
             ? "Normal Contrast"
             : "Toggle High Contrast";
@@ -2536,8 +2537,9 @@
           );
         });
 
+        // Toggle Large Font Size
         toggleFontSizeBtn.addEventListener("click", function () {
-          mainContent.classList.toggle("large-font"); // Toggle class on maincontent
+          mainContent.classList.toggle("large-font"); // Toggle large font on maincontent only
           this.textContent = mainContent.classList.contains("large-font")
             ? "Normal Font Size"
             : "Increase Font Size";
