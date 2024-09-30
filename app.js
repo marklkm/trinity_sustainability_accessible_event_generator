@@ -136,6 +136,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   );
   const glutenFree = glutenFreeElement ? glutenFreeElement.value : null;
 
+  const foodLabelElement = document.querySelector(
+    'input[name="foodLabel"]:checked'
+  );
+  const foodLabel = foodLabelElement ? foodLabelElement.value : null;
+
   const transportElement = document.querySelector(
     'input[name="transport"]:checked'
   );
@@ -225,6 +230,12 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         <strong>Will the event take a veggie first approach?</strong> ${
           veggieApproach || "Not selected"
         }<br>
+        <strong>Gluten free options availability:</strong> ${
+          glutenFree || "Not selected"
+        }<br>
+        <strong>Are foods labelled with all their ingredients?</strong> ${
+          foodLabel || "Not selected"
+        }<br>
         <strong>Will you promote public transport and active travel to your event?</strong> ${
           transport || "Not selected"
         }<br>
@@ -265,6 +276,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !zeroWaste ||
     !veggieApproach ||
     !glutenFree ||
+    !foodLabel ||
     !transport ||
     !sustainableSourced ||
     !promoteAwareness
@@ -340,8 +352,9 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Does the event include a video showing or video call?",
     "Will single-use items be available at the event?",
     "Will the event be a zero waste event?",
-    "Gluten-free options availability:",
     "Will the event take a veggie first approach?",
+    "Gluten-free options availability:",
+    "Are foods labelled with all their ingredients?",
     "Will you promote public transport and active travel to your event?",
     "Are products procured for the event sustainably sourced or produced?",
     "Will the event promote sustainability awareness and education among attendees?",
@@ -351,7 +364,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Gluten-free options availability:|Will the event take a veggie first approach\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
@@ -671,7 +684,18 @@ function copyToTextarea() {
   for (let i = 0; i < glutenFreeEls.length; i++) {
     if (glutenFreeEls[i].checked) {
       formData +=
-        "GLuten free options availability: " + glutenFreeEls[i].value + "\n";
+        "Gluten free options availability: " + glutenFreeEls[i].value + "\n";
+      break;
+    }
+  }
+
+  let foodLabelEls = document.getElementsByName("foodLabelEls");
+  for (let i = 0; i < foodLabelEls.length; i++) {
+    if (foodLabelEls[i].checked) {
+      formData +=
+        "Are foods labelled with all their ingredients? " +
+        foodLabelEls[i].value +
+        "\n";
       break;
     }
   }
