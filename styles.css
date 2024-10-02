@@ -138,10 +138,11 @@ h2 {
   font-size: 2rem;
 }
 
-h3, h4 {
+h3, h4, legend {
   color: #0569b9; /* Ensure this color has enough contrast */
   margin-top: 1rem;  /* Bootstrap's mt-3 equivalent */
   margin-bottom: 1rem;  /* Bootstrap's mb-3 equivalent */
+  font-weight: 600;
 }
 
 
