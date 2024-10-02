@@ -94,6 +94,8 @@ body {
 #maincontent.large-font .heading-secondary,
 #maincontent.large-font h1,
 #maincontent.large-font h2,
+#maincontent.large-font h3,
+#maincontent.large-font h4,
 #maincontent.large-font .text-secondary {
   color: #dc128e !important; /* Correct placement of !important */
   font-size: 2rem !important; /* Apply !important to font size as well if needed */
@@ -135,6 +137,13 @@ h2 {
   color: #0569b9; /* Ensure this color has enough contrast */
   font-size: 2rem;
 }
+
+h3, h4 {
+  color: #0569b9; /* Ensure this color has enough contrast */
+  margin-top: 1rem;  /* Bootstrap's mt-3 equivalent */
+  margin-bottom: 1rem;  /* Bootstrap's mb-3 equivalent */
+}
+
 
 /* Paragraphs */
 p {
