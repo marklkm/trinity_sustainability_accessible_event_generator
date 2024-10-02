@@ -133,23 +133,28 @@
 
     <!-- Search Form Below Navigation Links and Aligned Right -->
     <div class="container">
+      <!-- Accessible Search Form -->
       <form
         class="d-flex ms-auto mt-3"
         action="https://www.tcd.ie/search/q/"
         method="GET"
+        role="search"
+        aria-label="Search form for Trinity College website"
         style="max-width: 300px"
       >
+        <label for="searchInput" class="visually-hidden">Search</label>
         <input
           class="form-control me-2"
           type="search"
+          id="searchInput"
           placeholder="Search"
-          aria-label="Search"
+          aria-label="Search input"
           name="tcdsearchq"
         />
         <button
           class="btn btn-primary"
           type="submit"
-          aria-label="Perform search"
+          aria-label="Submit search"
         >
           <i class="bi bi-search"></i>
         </button>
