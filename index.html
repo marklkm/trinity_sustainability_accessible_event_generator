@@ -211,22 +211,19 @@
       </button>
 
       <div class="container mt-3 mb-3">
-        <h1 class="text-center mb-3">
-          Trinity Accessibility &amp; Sustainability Event Generator
-        </h1>
+        <h1>Trinity Accessibility &amp; Sustainability Event Generator</h1>
 
         <p>
-          The
-          <strong>Accessibility &amp; Sustainability Event Generator</strong> is
-          designed to provide clear and concise access information for events.
-          Having clear information is very important for an event to be as
-          sustainable, accessible, and inclusive as possible, and ensuring that
-          physical and digital spaces are accessible to everyone. Ensuring that
-          events are fully accessible is crucial for inclusivity. Fostering a
-          sense of belonging in events ensures success for all. No event is
-          truly accessible without the information to say that it is. Trinity's
-          aim as a 'Green Flag' Campus is to incorporate sustainability into
-          day-to-day activities in college.
+          The Accessibility &amp; Sustainability Event Generator is designed to
+          provide clear and concise access information for events. Having clear
+          information is very important for an event to be as sustainable,
+          accessible, and inclusive as possible, and ensuring that physical and
+          digital spaces are accessible to everyone. Ensuring that events are
+          fully accessible is crucial for inclusivity. Fostering a sense of
+          belonging in events ensures success for all. No event is truly
+          accessible without the information to say that it is. Trinity's aim as
+          a 'Green Flag' Campus is to incorporate sustainability into day-to-day
+          activities in college.
         </p>
 
         <p>
@@ -241,7 +238,7 @@
             href="https://www.tcd.ie/Junior_Dean/events/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Junior Dean - Events and Parties (opens in a new tab)"
+            aria-label="Opens in a new window"
           >
             Junior Dean - Events and Parties
           </a>
@@ -307,7 +304,7 @@
           </div>
         </section>
 
-        <h2>Event Details</h2>
+        <h3>Event Details</h3>
 
         <form id="eventForm" novalidate>
           <!-- input for Event Name -->
@@ -320,6 +317,7 @@
               class="form-control"
               id="eventName"
               aria-describedby="eventNameHelp"
+              aria-required="true"
               required
             />
             <div id="eventNameHelp" class="form-text">
@@ -338,6 +336,7 @@
               id="eventDescription"
               rows="3"
               aria-describedby="eventDescriptionHelp"
+              aria-required="true"
               required
             ></textarea>
             <div id="eventDescriptionHelp" class="form-text">
@@ -356,6 +355,7 @@
               class="form-control"
               id="eventLocation"
               aria-describedby="eventLocationHelp"
+              aria-required="true"
               required
             />
             <div id="eventLocationHelp" class="form-text">
@@ -374,6 +374,7 @@
               class="form-control"
               id="organiserName"
               aria-describedby="organiserNameHelp"
+              aria-required="true"
               required
             />
             <div id="organiserNameHelp" class="form-text">
@@ -394,6 +395,7 @@
               class="form-control"
               id="organiserEmail"
               aria-describedby="organiserEmailHelp"
+              aria-required="true"
               required
             />
             <div id="organiserEmailHelp" class="form-text">
@@ -490,6 +492,7 @@
                   href="https://www.tcd.ie/disability/services/assistive-tech/technology--accessibility/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                 >
                   Technology and Accessibility</a
                 >
@@ -518,6 +521,7 @@
                   value="No"
                   required
                   aria-describedby="onlineEventHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="onlineNo">No</label>
               </div>
@@ -539,6 +543,7 @@
                 href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/social-media/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Opens in a new window"
               >
                 Social Media Accessibility</a
               >
@@ -557,6 +562,7 @@
                   name="eventRecording"
                   id="selectionOne"
                   value="Recorded and available with subtitles and audio description"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionOne"
@@ -571,6 +577,7 @@
                   name="eventRecording"
                   id="selectionTwo"
                   value="Recorded and available with subtitles but no audio description"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionTwo"
@@ -586,6 +593,7 @@
                   name="eventRecording"
                   id="selectionThree"
                   value="Recorded and available"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionThree"
@@ -600,6 +608,7 @@
                   name="eventRecording"
                   id="selectionFour"
                   value="Can be recorded by request in advance"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionFour"
@@ -614,6 +623,7 @@
                   name="eventRecording"
                   id="selectionFive"
                   value="Cannot be recorded"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionFive"
@@ -628,6 +638,7 @@
                   name="eventRecording"
                   id="selectionSix"
                   value="Unknown"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="selectionSix"
@@ -653,6 +664,7 @@
                   href="https://www.tcd.ie/disability/physical-access-information/building/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                 >
                   Is your Building Accessible?</a
                 >
@@ -663,6 +675,7 @@
                   href="https://tcdsensemap.ie/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                 >
                   TCD Sense Map</a
                 >
@@ -679,6 +692,7 @@
                   value="Yes, in-person event"
                   required
                   aria-describedby="inpersonEventHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="inpersonYes"
                   >Yes, in-person event</label
@@ -693,6 +707,7 @@
                   value="No, not an in-person event"
                   required
                   aria-describedby="inpersonEventHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="inpersonNo">No</label>
               </div>
@@ -724,6 +739,7 @@
                   value="Yes, wheelchair accessible"
                   required
                   aria-describedby="eventAccessHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="accessWheelchair"
                   >Yes, wheelchair accessible</label
@@ -739,6 +755,7 @@
                   value="Step-free access only"
                   required
                   aria-describedby="eventAccessHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="stepfreeAccess"
                   >Step-free access only</label
@@ -754,6 +771,7 @@
                   value="No step-free access"
                   required
                   aria-describedby="eventAccessHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="noStepfreeAccess"
                   >No step-free access</label
@@ -769,6 +787,7 @@
                   value="Unknown"
                   required
                   aria-describedby="eventAccessHelp"
+                  aria-required="true"
                 />
                 <label class="form-check-label" for="unknownAccess"
                   >Unknown</label
@@ -790,6 +809,7 @@
                   name="seatingFacilities"
                   id="paddedSeating"
                   value="Yes - padded/comfortable"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="paddedSeating"
@@ -804,6 +824,7 @@
                   name="seatingFacilities"
                   id="basicSeating"
                   value="Yes - basic chairs"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="basicSeating"
@@ -818,6 +839,7 @@
                   name="seatingFacilities"
                   id="noSeating"
                   value="No seating"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="noSeating"
@@ -832,6 +854,7 @@
                   name="seatingFacilities"
                   id="unknownSeating"
                   value="Unknown"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="unknownSeating"
@@ -854,6 +877,7 @@
                   href="https://www.tcd.ie/disability/physical-access-information/enabled-toilets/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                 >
                   Enabled Toilets</a
                 >
@@ -876,6 +900,7 @@
                   name="wheelchairToilets"
                   id="yesToilet"
                   value="Yes, fully wheelchair accessible"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="yesToilet"
@@ -890,6 +915,7 @@
                   name="wheelchairToilets"
                   id="noToilet"
                   value="No, not wheelchair accessible"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="noToilet"
@@ -904,6 +930,7 @@
                   name="wheelchairToilets"
                   id="changingplacesToilet"
                   value="Yes, with changing places facilities"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="changingplacesToilet"
@@ -918,6 +945,7 @@
                   name="wheelchairToilets"
                   id="accessibleToilet"
                   value="Yes, accessible toilet"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="accessibleToilet"
@@ -932,6 +960,7 @@
                   name="wheelchairToilets"
                   id="partiallyAccessible"
                   value="Partially accessible toilet"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="partiallyAccessible"
@@ -946,6 +975,7 @@
                   name="wheelchairToilets"
                   id="unknownToilet"
                   value="Accessibility unknown"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="unknownToilet"
@@ -970,6 +1000,7 @@
                   href="https://www.tcd.ie/disability/services/assistive-tech/deaf--hard-of-hearing-technologies/#d.en.1583599"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                 >
                   Trinity Installed Loop Systems
                 </a>
@@ -983,6 +1014,7 @@
                   name="hearingLoop"
                   id="yesLoop"
                   value="Yes"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="yesLoop"
@@ -997,6 +1029,7 @@
                   name="hearingLoop"
                   id="noLoop"
                   value="No"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="noLoop"
@@ -1011,6 +1044,7 @@
                   name="hearingLoop"
                   id="advanceLoop"
                   value="Request in advance"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="advanceLoop"
@@ -1025,6 +1059,7 @@
                   name="hearingLoop"
                   id="requestLoop"
                   value="Request at event"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="requestLoop"
@@ -1039,6 +1074,7 @@
                   name="hearingLoop"
                   id="unknownLoop"
                   value="Unknown"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="unknownLoop"
@@ -1060,6 +1096,7 @@
                 href="https://www.tcd.ie/equality/policy/other-policies/#ISL"
                 target="_blank"
                 rel="noopener"
+                aria-label="Opens in a new window"
               >
                 ISL Interpreter at Trinity</a
               >
@@ -1077,6 +1114,7 @@
                   name="islInt"
                   id="yesISL"
                   value="Yes"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="yesISL"
@@ -1091,6 +1129,7 @@
                   name="islInt"
                   id="noISL"
                   value="No"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="noISL"
@@ -1105,6 +1144,7 @@
                   name="islInt"
                   id="advanceISL"
                   value="Request in advance"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="advanceISL"
@@ -1119,6 +1159,7 @@
                   name="islInt"
                   id="requestISL"
                   value="Request at event"
+                  aria-required="true"
                   required
                 />
                 <label class="form-check-label" for="requestISL"
@@ -1218,6 +1259,7 @@
                   href="https://www.tcd.ie/disability/physical-access-information/accessible-parking-info/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Opens in a new window"
                   >Accessible Campus Parking at Trinity</a
                 >
                 <span class="opens-new-window">(Opens in a new window)</span>.
@@ -1315,6 +1357,7 @@
                 href="https://www.tcd.ie/disability/services/tcdsense.php"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Opens in a new window"
                 >TCD Sense Project </a
               >page
               <span class="opens-new-window">(Opens in a new window)</span>. You
@@ -1323,6 +1366,7 @@
                 href="https://beacons.ai/neurodiversity"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Opens in a new window"
                 >Neurodiversity Society (DUNeS) Beacons</a
               >
               page<span class="opens-new-window"> (Opens in a new window)</span
@@ -1336,6 +1380,7 @@
                 href="https://tcdsensemap.ie/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Opens in a new window"
                 >Sensory Map</a
               >
               <span class="opens-new-window">(Opens in a new window)</span>.
@@ -1561,6 +1606,7 @@
                 href="https://www.tcd.ie/disability/information-for-teaching-and-professional-staff/inclusive-learning/guidelines-for-creating-accessible-materials/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Opens in a new window"
                 >Guidelines for Creating Accessible Materials</a
               >
               <span class="opens-new-window">(Opens in a new window)</span>.
@@ -1763,7 +1809,7 @@
                 href="https://www.tcd.ie/sustainability/initiatives/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Trinity Sustainability Initiatives (opens in a new window)"
+                aria-label="Opens in a new window"
                 >Trinity Sustainability Initiatives</a
               >
               <span class="opens-new-window">(Opens in a new window)</span>.
@@ -1772,7 +1818,7 @@
                 href="https://www.tcd.ie/sustainability/resources/sustainable-event-guidelines/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Trinity Sustinable Event Guidelines (opens in a new window)"
+                aria-label="Opens in a new window"
                 >TCD Sustainable Event Guidelines</a
               >
               <span class="opens-new-window">(Opens in a new window)</span> that
@@ -2151,6 +2197,7 @@
                 href="https://www.tcd.ie/sustainability/resources/guides/"
                 target="_blank"
                 rel="noopener"
+                aria-label="Opens in a new window"
                 >Sustainability Guides</a
               >
               <span class="opens-new-window">(Opens in a new window)</span> have
@@ -2161,6 +2208,7 @@
                 href="https://www.tcd.ie/sustainability/initiatives/sustainable-procurement/"
                 target="_blank"
                 rel="noopener"
+                aria-label="Opens in a new window"
                 >Sustainable Procurement</a
               >
               <span class="opens-new-window">(Opens in a new window)</span>.
@@ -2442,6 +2490,7 @@
                       href="https://www.tcd.ie/disability/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Opens in a new window"
                       >Trinity disAbility Service</a
                     >
                     <span class="opens-new-window"
@@ -2470,6 +2519,7 @@
                       href="https://www.tcd.ie/sustainability/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Opens in a new window"
                       >Trinity Sustainability
                     </a>
                     <span class="opens-new-window"
@@ -2482,6 +2532,7 @@
                       href="https://twitter.com/TrinitySustain1"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Opens in a new window"
                       >@TrinitySustain1</a
                     >
                     <span class="opens-new-window"
@@ -2512,6 +2563,7 @@
                       href="https://linktr.ee/abilitycoop"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Opens in a new window"
                       >abilitycoop</a
                     >
                     <span class="opens-new-window"
@@ -2538,6 +2590,7 @@
                       href="https://beacons.ai/neurodiversity"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Opens in a new window"
                       >beacons.ai/neurodiversity</a
                     >
                     <span class="opens-new-window"
