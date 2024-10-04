@@ -155,10 +155,29 @@ body {
   font-weight: bold;
 }
 
-/* span color for opens in new window text */
-.opens-new-window {
-  color: red;
+
+
+p {
+  background-color: #f8f9fa; /* Light background for good readability */
+  color: #212529; /* Dark text color for contrast */
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+p a {
+  color: #0056b3; /* Dark blue link color for contrast against light background */
   font-weight: bold;
+  text-decoration: underline;
+}
+
+p a:hover {
+  color: #003366; /* Slightly darker blue on hover for visual feedback */
+}
+
+.opens-new-window {
+  color: #d63384; /* Accessible contrasting color (pinkish-red) for "Opens in a new window" */
+  font-weight: bold; /* Make the text bold to stand out */
+  margin-left: 0.25rem; /* Small spacing to separate it from the link */
 }
 
 /* Form Styles */
