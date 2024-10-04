@@ -96,11 +96,68 @@ body {
 #maincontent.large-font h2,
 #maincontent.large-font h3,
 #maincontent.large-font h4,
+#maincontent.large-font .btn,
 #maincontent.large-font .text-secondary {
   color: #dc128e !important; /* Correct placement of !important */
   font-size: 2rem !important; /* Apply !important to font size as well if needed */
 }
 
+<!-- Copy to Textarea Button -->
+<button type="button" class="btn btn-secondary custom-copy-textarea mt-1" onclick="copyToTextarea()" aria-label="Copy text to textarea">
+  Copy to Textarea
+</button>
+
+<!-- Copy to Clipboard Button -->
+<button class="btn btn-secondary custom-copy-clipboard mt-1" id="copyBtn" aria-label="Copy text to clipboard">
+  Copy to Clipboard
+</button>
+
+<!-- Save as PDF Button -->
+<button class="btn btn-secondary custom-pdf-btn mt-1" id="pdfBtn" aria-label="Save document as PDF">
+  Save as PDF
+</button>
+
+<!-- Send to Email Button -->
+<button class="btn btn-secondary custom-email-btn mt-1" id="emailBtn" aria-label="Send document to email">
+  Send to Email
+</button>
+
+<!-- Clear All Fields Button -->
+<button type="button" class="btn btn-warning custom-clear-btn mt-1" id="clearBtn" aria-label="Clear all input fields">
+  Clear All Fields
+</button>
+
+<!-- Submit Button -->
+<button type="button" class="btn btn-primary custom-submit-btn" id="submitBtn" aria-label="Submit form">
+  Submit
+</button>
+
+<style>
+/* Common Custom Styles for Secondary Buttons */
+.custom-copy-textarea,
+.custom-copy-clipboard,
+.custom-pdf-btn,
+.custom-email-btn {
+  background-color: #6c757d !important; /* Darker gray background for better contrast */
+  color: #ffffff !important; /* White text for readability */
+}
+
+/* Specific Button Custom Styles */
+.custom-clear-btn {
+  background-color: #ffc107 !important; /* Slightly darker yellow for better contrast */
+  color: #212529 !important; /* Darker text for readability */
+}
+
+.custom-submit-btn {
+  background-color: #0056b3 !important; /* Darker shade of blue for better contrast */
+  color: #ffffff !important; /* White text for readability */
+}
+
+/* Ensure mt-1 margin utility from Bootstrap */
+.mt-1 {
+  margin-top: 0.25rem !important; /* Default Bootstrap margin */
+}
+</style>
 
 
 .bold-label {

@@ -284,7 +284,13 @@
                 </li>
                 <li class="list-group-item">
                   Click on the
-                  <button class="btn btn-primary" disabled>Submit</button>
+                  <button
+                    class="btn btn-primary text-light"
+                    disabled
+                    aria-label="Submit button is disabled"
+                  >
+                    Submit
+                  </button>
                   button.
                 </li>
                 <li class="list-group-item">
@@ -2467,7 +2473,12 @@
             >
           </div>
 
-          <button type="button" class="btn btn-primary" id="submitBtn">
+          <button
+            type="button"
+            class="btn btn-primary text-light"
+            id="submitBtn"
+            aria-label="Submit form"
+          >
             Submit
           </button>
 
@@ -2475,7 +2486,12 @@
             Form has been successfully submitted!
           </div>
 
-          <button type="button" class="btn btn-warning" id="clearBtn">
+          <button
+            type="button"
+            class="btn btn-warning text-dark"
+            id="clearBtn"
+            aria-label="Clear all input fields"
+          >
             Clear All Fields
           </button>
         </form>
@@ -2484,18 +2500,31 @@
         <div class="mt-4">
           <button
             type="button"
-            class="btn btn-secondary mt-1"
+            class="btn btn-secondary text-light mt-1"
             onclick="copyToTextarea()"
+            aria-label="Copy text to textarea"
           >
             Copy to Textarea
           </button>
-          <button class="btn btn-secondary mt-1" id="copyBtn">
+          <button
+            class="btn btn-secondary text-light mt-1"
+            id="copyBtn"
+            aria-label="Copy text to clipboard"
+          >
             Copy to Clipboard
           </button>
-          <button class="btn btn-secondary mt-1" id="pdfBtn">
+          <button
+            class="btn btn-secondary text-light mt-1"
+            id="pdfBtn"
+            aria-label="Save document as PDF"
+          >
             Save as PDF
           </button>
-          <button class="btn btn-secondary mt-1" id="emailBtn">
+          <button
+            class="btn btn-secondary text-light mt-1"
+            id="emailBtn"
+            aria-label="Send document to email"
+          >
             Send to Email
           </button>
         </div>
