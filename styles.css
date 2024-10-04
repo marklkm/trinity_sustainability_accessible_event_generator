@@ -157,7 +157,8 @@ body {
 
 /* span color for opens in new window text */
 .opens-new-window {
-  color: #dc128e;
+  color: red;
+  font-weight: bold;
 }
 
 /* Form Styles */
