@@ -75,6 +75,25 @@ body {
   color: #000;
 }
 
+
+/* form note */
+#form-note {
+  background-color: #0056b3; /* Dark blue background for higher contrast */
+  color: white; /* White text for better visibility */
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+#form-note a {
+  color: #ffeb3b; /* Bright yellow link for contrast against blue */
+  font-weight: bold; /* Make the link bold for better visibility */
+  text-decoration: underline; /* Ensure the link is always underlined */
+}
+
+#form-note a:hover {
+  color: #ffc107; /* Slightly darker yellow on hover for visual feedback */
+}
+
 /* Large Font Size Mode */
 #maincontent.large-font, 
 #maincontent.large-font p, 
