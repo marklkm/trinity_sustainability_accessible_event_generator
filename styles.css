@@ -96,20 +96,13 @@ body {
 #maincontent.large-font h2,
 #maincontent.large-font h3,
 #maincontent.large-font h4,
+#maincontent.large-font button,
+#maincontent.large-font .btn,
 #maincontent.large-font .text-secondary {
   color: #dc128e !important; /* Correct placement of !important */
   font-size: 2rem !important; /* Apply !important to font size as well if needed */
 }
 
-#maincontent.large-font button,
-#maincontent.large-font .btn,
-#maincontent.large-font .btn-dark,
-#maincontent.large-font .text-light,
-#maincontent.large-font .btn-secondary {
-  background-color: white;
-  color: black;
-  font-size: 2rem;
-}
 
 
 /* custom button styling */
