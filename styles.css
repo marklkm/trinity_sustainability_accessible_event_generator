@@ -207,21 +207,27 @@ p a:hover {
 
 /* ------- */
 
-/* Headings */
 .heading-primary,
 .heading-secondary,
 h1,
-h2 {
-  color: #0569b9; /* Ensure this color has enough contrast */
+h2,
+h3,
+h4,
+legend {
+  color: #0569b9; /* Headings color */
+  margin-top: 1rem;  /* Same as Bootstrap's mt-3 */
+  margin-bottom: 1rem;  /* Same as Bootstrap's mb-3 */
+  font-weight: 600;
+}
+
+h1, h2 {
   font-size: 2rem;
 }
 
 h3, h4, legend {
-  color: #0569b9; /* Ensure this color has enough contrast */
-  margin-top: 1rem;  /* Bootstrap's mt-3 equivalent */
-  margin-bottom: 1rem;  /* Bootstrap's mb-3 equivalent */
-  font-weight: 600;
+  font-size: 1.5rem; /* Adjust font size as needed */
 }
+
 
 
 /* Paragraphs */
