@@ -1,9 +1,12 @@
 /* Default Styles */
 body {
+  font-family: "Arial", "Verdana", "Helvetica Neue", sans-serif;
   font-size: 2rem; /* Base font size in rem for scalability */
-  color: #000;
-  background-color: #fff;
+  color: #000; /* Black text for high contrast */
+  background-color: #fff; /* White background for high contrast */
+  line-height: 1.6; /* Slightly larger line-height for readability */
 }
+
 
 .skip-link {
   position: absolute;
@@ -17,6 +20,8 @@ body {
   font-weight: bold; /* Make it stand out */
   transition: top 0.3s;
 }
+
+
 
 .skip-link:focus {
   top: 10px; /* Position it where it can be seen when focused */
@@ -58,6 +63,10 @@ body {
 }
 
 .high-contrast a {
+  color: #ffcc00; /* Yellow for high contrast links */
+}
+
+.high-contrast a:hover  {
   color: #ffcc00; /* Yellow for high contrast links */
 }
 
