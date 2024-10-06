@@ -95,6 +95,13 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   );
   const sensoryInfo = sensoryInfoElement ? sensoryInfoElement.value : null;
 
+  const eventTimelineElement = document.querySelector(
+    'input[name="eventTimeline"]:checked'
+  );
+  const eventTimeline = eventTimelineElement
+    ? eventTimelineElement.value
+    : null;
+
   const audioDescriptionElement = document.querySelector(
     'input[name="audioDescription"]:checked'
   );
@@ -209,9 +216,12 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         <strong>Is event information clear, concise, and provided in multiple formats?</strong> ${
           sensoryInfo || "Not selected"
         }<br>
-                <strong>Audio description availability:</strong> ${
-                  audioDescription || "Not selected"
-                }<br>
+        <strong>Is a detailed timeline of the event provided?</strong> ${
+          eventTimeline || "Not selected"
+        }<br>
+        <strong>Audio description availability:</strong> ${
+          audioDescription || "Not selected"
+        }<br>
         <strong>Are the presentation slides accessible?</strong> ${
           eventSlides || "Not selected"
         }<br>
@@ -269,6 +279,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !eventParking ||
     !quietSpace ||
     !sensoryInfo ||
+    !eventTimeline ||
     !audioDescription ||
     !eventSlides ||
     !eventVideo ||
@@ -347,6 +358,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Disabled Person's Parking Availability:",
     "Are there provisions for a designated quiet space?",
     "Is event information clear, concise, and provided in multiple formats?",
+    "Is a detailed timeline of the event provided?",
     "Audio description availability:",
     "Are the presentation slides accessible?",
     "Does the event include a video showing or video call?",
@@ -364,7 +376,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
@@ -611,6 +623,17 @@ function copyToTextarea() {
       formData +=
         "Is event information, instructions, and communications clear, concise, and provided in multiple formats? " +
         sensoryInfoEls[i].value +
+        "\n";
+      break;
+    }
+  }
+
+  let eventTimelineEls = document.getElementsByName("eventTimeline");
+  for (let i = 0; i < eventTimelineEls.length; i++) {
+    if (eventTimelineEls[i].checked) {
+      formData +=
+        "Is a detailed timeline of the event provided? " +
+        eventTimelineEls[i].value +
         "\n";
       break;
     }

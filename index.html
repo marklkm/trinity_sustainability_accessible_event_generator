@@ -466,7 +466,7 @@
               required
             />
             <div id="eventStartTimeHelp" class="form-text">
-              Please enter the time in 24-hour format, e.g.,
+              Please enter the time in the following format, e.g.,
               <strong>10:00 AM</strong> or <strong>10:00 PM</strong>.
             </div>
           </div>
@@ -486,7 +486,7 @@
               required
             />
             <div id="eventEndTimeHelp" class="form-text">
-              Please enter the time in 24-hour format, e.g.,
+              Please enter the time in the following format, e.g.,
               <strong>10:00 AM</strong> or <strong>10:00 PM</strong>.
             </div>
           </div>
@@ -506,8 +506,7 @@
               required
             />
             <div id="eventStartDateHelp" class="form-text">
-              Enter the start date of the event in the format YYYY-MM-DD. This
-              field is required.
+              Enter the start date of the event in the format YYYY-MM-DD.
             </div>
           </div>
 
@@ -526,8 +525,7 @@
               required
             />
             <div id="eventEndDateHelp" class="form-text">
-              Enter the end date of the event in the format YYYY-MM-DD. This
-              field is required.
+              Enter the end date of the event in the format YYYY-MM-DD.
             </div>
           </div>
 
@@ -1769,6 +1767,116 @@
 
             <div id="sensoryInfoHelp" class="form-text">Required answer.</div>
           </fieldset>
+
+          <!-- section for event timeline -->
+
+          <fieldset
+            class="border p-3 mt-3"
+            aria-describedby="eventTimelineHelp"
+          >
+            <legend class="text-primary">
+              Is a detailed timeline of the event provided?
+            </legend>
+
+            <p id="infoDesc">
+              (A timeline is important for an event because it provides a clear,
+              structured overview of what to expect, helping neurodivergent
+              individuals manage their time, reduce anxiety, and feel more in
+              control of the situation.)
+            </p>
+
+            <!-- Option: Yes a detailed timeline is present in event information -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="eventTimeline"
+                id="yesEventTimeline"
+                value="Yes, a detailed timeline is present in event information"
+                required
+                aria-describedby="infoDesc"
+                aria-required="true"
+              />
+              <label class="form-check-label fw-bold" for="yesEventTimeline">
+                Yes, a detailed timeline is present in event information
+              </label>
+            </div>
+
+            <!-- Option: No detailed timeline-->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="eventTimeline"
+                id="noEventTimeline"
+                value="No detailed timeline"
+                required
+                aria-describedby="infoDesc"
+                aria-required="true"
+              />
+              <label class="form-check-label fw-bold" for="noEventTimeline">
+                No detailed timeline
+              </label>
+            </div>
+
+            <!-- Option: Available by request in advance -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="eventTimeline"
+                id="advanceTimeline"
+                value="Available by request in advance"
+                required
+                aria-describedby="infoDesc"
+                aria-required="true"
+              />
+              <label class="form-check-label fw-bold" for="advanceTimeline">
+                Available by request in advance
+              </label>
+            </div>
+
+            <!-- Option: Available by request at the event -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="eventTimeline"
+                id="requesteventTimeline"
+                value="Available by request at the event"
+                required
+                aria-describedby="infoDesc"
+                aria-required="true"
+              />
+              <label
+                class="form-check-label fw-bold"
+                for="requesteventTimeline"
+              >
+                Available by request at the event
+              </label>
+            </div>
+
+            <!-- Option: Unknown -->
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="eventTimeline"
+                id="unknownTimeline"
+                value="Unknown"
+                required
+                aria-describedby="infoDesc"
+                aria-required="true"
+              />
+              <label class="form-check-label fw-bold" for="unknownTimeline">
+                Unknown
+              </label>
+            </div>
+
+            <div id="timelineInfoHelp" class="form-text">Required answer.</div>
+          </fieldset>
+
+          <!-- end of added section for event timeline -->
 
           <h2 class="text-primary mt-3 mb-3">Audio &amp; Visual</h2>
 
