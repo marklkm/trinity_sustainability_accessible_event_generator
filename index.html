@@ -532,16 +532,18 @@
 
           <!-- radio buttons for Online Event with tooltip -->
           <div class="mb-3">
-            <fieldset>
-              <legend>Online Event:</legend>
+            <fieldset class="border p-3" aria-describedby="onlineEventHelp">
+              <legend class="text-primary">Online Event</legend>
+
               <p>
-                <strong>Note:</strong> it's an 'Online Event' please refer to
+                <strong>Note:</strong> If it's an 'Online Event' please refer to
                 the
                 <a
                   href="https://www.tcd.ie/disability/services/assistive-tech/technology--accessibility/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
+                  class="text-decoration-underline"
                 >
                   Technology and Accessibility</a
                 >
@@ -549,6 +551,7 @@
                 <span class="opens-new-window">(Opens in a new window)</span>.
               </p>
 
+              <!-- Option: Yes -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -559,8 +562,12 @@
                   required
                   aria-describedby="onlineEventHelp"
                 />
-                <label class="form-check-label" for="onlineYes">Yes</label>
+                <label class="form-check-label fw-bold" for="onlineYes"
+                  >Yes</label
+                >
               </div>
+
+              <!-- Option: No -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -572,8 +579,11 @@
                   aria-describedby="onlineEventHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="onlineNo">No</label>
+                <label class="form-check-label fw-bold" for="onlineNo"
+                  >No</label
+                >
               </div>
+
               <div id="onlineEventHelp" class="form-text">
                 Select 'Yes' if the event is being held online or hybrid.
                 Required answer.
@@ -600,10 +610,12 @@
               description.
               <span class="opens-new-window">(Opens in a new window)</span>.
             </p>
-            <fieldset>
-              <legend>
+            <fieldset class="border p-3" aria-describedby="eventRecordingHelp">
+              <legend class="text-primary">
                 Will the event be recorded and be available to view afterwards?
               </legend>
+
+              <!-- Option 1 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -614,11 +626,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionOne"
-                  >Recorded and available with subtitles and audio description
+                <label class="form-check-label fw-bold" for="selectionOne">
+                  Recorded and available with subtitles and audio description
                 </label>
               </div>
 
+              <!-- Option 2 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -629,12 +642,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionTwo"
-                  >Recorded and available with subtitles but no audio
-                  description</label
-                >
+                <label class="form-check-label fw-bold" for="selectionTwo">
+                  Recorded and available with subtitles but no audio description
+                </label>
               </div>
 
+              <!-- Option 3 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -645,11 +658,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionThree"
-                  >Recorded and available
+                <label class="form-check-label fw-bold" for="selectionThree">
+                  Recorded and available
                 </label>
               </div>
 
+              <!-- Option 4 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -660,11 +674,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionFour"
-                  >Can be recorded by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="selectionFour">
+                  Can be recorded by request in advance
+                </label>
               </div>
 
+              <!-- Option 5 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -675,11 +690,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionFive"
-                  >Cannot be recorded
+                <label class="form-check-label fw-bold" for="selectionFive">
+                  Cannot be recorded
                 </label>
               </div>
 
+              <!-- Option 6 -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -690,9 +706,9 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="selectionSix"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="selectionSix">
+                  Unknown
+                </label>
               </div>
 
               <div id="eventRecordingHelp" class="form-text">
@@ -704,8 +720,9 @@
           <!-- END OF EVENT RECORDING -->
 
           <div class="mb-3">
-            <fieldset>
-              <legend>In-Person Event:</legend>
+            <fieldset class="border p-3" aria-describedby="inpersonEventHelp">
+              <legend class="text-primary">In-Person Event</legend>
+
               <p>
                 <strong>Note:</strong> If it is an
                 <strong>In-Person Event</strong>, please refer to the
@@ -714,6 +731,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
+                  class="text-decoration-underline"
                 >
                   Is your Building Accessible?</a
                 >
@@ -725,6 +743,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
+                  class="text-decoration-underline"
                 >
                   TCD Sense Map</a
                 >
@@ -732,6 +751,7 @@
                 <span class="opens-new-window">(Opens in a new window)</span>.
               </p>
 
+              <!-- Option: Yes, in-person event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -743,10 +763,12 @@
                   aria-describedby="inpersonEventHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="inpersonYes"
-                  >Yes, in-person event</label
-                >
+                <label class="form-check-label fw-bold" for="inpersonYes">
+                  Yes, in-person event
+                </label>
               </div>
+
+              <!-- Option: No, not an in-person event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -758,8 +780,11 @@
                   aria-describedby="inpersonEventHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="inpersonNo">No</label>
+                <label class="form-check-label fw-bold" for="inpersonNo">
+                  No
+                </label>
               </div>
+
               <div id="inpersonEventHelp" class="form-text">
                 Required answer.
               </div>
@@ -779,8 +804,10 @@
             requiring the use of stairs or steps.
           </p>
           <div class="mb-3">
-            <fieldset>
-              <legend>Is the event accessible?</legend>
+            <fieldset class="border p-3" aria-describedby="eventAccessHelp">
+              <legend class="text-primary">Is the event accessible?</legend>
+
+              <!-- Option: Yes, wheelchair accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -792,11 +819,12 @@
                   aria-describedby="eventAccessHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="accessWheelchair"
-                  >Yes, wheelchair accessible</label
-                >
+                <label class="form-check-label fw-bold" for="accessWheelchair">
+                  Yes, wheelchair accessible
+                </label>
               </div>
 
+              <!-- Option: Step-free access only -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -808,11 +836,12 @@
                   aria-describedby="eventAccessHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="stepfreeAccess"
-                  >Step-free access only</label
-                >
+                <label class="form-check-label fw-bold" for="stepfreeAccess">
+                  Step-free access only
+                </label>
               </div>
 
+              <!-- Option: No step-free access -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -824,11 +853,12 @@
                   aria-describedby="eventAccessHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="noStepfreeAccess"
-                  >No step-free access</label
-                >
+                <label class="form-check-label fw-bold" for="noStepfreeAccess">
+                  No step-free access
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -840,10 +870,11 @@
                   aria-describedby="eventAccessHelp"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="unknownAccess"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownAccess">
+                  Unknown
+                </label>
               </div>
+
               <div id="eventAccessHelp" class="form-text">Required answer.</div>
             </fieldset>
           </div>
@@ -851,8 +882,15 @@
           <h2 class="text-primary mt-3 mb-3">Event Facilities</h2>
           <!-- Sample radio buttons for Access to the Event with tooltip -->
           <div class="mb-3">
-            <fieldset>
-              <legend>Is seating available at the event?</legend>
+            <fieldset
+              class="border p-3"
+              aria-describedby="seatingFacilitiesHelp"
+            >
+              <legend class="text-primary">
+                Is seating available at the event?
+              </legend>
+
+              <!-- Option: Yes - Padded/comfortable -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -863,11 +901,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="paddedSeating"
-                  >Yes - Padded/comfortable</label
-                >
+                <label class="form-check-label fw-bold" for="paddedSeating">
+                  Yes - Padded/comfortable
+                </label>
               </div>
 
+              <!-- Option: Yes - Basic chairs -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -878,11 +917,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="basicSeating"
-                  >Yes - Basic chairs</label
-                >
+                <label class="form-check-label fw-bold" for="basicSeating">
+                  Yes - Basic chairs
+                </label>
               </div>
 
+              <!-- Option: No seating -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -893,11 +933,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noSeating"
-                  >No seating</label
-                >
+                <label class="form-check-label fw-bold" for="noSeating">
+                  No seating
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -908,9 +949,9 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownSeating"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownSeating">
+                  Unknown
+                </label>
               </div>
 
               <div id="seatingFacilitiesHelp" class="form-text">
@@ -920,8 +961,12 @@
           </div>
 
           <div class="mb-3">
-            <fieldset>
-              <legend>Wheelchair accessible toilet:</legend>
+            <fieldset
+              class="border p-3"
+              aria-describedby="wheelchairToiletsHelp"
+            >
+              <legend class="text-primary">Wheelchair accessible toilet</legend>
+
               <p>
                 <strong>Note:</strong> Read more about
                 <a
@@ -929,21 +974,23 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
+                  class="text-decoration-underline"
                 >
                   Enabled Toilets</a
                 >
-                in Trinity<span class="opens-new-window">
-                  (Opens in a new window)</span
+                in Trinity<span class="opens-new-window"
+                  >(Opens in a new window)</span
                 >. Changing places toilet changing are specially designed
                 toilets for individuals with profound disabilities who need
                 additional space and specialised equipment such as a hoist
-                system. Accessible toilets meets general accessibility
-                guidelines but may not be fully wheelchair-friendly. Partially
-                accessible toilets offers some accessibility features, like grab
-                bars or a raised toilet but lacks comprehensive accessibility,
-                such as insufficient space for a wheelchair to navigate.
+                system. Accessible toilets meet general accessibility guidelines
+                but may not be fully wheelchair-friendly. Partially accessible
+                toilets offer some accessibility features, like grab bars or a
+                raised toilet but may lack comprehensive accessibility, such as
+                insufficient space for a wheelchair to navigate.
               </p>
 
+              <!-- Option: Yes, fully wheelchair accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -954,11 +1001,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesToilet"
-                  >Yes, fully wheelchair accessible</label
-                >
+                <label class="form-check-label fw-bold" for="yesToilet">
+                  Yes, fully wheelchair accessible
+                </label>
               </div>
 
+              <!-- Option: No, not wheelchair accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -969,11 +1017,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noToilet"
-                  >No, not wheelchair accessible
+                <label class="form-check-label fw-bold" for="noToilet">
+                  No, not wheelchair accessible
                 </label>
               </div>
 
+              <!-- Option: Yes, with changing places facilities -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -984,11 +1033,15 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="changingplacesToilet"
-                  >Yes, with changing places facilities</label
+                <label
+                  class="form-check-label fw-bold"
+                  for="changingplacesToilet"
                 >
+                  Yes, with changing places facilities
+                </label>
               </div>
 
+              <!-- Option: Yes, accessible toilet -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -999,11 +1052,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="accessibleToilet"
-                  >Yes, accessible toilet</label
-                >
+                <label class="form-check-label fw-bold" for="accessibleToilet">
+                  Yes, accessible toilet
+                </label>
               </div>
 
+              <!-- Option: Partially accessible toilet -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1014,11 +1068,15 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="partiallyAccessible"
-                  >Partially accessible toilet</label
+                <label
+                  class="form-check-label fw-bold"
+                  for="partiallyAccessible"
                 >
+                  Partially accessible toilet
+                </label>
               </div>
 
+              <!-- Option: Accessibility unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1029,10 +1087,11 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownToilet"
-                  >Wheelchair accessibility unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownToilet">
+                  Wheelchair accessibility unknown
+                </label>
               </div>
+
               <div id="wheelchairToiletsHelp" class="form-text">
                 Required answer.
               </div>
@@ -1040,24 +1099,27 @@
           </div>
 
           <div class="mb-3">
-            <fieldset>
-              <legend>Hearing Loop Availability:</legend>
+            <fieldset class="border p-3" aria-describedby="hearingLoopHelp">
+              <legend class="text-primary">Hearing Loop Availability</legend>
+
               <p>
-                <strong>Note:</strong> A loop System enables hearing aid users
-                hear various sound sources in large rooms or reception areas, in
-                auditoriums, offices, theatres, or other large public areas.
+                <strong>Note:</strong> A loop system enables hearing aid users
+                to hear various sound sources in large rooms or reception areas,
+                in auditoriums, offices, theatres, or other large public areas.
                 More information about
                 <a
                   href="https://www.tcd.ie/disability/services/assistive-tech/deaf--hard-of-hearing-technologies/#d.en.1583599"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
+                  class="text-decoration-underline"
                 >
                   Trinity Installed Loop Systems
                 </a>
-                <span class="opens-new-window">(Opens in a new window).</span>
+                <span class="opens-new-window">(Opens in a new window)</span>.
               </p>
 
+              <!-- Option: Yes, hearing loop available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1068,11 +1130,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesLoop"
-                  >Yes, hearing loop available</label
-                >
+                <label class="form-check-label fw-bold" for="yesLoop">
+                  Yes, hearing loop available
+                </label>
               </div>
 
+              <!-- Option: No, hearing loop not available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1083,11 +1146,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noLoop"
-                  >No, hearing loop not available</label
-                >
+                <label class="form-check-label fw-bold" for="noLoop">
+                  No, hearing loop not available
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1098,11 +1162,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="advanceLoop"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="advanceLoop">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Available by request at the event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1113,11 +1178,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="requestLoop"
-                  >Available by request at the event</label
-                >
+                <label class="form-check-label fw-bold" for="requestLoop">
+                  Available by request at the event
+                </label>
               </div>
 
+              <!-- Option: Hearing loop availability unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1128,9 +1194,9 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownLoop"
-                  >Hearing loop availability unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownLoop">
+                  Hearing loop availability unknown
+                </label>
               </div>
 
               <div id="hearingLoopHelp" class="form-text">Required answer.</div>
@@ -1154,10 +1220,12 @@
               <span class="opens-new-window">(Opens in a new window)</span>.
             </p>
 
-            <fieldset class="mb-3">
-              <legend>
-                Irish Sign Language (ISL) Interpretation Availability?
+            <fieldset class="border p-3 mb-3" aria-describedby="islIntHelp">
+              <legend class="text-primary">
+                Irish Sign Language (ISL) Interpretation Availability
               </legend>
+
+              <!-- Option: Yes, ISL interpretation available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1168,11 +1236,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesISL"
-                  >Yes, ISL interpretation available</label
-                >
+                <label class="form-check-label fw-bold" for="yesISL">
+                  Yes, ISL interpretation available
+                </label>
               </div>
 
+              <!-- Option: No, ISL interpretation not available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1183,11 +1252,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noISL"
-                  >No, ISL interpretation not available</label
-                >
+                <label class="form-check-label fw-bold" for="noISL">
+                  No, ISL interpretation not available
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1198,11 +1268,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="advanceISL"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="advanceISL">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Available by request at the event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1213,11 +1284,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="requestISL"
-                  >Available by request at the event</label
-                >
+                <label class="form-check-label fw-bold" for="requestISL">
+                  Available by request at the event
+                </label>
               </div>
 
+              <!-- Option: ISL interpretation availability unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1228,9 +1300,9 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownISL"
-                  >ISL interpretation availability unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownISL">
+                  ISL interpretation availability unknown
+                </label>
               </div>
 
               <div id="islIntHelp" class="form-text">Required answer.</div>
@@ -1238,19 +1310,24 @@
           </section>
 
           <div class="mb-3">
-            <fieldset>
-              <legend>Accessibility Requirements:</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="accessRequirementsHelp"
+            >
+              <legend class="text-primary">Accessibility Requirements</legend>
+
               <p id="accessNote2">
-                <strong>Note:</strong> When publicising events ensure that there
-                is a standard accessibility contact statement on all publicity,
-                including print ads, web pages, and information flyers. An
-                example of this statement is:
-                <strong
-                  >'Please indicate if you have any access requirements so that
-                  we may facilitate you in attending this event'.</strong
-                >
+                <strong>Note:</strong> When publicising events, ensure that
+                there is a standard accessibility contact statement on all
+                publicity, including print ads, web pages, and information
+                flyers. An example of this statement is:
+                <strong>
+                  'Please indicate if you have any access requirements so that
+                  we may facilitate you in attending this event.'
+                </strong>
               </p>
 
+              <!-- Option: Yes, accessibility requirements are queried -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1262,11 +1339,12 @@
                   aria-describedby="accessNote2"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="yesRequirements"
-                  >Yes, accessibility requirements are queried</label
-                >
+                <label class="form-check-label fw-bold" for="yesRequirements">
+                  Yes, accessibility requirements are queried
+                </label>
               </div>
 
+              <!-- Option: No, accessibility requirements are not queried -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1278,11 +1356,12 @@
                   aria-describedby="accessNote2"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="noRequirements"
-                  >No, accessibility requirements are not queried</label
-                >
+                <label class="form-check-label fw-bold" for="noRequirements">
+                  No, accessibility requirements are not queried
+                </label>
               </div>
 
+              <!-- Option: Unknown if accessibility requirements are queried -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1294,9 +1373,12 @@
                   aria-describedby="accessNote2"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="unknownRequirements"
-                  >Unknown if accessibility requirements are queried</label
+                <label
+                  class="form-check-label fw-bold"
+                  for="unknownRequirements"
                 >
+                  Unknown if accessibility requirements are queried
+                </label>
               </div>
 
               <div id="accessRequirementsHelp" class="form-text">
@@ -1306,8 +1388,14 @@
           </div>
 
           <div class="mb-3">
-            <fieldset>
-              <legend>Disabled Person's Parking Availability:</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="eventParkingHelp"
+            >
+              <legend class="text-primary">
+                Disabled Person's Parking Availability
+              </legend>
+
               <p id="parkingInfo">
                 <strong>Note:</strong> More information on
                 <a
@@ -1315,11 +1403,14 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Opens in a new window"
-                  >Accessible Campus Parking at Trinity</a
+                  class="text-decoration-underline"
                 >
+                  Accessible Campus Parking at Trinity
+                </a>
                 <span class="opens-new-window">(Opens in a new window)</span>.
               </p>
 
+              <!-- Option: Yes, disabled person's parking is available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1331,11 +1422,12 @@
                   aria-describedby="parkingInfo"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="yesParking"
-                  >Yes, disabled person's parking is available</label
-                >
+                <label class="form-check-label fw-bold" for="yesParking">
+                  Yes, disabled person's parking is available
+                </label>
               </div>
 
+              <!-- Option: No, disabled person's parking is not available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1347,11 +1439,12 @@
                   aria-describedby="parkingInfo"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="noParking"
-                  >No, disabled person's parking is not available</label
-                >
+                <label class="form-check-label fw-bold" for="noParking">
+                  No, disabled person's parking is not available
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1363,11 +1456,12 @@
                   aria-describedby="parkingInfo"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="advanceParking"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="advanceParking">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Available by request at the event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1379,11 +1473,12 @@
                   aria-describedby="parkingInfo"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="requestParking"
-                  >Available by request at the event</label
-                >
+                <label class="form-check-label fw-bold" for="requestParking">
+                  Available by request at the event
+                </label>
               </div>
 
+              <!-- Option: Parking availability unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1395,9 +1490,9 @@
                   aria-describedby="parkingInfo"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="unknownParking"
-                  >Parking availability unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownParking">
+                  Parking availability unknown
+                </label>
               </div>
 
               <div id="eventParkingHelp" class="form-text">
@@ -1446,10 +1541,12 @@
               <span class="opens-new-window">(Opens in a new window)</span>.
             </p>
 
-            <fieldset>
-              <legend>
+            <fieldset class="border p-3 mb-3" aria-describedby="quietSpaceHelp">
+              <legend class="text-primary">
                 Are there provisions for a designated quiet space?
               </legend>
+
+              <!-- Option: Yes, a quiet space is available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1461,11 +1558,12 @@
                   aria-describedby="quietSpaceNote"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="yesSpace"
-                  >Yes, a quiet space is available</label
-                >
+                <label class="form-check-label fw-bold" for="yesSpace">
+                  Yes, a quiet space is available
+                </label>
               </div>
 
+              <!-- Option: No, a quiet space is not available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1477,11 +1575,12 @@
                   aria-describedby="quietSpaceNote"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="noSpace"
-                  >No, a quiet space is not available</label
-                >
+                <label class="form-check-label fw-bold" for="noSpace">
+                  No, a quiet space is not available
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1493,11 +1592,12 @@
                   aria-describedby="quietSpaceNote"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="advanceSpace"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="advanceSpace">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Available by request at the event -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1509,11 +1609,12 @@
                   aria-describedby="quietSpaceNote"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="requestSpace"
-                  >Available by request at the event</label
-                >
+                <label class="form-check-label fw-bold" for="requestSpace">
+                  Available by request at the event
+                </label>
               </div>
 
+              <!-- Option: Quiet space availability unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1525,9 +1626,9 @@
                   aria-describedby="quietSpaceNote"
                   aria-required="true"
                 />
-                <label class="form-check-label" for="unknownSpace"
-                  >Quiet space availability unknown</label
-                >
+                <label class="form-check-label fw-bold" for="unknownSpace">
+                  Quiet space availability unknown
+                </label>
               </div>
 
               <div id="quietSpaceHelp" class="form-text">Required answer.</div>
@@ -1603,16 +1704,18 @@
 
           <!-- End -->
 
-          <fieldset class="mt-3">
-            <legend>
+          <fieldset class="border p-3 mt-3" aria-describedby="sensoryInfoHelp">
+            <legend class="text-primary">
               Is event information clear, concise, and provided in multiple
               formats?
             </legend>
+
             <p id="infoDesc">
               (e.g., written, visual, verbal to cater to diverse cognitive
               processing styles.)
             </p>
 
+            <!-- Option: Yes, information is clear and in multiple formats -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -1624,11 +1727,12 @@
                 aria-describedby="infoDesc"
                 aria-required="true"
               />
-              <label class="form-check-label" for="yesSensoryinfo"
-                >Yes, information is clear and in multiple formats</label
-              >
+              <label class="form-check-label fw-bold" for="yesSensoryinfo">
+                Yes, information is clear and in multiple formats
+              </label>
             </div>
 
+            <!-- Option: No, information is not in multiple formats -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -1640,11 +1744,12 @@
                 aria-describedby="infoDesc"
                 aria-required="true"
               />
-              <label class="form-check-label" for="noSensoryinfo"
-                >No, information is not in multiple formats</label
-              >
+              <label class="form-check-label fw-bold" for="noSensoryinfo">
+                No, information is not in multiple formats
+              </label>
             </div>
 
+            <!-- Option: Unknown if information is in multiple formats -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -1656,9 +1761,9 @@
                 aria-describedby="infoDesc"
                 aria-required="true"
               />
-              <label class="form-check-label" for="unknownSensoryinfo"
-                >Unknown if information is in multiple formats</label
-              >
+              <label class="form-check-label fw-bold" for="unknownSensoryinfo">
+                Unknown if information is in multiple formats
+              </label>
             </div>
 
             <div id="sensoryInfoHelp" class="form-text">Required answer.</div>
@@ -1682,8 +1787,15 @@
 
             <!-- Audio description availability -->
 
-            <fieldset>
-              <legend>Audio description availability:</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="audioDescriptionHelp"
+            >
+              <legend class="text-primary">
+                Audio description availability
+              </legend>
+
+              <!-- Option: Yes, audio description available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1694,26 +1806,34 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesAudioDescription"
-                  >Yes, audio description available</label
+                <label
+                  class="form-check-label fw-bold"
+                  for="yesAudioDescription"
                 >
+                  Yes, audio description available
+                </label>
               </div>
 
+              <!-- Option: No, audio description not available -->
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="audioDescription"
                   id="noAudioDescription"
-                  value="No, audio description not available "
+                  value="No, audio description not available"
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noAudioDescription"
-                  >No, audio description not available
+                <label
+                  class="form-check-label fw-bold"
+                  for="noAudioDescription"
+                >
+                  No, audio description not available
                 </label>
               </div>
 
+              <!-- Option: Available on request -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1724,37 +1844,49 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="requestAudioDescription"
-                  >Available on request</label
+                <label
+                  class="form-check-label fw-bold"
+                  for="requestAudioDescription"
                 >
+                  Available on request
+                </label>
               </div>
 
+              <!-- Option: Audio description availability unknown -->
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="audioDescription"
                   id="unknownAudioDescription"
-                  value="Audio description availability unknown "
+                  value="Audio description availability unknown"
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownAudioDescription"
-                  >Audio description availability unknown
+                <label
+                  class="form-check-label fw-bold"
+                  for="unknownAudioDescription"
+                >
+                  Audio description availability unknown
                 </label>
               </div>
 
-              <div id="audioDescriptionHelp" class="form-text mb-3">
+              <div id="audioDescriptionHelp" class="form-text">
                 Required answer.
               </div>
             </fieldset>
 
             <!-- End of audio description availability -->
 
-            <fieldset>
-              <legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="eventSlidesHelp"
+            >
+              <legend class="text-primary">
                 Are the presentation slides (PowerPoint etc.) accessible?
               </legend>
+
+              <!-- Option: Yes, presentation slides are accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1765,11 +1897,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesSlides"
-                  >Yes, presentation slides are accessible</label
-                >
+                <label class="form-check-label fw-bold" for="yesSlides">
+                  Yes, presentation slides are accessible
+                </label>
               </div>
 
+              <!-- Option: No, presentation slides are not accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1780,11 +1913,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noSlides"
-                  >No, presentation slides are not accessible</label
-                >
+                <label class="form-check-label fw-bold" for="noSlides">
+                  No, presentation slides are not accessible
+                </label>
               </div>
 
+              <!-- Option: Presentation slides are not required -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1795,11 +1929,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noRequiredSlides"
-                  >Presentation slides are not required</label
-                >
+                <label class="form-check-label fw-bold" for="noRequiredSlides">
+                  Presentation slides are not required
+                </label>
               </div>
 
+              <!-- Option: Unknown if the presentation slides are accessible -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1810,18 +1945,20 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownSlides"
-                  >Unknown if the presentation slides are accessible</label
-                >
+                <label class="form-check-label fw-bold" for="unknownSlides">
+                  Unknown if the presentation slides are accessible
+                </label>
               </div>
 
               <div id="eventSlidesHelp" class="form-text">Required answer.</div>
             </fieldset>
 
-            <fieldset class="mt-3">
-              <legend>
+            <fieldset class="border p-3 mt-3" aria-describedby="eventVideoHelp">
+              <legend class="text-primary">
                 Does the event include a video showing or video call?
               </legend>
+
+              <!-- Option: Yes, it includes a video -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1832,11 +1969,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="yesVideo"
-                  >Yes, it includes a video</label
-                >
+                <label class="form-check-label fw-bold" for="yesVideo">
+                  Yes, it includes a video
+                </label>
               </div>
 
+              <!-- Option: No, it does not include a video -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1847,11 +1985,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="noVideo"
-                  >No, it does not include a video</label
-                >
+                <label class="form-check-label fw-bold" for="noVideo">
+                  No, it does not include a video
+                </label>
               </div>
 
+              <!-- Option: Unknown if the event includes a video -->
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -1862,9 +2001,9 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="unknownVideo"
-                  >Unknown if the event includes a video</label
-                >
+                <label class="form-check-label fw-bold" for="unknownVideo">
+                  Unknown if the event includes a video
+                </label>
               </div>
 
               <div id="eventVideoHelp" class="form-text">Required answer.</div>
@@ -1910,49 +2049,58 @@
 
           <div class="container mt-4">
             <!-- Single Use Items Section -->
-            <fieldset class="mb-3">
-              <legend>Single Use Items</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="singleUseItemsHelp"
+            >
+              <legend class="text-primary">Single Use Items</legend>
+
               <p>
-                <strong>Note:</strong> Single use items i.e. coffee cups,
-                plates, water bottles, gift wrapping, plastic bags. 100%
-                reusable are materials, resources, or components used for the
-                event that will be designed to be reused rather than discarded,
-                minimizing waste.
+                <strong>Note:</strong> Single use items (e.g., coffee cups,
+                plates, water bottles, gift wrapping, plastic bags) are
+                typically discarded after one use. 100% reusable items are
+                materials, resources, or components used for the event that are
+                designed to be reused rather than discarded, minimizing waste.
               </p>
+
               <h3 class="text-primary mt-3 mb-3">
                 Will single use items be available at the event?
               </h3>
 
+              <!-- Option: Yes, single use items will be available -->
               <div class="form-check">
                 <input
                   type="radio"
                   class="form-check-input"
                   id="singleUseYes"
                   name="singleUseItems"
-                  value="Yes, single use items will be available for customers at the
-                  event."
+                  value="Yes, single use items will be available for customers at the event."
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="singleUseYes"
-                  >Yes, single use items will be available for customers at the
-                  event</label
-                >
+                <label class="form-check-label fw-bold" for="singleUseYes">
+                  Yes, single use items will be available for customers at the
+                  event
+                </label>
               </div>
 
+              <!-- Option: No, the event will be 100% reusable -->
               <div class="form-check">
                 <input
                   type="radio"
                   class="form-check-input"
                   id="singleUseNo"
                   name="singleUseItems"
-                  value="no"
+                  value="No"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="singleUseNo"
-                  >No, the event will be 100% reusable</label
-                >
+                <label class="form-check-label fw-bold" for="singleUseNo">
+                  No, the event will be 100% reusable
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -1960,10 +2108,12 @@
                   id="singleUseUnknown"
                   name="singleUseItems"
                   value="Unknown"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="singleUseUnknown"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="singleUseUnknown">
+                  Unknown
+                </label>
               </div>
 
               <div id="singleUseItemsHelp" class="form-text">
@@ -1972,7 +2122,7 @@
             </fieldset>
 
             <!-- Reduce Section -->
-            <h2 class="text-primary mt-3 mb-3">educing Waste</h2>
+            <h2 class="text-primary mt-3 mb-3">Reducing Waste</h2>
             <p>
               <strong>Note: </strong>A zero waste event aims to minimise waste
               by reducing, reusing, recycling, and composting materials, with
@@ -1980,24 +2130,28 @@
               sending no waste to them. This involves careful planning to
               eliminate single-use items and encourage sustainable practices.
             </p>
-            <fieldset class="mb-3">
-              <legend>Will the event be a zero waste event?</legend>
+            <fieldset class="border p-3 mb-3" aria-describedby="zeroWasteHelp">
+              <legend class="text-primary">
+                Will the event be a zero waste event?
+              </legend>
 
+              <!-- Option: Yes, it will be 100% zero waste -->
               <div class="form-check">
                 <input
                   type="radio"
                   class="form-check-input"
                   id="zeroWasteYes"
                   name="zeroWaste"
-                  value="yes"
+                  value="Yes, it will be 100% zero waste."
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="zeroWasteYes"
-                  >Yes, it will be 100% zero waste.</label
-                >
+                <label class="form-check-label fw-bold" for="zeroWasteYes">
+                  Yes, it will be 100% zero waste
+                </label>
               </div>
 
+              <!-- Option: No, there will be waste generated -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2005,12 +2159,15 @@
                   id="zeroWasteNo"
                   name="zeroWaste"
                   value="No"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="zeroWasteNo"
-                  >No, there will be waste generated.</label
-                >
+                <label class="form-check-label fw-bold" for="zeroWasteNo">
+                  No, there will be waste generated
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2018,10 +2175,12 @@
                   id="zeroWasteUnknown"
                   name="zeroWaste"
                   value="Unknown"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="zeroWasteUnknown"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="zeroWasteUnknown">
+                  Unknown
+                </label>
               </div>
 
               <div id="zeroWasteHelp" class="form-text">Required answer.</div>
@@ -2037,9 +2196,15 @@
               vegan, vegetarian, food labelling, and other options.
             </p>
 
-            <fieldset class="mb-3">
-              <legend>Will the event take a veggie first approach?</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="veggieApproachHelp"
+            >
+              <legend class="text-primary">
+                Will the event take a veggie first approach?
+              </legend>
 
+              <!-- Option: 100% vegan -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2050,9 +2215,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="vegan">100% vegan</label>
+                <label class="form-check-label fw-bold" for="vegan">
+                  100% vegan
+                </label>
               </div>
 
+              <!-- Option: 100% vegan or vegetarian -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2060,12 +2228,15 @@
                   id="veganveggie"
                   name="veggieApproach"
                   value="100% vegan or vegetarian"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="veganveggie"
-                  >100% vegan or vegetarian</label
-                >
+                <label class="form-check-label fw-bold" for="veganveggie">
+                  100% vegan or vegetarian
+                </label>
               </div>
 
+              <!-- Option: Neither -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2073,8 +2244,12 @@
                   id="neithervv"
                   name="veggieApproach"
                   value="Neither"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="neithervv">Neither</label>
+                <label class="form-check-label fw-bold" for="neithervv">
+                  Neither
+                </label>
               </div>
 
               <div id="veggieApproachHelp" class="form-text">
@@ -2084,8 +2259,15 @@
 
             <!-- Gluten free food -->
 
-            <fieldset class="mb-3">
-              <legend>Gluten free options availability:</legend>
+            <fieldset
+              class="border p-3 mb-3"
+              aria-describedby="veggieApproacReq"
+            >
+              <legend class="text-primary">
+                Gluten free options availability
+              </legend>
+
+              <!-- Option: Yes, gluten free options available -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2096,11 +2278,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="glutenFreeYes"
-                  >Yes, gluten free options available</label
-                >
+                <label class="form-check-label fw-bold" for="glutenFreeYes">
+                  Yes, gluten free options available
+                </label>
               </div>
 
+              <!-- Option: No, gluten free options are not available -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2108,12 +2291,15 @@
                   id="glutenFreeNo"
                   name="glutenFree"
                   value="No, gluten free options are not available"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="glutenFreeNo"
-                  >No, gluten free options are not available</label
-                >
+                <label class="form-check-label fw-bold" for="glutenFreeNo">
+                  No, gluten free options are not available
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2121,12 +2307,15 @@
                   id="glutenFreeRequest"
                   name="glutenFree"
                   value="Available by request in advance"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="glutenFreeRequest"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="glutenFreeRequest">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2134,10 +2323,12 @@
                   id="glutenFreeUnknown"
                   name="glutenFree"
                   value="Unknown"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="glutenFreeUnknown"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="glutenFreeUnknown">
+                  Unknown
+                </label>
               </div>
 
               <div id="veggieApproacReq" class="form-text">
@@ -2149,8 +2340,12 @@
 
             <!-- Food label -->
 
-            <fieldset class="mb-3">
-              <legend>Are foods labelled with all their ingredients?</legend>
+            <fieldset class="border p-3 mb-3" aria-describedby="foodLabelHelp">
+              <legend class="text-primary">
+                Are foods labelled with all their ingredients?
+              </legend>
+
+              <!-- Option: Yes, foods are labelled -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2161,11 +2356,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="foodLabelYes"
-                  >Yes, foods are labelled</label
-                >
+                <label class="form-check-label fw-bold" for="foodLabelYes">
+                  Yes, foods are labelled
+                </label>
               </div>
 
+              <!-- Option: No, foods are not labelled -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2173,12 +2369,15 @@
                   id="foodLabelNo"
                   name="foodLabel"
                   value="No, foods are not labelled"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="foodLabelNo"
-                  >No, foods are not labelled</label
-                >
+                <label class="form-check-label fw-bold" for="foodLabelNo">
+                  No, foods are not labelled
+                </label>
               </div>
 
+              <!-- Option: Available by request in advance -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2186,12 +2385,15 @@
                   id="foodLabelAdvance"
                   name="foodLabel"
                   value="Available by request in advance"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="foodLabelAdvance"
-                  >Available by request in advance</label
-                >
+                <label class="form-check-label fw-bold" for="foodLabelAdvance">
+                  Available by request in advance
+                </label>
               </div>
 
+              <!-- Option: Available by request at the event -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2199,12 +2401,15 @@
                   id="foodLabelEvent"
                   name="foodLabel"
                   value="Available by request at the event"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="foodLabelEvent"
-                  >Available by request at the event</label
-                >
+                <label class="form-check-label fw-bold" for="foodLabelEvent">
+                  Available by request at the event
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2212,14 +2417,17 @@
                   id="foodLabelUnknown"
                   name="foodLabel"
                   value="Unknown"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="foodLabelUnknown"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="foodLabelUnknown">
+                  Unknown
+                </label>
               </div>
 
               <div id="foodLabelHelp" class="form-text">Required answer.</div>
             </fieldset>
+
             <!-- end food label -->
 
             <!-- Transport Section -->
@@ -2230,11 +2438,16 @@
               sustainable gatherings.
             </p>
 
-            <fieldset class="mt-3 mb-3">
-              <legend>
+            <fieldset
+              class="border p-3 mt-3 mb-3"
+              aria-describedby="transportHelp"
+            >
+              <legend class="text-primary">
                 Will you promote public transport and active travel to your
                 event?
               </legend>
+
+              <!-- Option: Yes, we will promote sustainable travel options -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2245,12 +2458,12 @@
                   aria-required="true"
                   required
                 />
-                <label class="form-check-label" for="transportYes"
-                  >Yes, we will promote sustainable travel options to our
-                  event.</label
-                >
+                <label class="form-check-label fw-bold" for="transportYes">
+                  Yes, we will promote sustainable travel options to our event
+                </label>
               </div>
 
+              <!-- Option: No -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2258,10 +2471,15 @@
                   id="transportNo"
                   name="transport"
                   value="No"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="transportNo">No</label>
+                <label class="form-check-label fw-bold" for="transportNo">
+                  No
+                </label>
               </div>
 
+              <!-- Option: Unknown -->
               <div class="form-check">
                 <input
                   type="radio"
@@ -2269,10 +2487,12 @@
                   id="transportUnknown"
                   name="transport"
                   value="Unknown"
+                  aria-required="true"
+                  required
                 />
-                <label class="form-check-label" for="transportUnknown"
-                  >Unknown</label
-                >
+                <label class="form-check-label fw-bold" for="transportUnknown">
+                  Unknown
+                </label>
               </div>
 
               <div id="transportHelp" class="form-text">Required answer.</div>
@@ -2280,8 +2500,14 @@
           </div>
           <!-- End -->
 
-          <fieldset class="mb-3">
-            <legend>Sustainability of Procured Products and Services</legend>
+          <fieldset
+            class="border p-3 mb-3"
+            aria-describedby="sustainableSourcedHelp"
+          >
+            <legend class="text-primary">
+              Sustainability of Procured Products and Services
+            </legend>
+
             <p>
               <strong>Note: </strong> A number of
               <a
@@ -2289,26 +2515,32 @@
                 target="_blank"
                 rel="noopener"
                 aria-label="Opens in a new window"
-                >Sustainability Guides</a
+                class="text-decoration-underline"
+              >
+                Sustainability Guides</a
               >
               <span class="opens-new-window">(Opens in a new window)</span> have
               been created to share helpful information about how to conserve
-              resources, reduce waste and recycle on campus. As well as
-              informtation about
+              resources, reduce waste, and recycle on campus. You can also find
+              information about
               <a
                 href="https://www.tcd.ie/sustainability/initiatives/sustainable-procurement/"
                 target="_blank"
                 rel="noopener"
                 aria-label="Opens in a new window"
-                >Sustainable Procurement</a
+                class="text-decoration-underline"
+              >
+                Sustainable Procurement</a
               >
               <span class="opens-new-window">(Opens in a new window)</span>.
             </p>
-            <legend>
+
+            <legend class="text-primary">
               Are products and services procured for the event sustainably
               sourced or produced?
             </legend>
 
+            <!-- Option: Sustainably sourced or produced -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -2319,11 +2551,12 @@
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="yesSourced"
-                >Sustainably sourced or produced</label
-              >
+              <label class="form-check-label fw-bold" for="yesSourced">
+                Sustainably sourced or produced
+              </label>
             </div>
 
+            <!-- Option: Not sustainably sourced or produced -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -2334,11 +2567,12 @@
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="noSourced"
-                >Not sustainably sourced or produced</label
-              >
+              <label class="form-check-label fw-bold" for="noSourced">
+                Not sustainably sourced or produced
+              </label>
             </div>
 
+            <!-- Option: Sustainability unknown -->
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -2349,9 +2583,9 @@
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="unknownSourced"
-                >Sustainability unknown</label
-              >
+              <label class="form-check-label fw-bold" for="unknownSourced">
+                Sustainability unknown
+              </label>
             </div>
 
             <div id="sustainableSourcedHelp" class="form-text">
@@ -2359,64 +2593,67 @@
             </div>
           </fieldset>
 
-          <fieldset class="mb-3">
-            <legend>Sustainability Awareness and Education</legend>
+          <fieldset
+            class="border p-3 mb-3"
+            aria-describedby="promoteAwarenessHelp awarenessHelp"
+          >
+            <legend class="text-primary">
+              Sustainability Awareness and Education
+            </legend>
+
             <p>
               Will the event promote sustainability awareness and education
               among attendees, and how will their feedback be collected to
               improve future sustainability efforts?
             </p>
 
+            <!-- Option: Yes, activities and information to promote sustainability awareness -->
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
                 name="promoteAwareness"
                 id="yesAwareness"
-                value="Yes, activities and information to promote sustainability
-                awareness will be included and feedback will be collected."
+                value="Yes, activities and information to promote sustainability awareness will be included and feedback will be collected."
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="yesAwareness"
-                >Yes, activities and information to promote sustainability
-                awareness will be included and feedback will be
-                collected.</label
-              >
+              <label class="form-check-label fw-bold" for="yesAwareness">
+                Yes, activities and information to promote sustainability
+                awareness will be included and feedback will be collected.
+              </label>
             </div>
 
+            <!-- Option: No, there are no plans to promote sustainability awareness -->
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
                 name="promoteAwareness"
                 id="noAwareness"
-                value="No, there are no plans to promote sustainability
-                awareness"
+                value="No, there are no plans to promote sustainability awareness"
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="noAwareness"
-                >No, there are no plans to promote sustainability
-                awareness</label
-              >
+              <label class="form-check-label fw-bold" for="noAwareness">
+                No, there are no plans to promote sustainability awareness
+              </label>
             </div>
 
+            <!-- Option: Unknown if sustainability awareness will be promoted -->
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
                 name="promoteAwareness"
                 id="unknownAwareness"
-                value="It is unknown if sustainability awareness will be
-                promoted"
+                value="It is unknown if sustainability awareness will be promoted"
                 aria-required="true"
                 required
               />
-              <label class="form-check-label" for="unknownAwareness"
-                >It is unknown if sustainability awareness will be
-                promoted</label
-              >
+              <label class="form-check-label fw-bold" for="unknownAwareness">
+                It is unknown if sustainability awareness will be promoted
+              </label>
             </div>
 
             <div id="promoteAwarenessHelp" class="form-text">
