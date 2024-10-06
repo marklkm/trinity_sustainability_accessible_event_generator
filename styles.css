@@ -113,9 +113,8 @@ body {
 #maincontent.large-font span, 
 #maincontent.large-font .form-text, 
 #maincontent.large-font .form-control { /* Targeting Bootstrap buttons */
-  font-size: 2rem; /* Adjust size as needed */
-  color: #ffffff;
-  background-color: #000;
+  font-size: 2rem !important; /* Adjust size as needed */
+
 }
 
 #maincontent.large-font .heading-primary,
@@ -126,9 +125,13 @@ body {
 #maincontent.large-font h4,
 #maincontent.large-font button,
 #maincontent.large-font .btn,
+#maincontent.large-font .text-primary,
 #maincontent.large-font .text-secondary {
-  color: #dc128e !important; /* Correct placement of !important */
-  font-size: 2rem !important; /* Apply !important to font size as well if needed */
+  font-size: 2rem !important; /* Ensures the font size overrides default Bootstrap styles */
+}
+
+.text-primary {
+  color: #0569b9 !important; /* Set the desired primary color */
 }
 
 
