@@ -192,6 +192,8 @@
           >
             Toggle Dyslexia-Friendly Font
           </button>
+
+          <h2 class="text-primary mt-3 mb-3">Accessbility Options</h2>
         </div>
       </section>
 
@@ -3286,6 +3288,40 @@
         });
       });
     </script>
+
+    <!-- Script for Search Box for information for the maincontent -->
+    <script>
+      function performSearch() {
+        var query = document.getElementById("searchInput").value;
+        var resultsSection = document.getElementById("search-results");
+        resultsSection.innerHTML = "";
+
+        if (query.trim() === "") {
+          resultsSection.innerHTML = "<p>Please enter a search term.</p>";
+          return;
+        }
+
+        var newSection = document.createElement("section");
+        newSection.setAttribute("role", "region");
+        newSection.setAttribute("aria-labelledby", "searchResultsHeading");
+
+        var heading = document.createElement("h2");
+        heading.id = "searchResultsHeading";
+        heading.textContent = "Search Results for: " + query;
+
+        var result = document.createElement("p");
+        result.textContent = 'Showing results for "' + query + '".';
+
+        newSection.appendChild(heading);
+        newSection.appendChild(result);
+
+        resultsSection.appendChild(newSection);
+
+        newSection.setAttribute("tabindex", "-1");
+        newSection.focus();
+      }
+    </script>
+    <!-- End -->
 
     <!-- END-->
 
