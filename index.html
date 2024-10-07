@@ -2118,7 +2118,6 @@
           <h2 class="text-primary mt-3 mb-3">Immunocompromised Individuals</h2>
 
           <section class="mb-3">
-            <!--<h2>Planning for a Sustainable Event</h2>-->
             <p>
               <strong>Note:</strong> Immunocompromised individuals have weakened
               immune systems, making them more vulnerable to infections and
@@ -2129,6 +2128,85 @@
               ensuring a safer and more inclusive environment for everyone.
             </p>
           </section>
+
+          <fieldset class="border p-3 mb-3" aria-describedby="maskingHelp">
+            <legend class="text-primary">Masking:</legend>
+
+            <!-- Masking -->
+
+            <p>
+              Masking is wearing a face covering to reduce the spread of
+              airborne particles, such as viruses, and protect against
+              infection.
+            </p>
+
+            <!-- Option: The event will encourage masking -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="maskingEncourage"
+                name="masking"
+                value="The event will encourage masking"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="maskingEncourage">
+                The event will encourage masking
+              </label>
+            </div>
+
+            <!-- Option: The event will require masking (except speakers, interpreters, people with medical exemptions) -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="maskingRequire"
+                name="masking"
+                value="The event will require masking (except speakers, interpreters, people with medical exemptions)"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="maskingRequire">
+                The event will require masking (except speakers, interpreters,
+                people with medical exemptions)
+              </label>
+            </div>
+
+            <!-- Option: The event will not encourage masking -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="noMasking"
+                name="masking"
+                value="The event will not encourage masking"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="noMasking">
+                The event will not encourage masking
+              </label>
+            </div>
+
+            <!-- Option: Unknown masking -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="unknownMasking"
+                name="masking"
+                value="unknown"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="unknownMasking">
+                Unknown
+              </label>
+            </div>
+
+            <div id="maskingHelp" class="form-text">Required answer.</div>
+          </fieldset>
 
           <!-- End of ection for Immunocompromised Individuals -->
 
