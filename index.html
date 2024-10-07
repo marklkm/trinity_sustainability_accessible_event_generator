@@ -2137,8 +2137,6 @@
           <fieldset class="border p-3 mb-3" aria-describedby="maskingHelp">
             <legend class="text-primary">Masking:</legend>
 
-            <!-- Masking -->
-
             <p>
               Masking is wearing a face covering to reduce the spread of
               airborne particles, such as viruses, and protect against
@@ -2212,6 +2210,206 @@
 
             <div id="maskingHelp" class="form-text">Required answer.</div>
           </fieldset>
+
+          <!-- End of Masking -->
+
+          <!-- HEPA -->
+
+          <fieldset class="border p-3 mb-3" aria-describedby="hepaHelp">
+            <legend class="text-primary">HEPA:</legend>
+
+            <p>
+              HEPA filters are high-efficiency air filters that capture tiny
+              particles, including dust, allergens, and pathogens, improving air
+              quality.
+            </p>
+
+            <!-- Option: Yes, the event will have HEPA filters -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="yesHepa"
+                name="hepa"
+                value="Yes, the event will have HEPA filters"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="yesHepa">
+                Yes, the event will have HEPA filters
+              </label>
+            </div>
+
+            <!-- Option: Available by request in advance -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="requestHepa"
+                name="hepa"
+                value="Available by request in advance"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="requestHepa">
+                Available by request in advance
+              </label>
+            </div>
+
+            <!-- Option: No, the event will not have HEPA filters  -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="noHepa"
+                name="hepa"
+                value="No, the event will not have HEPA filters"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="noHepa">
+                No, the event will not have HEPA filters
+              </label>
+            </div>
+
+            <!-- Option: Unknown Hepa -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="unknownHepa"
+                name="hepa"
+                value="unknown"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="unknownHepa">
+                Unknown
+              </label>
+            </div>
+
+            <div id="hepaHelp" class="form-text">Required answer.</div>
+          </fieldset>
+
+          <!-- End of HEPA -->
+
+          <!-- Open Windows -->
+
+          <fieldset class="border p-3 mb-3" aria-describedby="openwindowsHelp">
+            <legend class="text-primary">Open Windows:</legend>
+
+            <p>
+              Opening windows to increase ventilation is another important
+              measure to consider for the safety of immunocompromised
+              individuals at an event. Improved airflow helps reduce the
+              concentration of airborne contaminants, lowering the risk of
+              illness and contributing to a healthier environment.
+            </p>
+
+            <!-- Option: The event will be outside -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsOutside"
+                name="openwindows"
+                value="The event will be outside"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="openwindowsOutside">
+                The event will be outside
+              </label>
+            </div>
+
+            <!-- Option: All windows will be opened all throughout the event -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsEvent"
+                name="openwindows"
+                value="All windows will be opened all throughout the event"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="openwindowsEvent">
+                All windows will be opened all throughout the event
+              </label>
+            </div>
+
+            <!-- Option: Available by request in advance -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsRequest"
+                name="openwindows"
+                value="Available by request in advance"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="openwindowsRequest">
+                Available by request in advance
+              </label>
+            </div>
+
+            <!-- Option: Available by request at event -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsRequestevent"
+                name="openwindows"
+                value="Available by request at event"
+                aria-required="true"
+                required
+              />
+              <label
+                class="form-check-label fw-bold"
+                for="openwindowsRequestevent"
+              >
+                Available by request at event
+              </label>
+            </div>
+
+            <!-- Option: No, there are no windows or they will not be opened throughout the event -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsNo"
+                name="openwindows"
+                value="No, there are no windows or they will not be opened throughout the event"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="openwindowsNo">
+                No, there are no windows or they will not be opened throughout
+                the event
+              </label>
+            </div>
+
+            <!-- Option: Unknown -->
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                id="openwindowsUnknown"
+                name="openwindows"
+                value="Unknown"
+                aria-required="true"
+                required
+              />
+              <label class="form-check-label fw-bold" for="openwindowsUnknown">
+                Unknown
+              </label>
+            </div>
+
+            <div id="openwindowsHelp" class="form-text">Required answer.</div>
+          </fieldset>
+
+          <!-- End of Open Windows -->
 
           <!-- End of ection for Immunocompromised Individuals -->
 

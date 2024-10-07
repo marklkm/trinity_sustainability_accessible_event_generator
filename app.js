@@ -131,6 +131,14 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   );
   const masking = maskingElement ? maskingElement.value : null;
 
+  const hepaElement = document.querySelector('input[name="hepa"]:checked');
+  const hepa = hepaElement ? hepaElement.value : null;
+
+  const openwindowsElement = document.querySelector(
+    'input[name="openwindows"]:checked'
+  );
+  const openwindows = openwindowsElement ? openwindowsElement.value : null;
+
   const zeroWasteElement = document.querySelector(
     'input[name="zeroWaste"]:checked'
   );
@@ -234,6 +242,8 @@ document.getElementById("submitBtn").addEventListener("click", function () {
           eventVideo || "Not selected"
         }<br>
         <strong>Masking:</strong> ${masking || "Not selected"}<br>
+        <strong>HEPA:</strong> ${hepa || "Not selected"}<br>
+         <strong>Open Windows:</strong> ${openwindows || "Not selected"}<br>
         <strong>Will single-use items be available at the event?</strong> ${
           singleUseItems || "Not selected"
         }<br>
@@ -290,6 +300,8 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !eventSlides ||
     !eventVideo ||
     !masking ||
+    !hepa ||
+    !openwindows ||
     !singleUseItems ||
     !zeroWaste ||
     !veggieApproach ||
@@ -370,6 +382,8 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Are the presentation slides accessible?",
     "Does the event include a video showing or video call?",
     "Masking:",
+    "HEPA:",
+    "Open Windows:",
     "Will single-use items be available at the event?",
     "Will the event be a zero waste event?",
     "Will the event take a veggie first approach?",
@@ -384,7 +398,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|HEPA:|Open Windows:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
@@ -684,6 +698,22 @@ function copyToTextarea() {
   for (let i = 0; i < maskingEls.length; i++) {
     if (maskingEls[i].checked) {
       formData += "Masking: " + maskingEls[i].value + "\n";
+      break;
+    }
+  }
+
+  let hepaEls = document.getElementsByName("hepa");
+  for (let i = 0; i < hepaEls.length; i++) {
+    if (hepaEls[i].checked) {
+      formData += "HEPA: " + hepaEls[i].value + "\n";
+      break;
+    }
+  }
+
+  let openwindowsEls = document.getElementsByName("openwindows");
+  for (let i = 0; i < openwindowsEls.length; i++) {
+    if (openwindowsEls[i].checked) {
+      formData += "Open Windows: " + openwindowsEls[i].value + "\n";
       break;
     }
   }
