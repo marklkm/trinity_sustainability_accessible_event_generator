@@ -312,7 +312,9 @@ p, label, .form-check-label {
     font-size: 1.125rem; /* Slightly larger font size for important text */
   }
 
-
+  h2 {
+    font-size: 18px; /* Smaller font size for mobile devices */
+}
 
   .bg-image {
     max-height: 300px; /* Smaller max-height for background images */
