@@ -1235,9 +1235,10 @@
           <section>
             <h2 class="text-primary mt-3 mb-3">Accessibility Options</h2>
             <p>
-              <strong>Note:</strong> Interpreters should be provided upon
-              request. Ask attendees if they have any accessibility requirements
-              at least two weeks before an event. More information on booking an
+              <strong>Note:</strong> Irish Sign Language (ISL) Interpreters
+              should be provided upon request. Ask attendees if they have any
+              accessibility requirements at least two weeks before an event.
+              More information on booking an
               <a
                 href="https://www.tcd.ie/equality/resources-and-activities/isl-interpreting/"
                 target="_blank"
@@ -1251,7 +1252,7 @@
 
             <fieldset class="border p-3 mb-3" aria-describedby="islIntHelp">
               <legend class="text-primary">
-                Irish Sign Language (ISL) Interpretation Availability
+                Irish Sign Language Interpretation Availability:
               </legend>
 
               <!-- Option: Yes, ISL interpretation available -->
@@ -1338,6 +1339,115 @@
             </fieldset>
           </section>
 
+          <!-- Test section for Event Speakers -->
+          <section>
+            <h2 class="text-primary mt-3 mb-3">
+              Speaker Accessibility Options
+            </h2>
+            <p>
+              <strong>Note:</strong> Ensure all speaker platforms are
+              accessible. Ask speakers about any specific accessibility
+              requirements they might have at least two weeks before the event.
+              Provide details on accessible technologies available.
+            </p>
+
+            <fieldset class="border p-3 mb-3" aria-describedby="speakerAccHelp">
+              <legend class="text-primary">
+                Speaker Accessibility Accommodations
+              </legend>
+
+              <p>
+                <strong>Note:</strong> Checked Box = Yes. Unchecked Box = No.
+              </p>
+
+              <!-- Option: Hearing loop available -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="speakerAcc"
+                  id="hearingLoop"
+                  value="Hearing loop available"
+                  aria-required="true"
+                  required
+                />
+                <label class="form-check-label fw-bold" for="hearingLoop">
+                  Hearing loop available
+                </label>
+              </div>
+
+              <!-- Option: Adjustable podium height -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="speakerAcc"
+                  id="adjustPodium"
+                  value="Adjustable podium height"
+                  aria-required="true"
+                  required
+                />
+                <label class="form-check-label fw-bold" for="adjustPodium">
+                  Adjustable podium height
+                </label>
+              </div>
+
+              <!-- Option: Speech-to-text service -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="speakerAcc"
+                  id="speechToText"
+                  value="Speech-to-text service"
+                  aria-required="true"
+                  required
+                />
+                <label class="form-check-label fw-bold" for="speechToText">
+                  Speech-to-text service
+                </label>
+              </div>
+
+              <!-- Option: Personal microphone -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="speakerAcc"
+                  id="personalMic"
+                  value="Personal microphone"
+                  aria-required="true"
+                  required
+                />
+                <label class="form-check-label fw-bold" for="personalMic">
+                  Personal microphone
+                </label>
+              </div>
+
+              <!-- Option: Other specified adjustments -->
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="speakerAcc"
+                  id="otherAdjust"
+                  value="Other specified adjustments"
+                  aria-required="true"
+                  required
+                />
+                <label class="form-check-label fw-bold" for="otherAdjust">
+                  Other specified adjustments
+                </label>
+              </div>
+
+              <div id="speakerAccHelp" class="form-text">
+                Please select any applicable accommodations.
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- End of test section for Event Speakers -->
+
           <div class="mb-3">
             <fieldset
               class="border p-3 mb-3"
@@ -1345,7 +1455,7 @@
             >
               <legend class="text-primary">Accessibility Requirements</legend>
 
-              <p id="accessNote2">
+              <p>
                 <strong>Note:</strong> When publicising events, ensure that
                 there is a standard accessibility contact statement on all
                 publicity, including print ads, web pages, and information
@@ -1574,6 +1684,12 @@
               <legend class="text-primary">
                 Are there provisions for a designated quiet space?
               </legend>
+
+              <p>
+                A designated quiet space at events provides a calm area where
+                neurodivergent individuals can retreat to avoid sensory overload
+                and decompress from the bustling event environment.
+              </p>
 
               <!-- Option: Yes, a quiet space is available -->
               <div class="form-check">
@@ -1804,10 +1920,10 @@
             </legend>
 
             <p id="timelineInfoDesc">
-              (A timeline is important for an event because it provides a clear,
+              A timeline is important for an event because it provides a clear,
               structured overview of what to expect, helping neurodivergent
               individuals manage their time, reduce anxiety, and feel more in
-              control of the situation.)
+              control of the situation.
             </p>
 
             <!-- Option: Yes a detailed timeline is present in event information -->
@@ -2686,12 +2802,9 @@
 
             <!-- Gluten free food -->
 
-            <fieldset
-              class="border p-3 mb-3"
-              aria-describedby="veggieApproacReq"
-            >
+            <fieldset class="border p-3 mb-3" aria-describedby="glutenFreeReq">
               <legend class="text-primary">
-                Gluten free options availability
+                Gluten free options availability:
               </legend>
 
               <!-- Option: Yes, gluten free options available -->
@@ -2758,9 +2871,7 @@
                 </label>
               </div>
 
-              <div id="veggieApproacReq" class="form-text">
-                Required answer.
-              </div>
+              <div id="glutenFreeReq" class="form-text">Required answer.</div>
             </fieldset>
 
             <!-- end gluten free food -->

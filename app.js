@@ -26,6 +26,23 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const eventEndDate =
     document.getElementById("eventEndDate").value || "Not Selected";
 
+  // Adding new speaker accessibility options
+  const hearingLoopAvailable = document.getElementById("hearingLoop").checked
+    ? "Yes"
+    : "No";
+  const adjustablePodium = document.getElementById("adjustPodium").checked
+    ? "Yes"
+    : "No";
+  const speechToTextService = document.getElementById("speechToText").checked
+    ? "Yes"
+    : "No";
+  const personalMicrophone = document.getElementById("personalMic").checked
+    ? "Yes"
+    : "No";
+  const otherAdjustments = document.getElementById("otherAdjust").checked
+    ? "Yes"
+    : "No";
+
   // Radio buttons: Add null checks
   const onlineEventElement = document.querySelector(
     'input[name="onlineEvent"]:checked'
@@ -214,9 +231,17 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         <strong>Hearing Loop Availability:</strong> ${
           hearingLoop || "Not selected"
         }<br>
-        <strong>Irish Sign Language (ISL) Interpretation Availability?</strong> ${
+        <strong>Irish Sign Language Interpretation Availability:</strong> ${
           islInt || "Not selected"
-        }<br>
+        }<br><br>
+
+        <strong>- Speaker Accessibility Accommodations -</strong><br>
+            <strong>Adjustable Podium Height:</strong> ${adjustablePodium}<br>
+    <strong>Personal Microphone:</strong> ${personalMicrophone}<br>
+    <strong>Speech-to-Text Service:</strong> ${speechToTextService}<br>
+    <strong>Hearing Loop Available:</strong> ${hearingLoopAvailable}<br>
+    <strong>Other Specified Adjustments:</strong> ${otherAdjustments}<br><br>
+
         <strong>Accessibility Requirements:</strong> ${
           accessRequirements || "Not selected"
         }<br>
@@ -249,9 +274,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         }<br>
         <strong>Will the event be a zero waste event?</strong> ${
           zeroWaste || "Not selected"
-        }<br>
-        <strong>Gluten-free options availability:</strong> ${
-          glutenFree || "Not selected"
         }<br>
         <strong>Will the event take a veggie first approach?</strong> ${
           veggieApproach || "Not selected"
@@ -372,7 +394,8 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Is seating available at the event?",
     "Wheelchair accessible toilet:",
     "Hearing Loop Availability:",
-    "Irish Sign Language (ISL) Interpretation Availability?",
+    "Irish Sign Language Interpretation Availability:",
+    "- Speaker Accessibility Accommodations -",
     "Accessibility Requirements:",
     "Disabled Person's Parking Availability:",
     "Are there provisions for a designated quiet space?",
@@ -387,7 +410,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Will single-use items be available at the event?",
     "Will the event be a zero waste event?",
     "Will the event take a veggie first approach?",
-    "Gluten-free options availability:",
+    "Gluten free options availability:",
     "Are foods labelled with all their ingredients?",
     "Will you promote public transport and active travel to your event?",
     "Are products procured for the event sustainably sourced or produced?",
@@ -398,7 +421,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language \(ISL\) Interpretation Availability\?|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|HEPA:|Open Windows:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten-free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language Interpretation Availability:|- Speaker Accessibility Accommodations -|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|HEPA:|Open Windows:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
@@ -590,7 +613,7 @@ function copyToTextarea() {
   for (let i = 0; i < islIntEls.length; i++) {
     if (islIntEls[i].checked) {
       formData +=
-        "Irish Sign Language (ISL) Interpretation Availability? " +
+        "Irish Sign Language Interpretation Availability:" +
         islIntEls[i].value +
         "\n";
       break;
@@ -749,16 +772,16 @@ function copyToTextarea() {
     }
   }
 
-  let glutenFreeEls = document.getElementsByName("glutenFreeEls");
+  let glutenFreeEls = document.getElementsByName("glutenFree");
   for (let i = 0; i < glutenFreeEls.length; i++) {
     if (glutenFreeEls[i].checked) {
       formData +=
-        "Gluten free options availability: " + glutenFreeEls[i].value + "\n";
+        "Gluten free options availability:" + glutenFreeEls[i].value + "\n";
       break;
     }
   }
 
-  let foodLabelEls = document.getElementsByName("foodLabelEls");
+  let foodLabelEls = document.getElementsByName("foodLabel");
   for (let i = 0; i < foodLabelEls.length; i++) {
     if (foodLabelEls[i].checked) {
       formData +=
