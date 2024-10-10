@@ -205,11 +205,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
 
   const output = `
-       <span class="bold-label">Event Name:</span> ${eventName}<br>
+       <span class="bold-label">Event Name</span> ${eventName}<br>
         <strong>Event Description:</strong> ${eventDescription}<br>
         <strong>Event Location:</strong> ${eventLocation}<br>
-        <strong>Event Organiser name:</strong> ${organiserName}<br>
-        <strong>Event Organiser email:</strong> ${organiserEmail}<br>
+        <strong>Event Organiser Name:</strong> ${organiserName}<br>
+        <strong>Event Organiser Email:</strong> ${organiserEmail}<br>
         <strong>Event Start Time:</strong> ${eventStartTime}<br>
         <strong>Event End Time:</strong> ${eventEndTime}<br>
         <strong>Event Start Date:</strong> ${eventStartDate}<br>
@@ -381,8 +381,8 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     "Event Name:",
     "Event Description:",
     "Event Location:",
-    "Event Organiser name:",
-    "Event Organiser email:",
+    "Event Organiser Name:",
+    "Event Organiser Email:",
     "Event Start Time:",
     "Event End Time:",
     "Event Start Date:",
@@ -421,7 +421,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
   function addTextWithBold(doc, text, yPosition) {
     const parts = text.split(
-      /(Event Name:|Event Description:|Event Location:|Event Organiser name:|Event Organiser email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language Interpretation Availability:|- Speaker Accessibility Accommodations -|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|HEPA:|Open Windows:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
+      /(Event Name:|Event Description:|Event Location:|Event Organiser Name:|Event Organiser Email:|Event Start Time:|Event End Time:|Event Start Date:|Event End Date:|Online Event:|Event Recording:|In-Person Event:|Is the event accessible\?|Is seating available at the event\?|Wheelchair accessible toilet:|Hearing Loop Availability:|Irish Sign Language Interpretation Availability:|- Speaker Accessibility Accommodations -|Accessibility Requirements:|Disabled Person's Parking Availability:|Are there provisions for a designated quiet space\?|Audio description availability:|Is event information clear, concise, and provided in multiple formats\?|Is a detailed timeline of the event provided\?|Audio description availability|Are the presentation slides accessible\?|Does the event include a video showing or video call\?|Masking:|HEPA:|Open Windows:|Will single-use items be available at the event\?|Will the event be a zero waste event\?|Will the event take a veggie first approach\?|Gluten free options availability:|Are foods labelled with all their ingredients\?|Will you promote public transport and active travel to your event\?|Are products procured for the event sustainably sourced or produced\?|Will the event promote sustainability awareness and education among attendees\?|Any further comments or details\?|Please provide contact details for any access enquiries:)/
     );
 
     parts.forEach((part, index) => {
