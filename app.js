@@ -205,7 +205,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
 
   const output = `
-       <span class="bold-label">Event Name</span> ${eventName}<br>
+       <strong>Event Name:</strong> ${eventName}<br>
         <strong>Event Description:</strong> ${eventDescription}<br>
         <strong>Event Location:</strong> ${eventLocation}<br>
         <strong>Event Organiser Name:</strong> ${organiserName}<br>
