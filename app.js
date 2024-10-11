@@ -333,11 +333,18 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     !sustainableSourced ||
     !promoteAwareness
   ) {
-    alert("Please fill out all required fields.");
+    const feedbackElement = document.getElementById("feedback");
+    feedbackElement.classList.remove("d-none", "alert-success");
+    feedbackElement.classList.add("alert-danger");
+    feedbackElement.innerHTML = "Please fill out all required fields.";
   } else {
-    alert("Form submitted successfully!");
+    const feedbackElement = document.getElementById("feedback");
+    feedbackElement.classList.remove("d-none", "alert-danger");
+    feedbackElement.classList.add("alert-success");
+    feedbackElement.innerHTML = "Form submitted successfully!";
   }
 
+  // Display the output
   document.getElementById("output").innerHTML = output;
 });
 

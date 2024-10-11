@@ -820,9 +820,7 @@
             </fieldset>
           </div>
 
-          <h3 class="text-primary mt-3 mb-3">
-            Event Accessibility (Wheelchair Access)
-          </h3>
+          <h3 class="text-primary mt-3 mb-3">Event Accessibility</h3>
           <!-- Sample radio buttons for Access to the Event with tooltip -->
           <p>
             <strong>Note:</strong> Wheelchair access requires flat access (no
@@ -1005,18 +1003,11 @@
                   aria-label="Opens in a new window"
                   class="text-decoration-underline"
                 >
-                  Enabled Toilets</a
+                  Enabled toilets and changing places toilets</a
                 >
                 in Trinity<span class="opens-new-window"
                   >(Opens in a new window)</span
-                >. Changing places toilet changing are specially designed
-                toilets for individuals with profound disabilities who need
-                additional space and specialised equipment such as a hoist
-                system. Accessible toilets meet general accessibility guidelines
-                but may not be fully wheelchair-friendly. Partially accessible
-                toilets offer some accessibility features, like grab bars or a
-                raised toilet but may lack comprehensive accessibility, such as
-                insufficient space for a wheelchair to navigate.
+                >.
               </p>
 
               <!-- Option: Yes, fully wheelchair accessible -->
@@ -1455,13 +1446,13 @@
             >
               <legend class="text-primary">Accessibility Requirements</legend>
               <p>
-                <strong>Note:</strong> When publicising events, ensure that
-                there is a standard accessibility contact statement on all
-                publicity, including print ads, web pages, and information
-                flyers. An example of this statement is:
+                <strong>Note:</strong> When promoting events, make sure to
+                include a consistent accessibility contact statement in all
+                promotional materials, such as print advertisements, web pages,
+                and information flyers. For example:
                 <strong
-                  >'Please indicate if you have any access requirements so that
-                  we may facilitate you in attending this event.'</strong
+                  >'Please let us know if you have any accessibility needs so we
+                  can assist you in participating in this event.'</strong
                 >
               </p>
 
@@ -2435,11 +2426,9 @@
             <legend class="text-primary">Open Windows:</legend>
 
             <p>
-              Opening windows to increase ventilation is another important
-              measure to consider for the safety of immunocompromised
-              individuals at an event. Improved airflow helps reduce the
-              concentration of airborne contaminants, lowering the risk of
-              illness and contributing to a healthier environment.
+              Opening windows to improve ventilation is important for the safety
+              of immunocompromised individuals, as better airflow reduces
+              airborne contaminants and lowers the risk of illness.
             </p>
 
             <!-- Option: The event will be outside -->
@@ -3278,6 +3267,13 @@
           </button>
         </form>
 
+        <!-- Feedback area with aria-live for screen reader support -->
+        <div
+          id="feedback"
+          class="alert d-none mt-3 mb-3"
+          role="alert"
+          aria-live="polite"
+        ></div>
         <div class="mt-4" id="output"></div>
         <div class="mt-4">
           <button
@@ -3481,8 +3477,8 @@
     <footer class="mt-6">
       <!-- Increase top margin -->
       <p class="text-center">
-        &copy; 2024 Trinity Accessibility & Sustainability Event Generator. The
-        Accessibility & Sustainability Event Generator was developed by
+        &copy; 2024 Accessibility & Sustainability Event Generator. Developed by
+        the
         <a
           href="https://www.tcd.ie/disability/"
           class="text-primary"
