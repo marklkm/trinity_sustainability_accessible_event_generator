@@ -205,6 +205,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
 
   const output = `
+  <img src="images/tcd_logo.png" alt="TCD Logo" style="max-width: 100px;"><br>
        <strong>Event Name:</strong> ${eventName}<br>
         <strong>Event Description:</strong> ${eventDescription}<br>
         <strong>Event Location:</strong> ${eventLocation}<br>
@@ -382,7 +383,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
   const marginTop = 10;
   const marginBottom = 10;
   const textWidth = pageWidth - marginLeft - marginRight;
-  let yPosition = 20;
+  let yPosition = 100; // Start text after image
 
   const boldTextArray = [
     "Event Name:",
@@ -453,6 +454,27 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
     return yPosition;
   }
 
+  // Add the TCD Logo as a header
+  const logoPath = "images/tcd_logo.png"; // Replace with the path to your logo image
+
+  // Load the image file using FileReader
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    const imgData = event.target.result;
+
+    // Add the image to the PDF
+    doc.addImage(imgData, "PNG", 10, 10, 50, 30); // Adjust position and size as needed
+
+    // Add the text content
+    yPosition = addTextWithBold(doc, output, yPosition);
+
+    // Save the PDF
+    doc.save("event-details.pdf");
+  };
+
+  reader.readAsDataURL(new File([logoPath], "tcd_logo.png")); // Read the image as base64
+
+  // For other files
   if (file && file.type === "image/png") {
     const reader = new FileReader();
     reader.onload = function (event) {
@@ -464,7 +486,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
       doc.setFontSize(22);
       doc.text("Event Details", marginLeft, yPosition);
-      yPosition += 20;
+      yPosition += 10;
 
       doc.setFontSize(14);
 
@@ -476,7 +498,7 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
   } else {
     doc.setFontSize(22);
     doc.text("Event Details", marginLeft, yPosition);
-    yPosition += 20;
+    yPosition += 10;
 
     doc.setFontSize(14);
 
