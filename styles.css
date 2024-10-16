@@ -10,22 +10,47 @@ body {
 
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000; /* Choose a high-contrast background color */
-  color: #ffffff; /* Choose a high-contrast text color */
-  padding: 8px 16px;
-  z-index: 100; /* Ensure it's above other elements */
-  text-decoration: none;
-  font-weight: bold; /* Make it stand out */
-  transition: top 0.3s;
+  top: 10px; /* Adjust top margin */
+  left: 15px; /* Adjust left margin */
+  background-color: #007bff; /* High-contrast blue (Bootstrap primary) */
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+  clip: rect(0, 0, 0, 0); /* Hide offscreen */
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
-
-
 
 .skip-link:focus {
-  top: 10px; /* Position it where it can be seen when focused */
+  clip: auto; /* Show the link when focused */
+  height: auto;
+  width: auto;
+  text-decoration: underline;
+  margin-left: 15px; /* Add margin on the left */
 }
+
+/* Darken the radio button border and background */
+.custom-radio {
+  accent-color: #343a40; /* Darker Bootstrap gray (you can change this) */
+}
+
+/* Increase contrast for better visibility when selected */
+.custom-radio:checked {
+  background-color: #343a40; /* Darken the selected radio button */
+  border-color: #343a40;
+}
+
+/* Optional: Provide hover state for better feedback */
+.custom-radio:hover {
+  border-color: #212529; /* Even darker border on hover */
+}
+
+/* For better focus indication */
+.custom-radio:focus {
+  box-shadow: 0 0 0 0.25rem rgba(52, 58, 64, 0.5); /* Focus shadow with contrast */
+}
+
 
 #backToTopBtn {
   z-index: 100; /* Ensure it's above other items */
