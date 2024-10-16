@@ -875,3 +875,34 @@ function copyToTextarea() {
   // Set the textarea value to the formData
   document.getElementById("copiedData").value = formData;
 }
+
+// Chatobot
+document.getElementById("send-button").addEventListener("click", function () {
+  let userInput = document.getElementById("user-input").value;
+  let chatbotMessages = document.getElementById("chatbot-messages");
+
+  if (userInput.trim() === "") return; // Prevent sending empty messages
+
+  // Display user question
+  let userMessage = document.createElement("div");
+  userMessage.classList.add("alert", "alert-primary");
+  userMessage.textContent = `You: ${userInput}`;
+  chatbotMessages.appendChild(userMessage);
+
+  // Simulate chatbot response
+  let botMessage = document.createElement("div");
+  botMessage.classList.add("alert", "alert-secondary");
+  botMessage.textContent = `Bot: Here's how to make your event accessible...`;
+  chatbotMessages.appendChild(botMessage);
+
+  // Clear input after sending
+  document.getElementById("user-input").value = "";
+});
+
+document.getElementById("reset-button").addEventListener("click", function () {
+  // Clear the input field and the chatbot messages
+  document.getElementById("user-input").value = "";
+  document.getElementById("chatbot-messages").innerHTML = ""; // Clear chat history
+});
+
+// End chatbot
