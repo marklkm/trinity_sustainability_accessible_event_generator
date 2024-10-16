@@ -205,7 +205,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     "No additional contact details provided";
 
   const output = `
-  <img src="images/tcd_logo.png" alt="TCD Logo" style="max-width: 100px;"><br>
+
        <strong>Event Name:</strong> ${eventName}<br>
         <strong>Event Description:</strong> ${eventDescription}<br>
         <strong>Event Location:</strong> ${eventLocation}<br>
@@ -237,11 +237,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
         }<br><br>
 
         <strong>- Speaker Accessibility Accommodations -</strong><br>
-            <strong>Adjustable Podium Height:</strong> ${adjustablePodium}<br>
-    <strong>Personal Microphone:</strong> ${personalMicrophone}<br>
-    <strong>Speech-to-Text Service:</strong> ${speechToTextService}<br>
-    <strong>Hearing Loop Available:</strong> ${hearingLoopAvailable}<br>
-    <strong>Other Specified Adjustments:</strong> ${otherAdjustments}<br><br>
+        <strong>Adjustable Podium Height:</strong> ${adjustablePodium}<br>
+        <strong>Personal Microphone:</strong> ${personalMicrophone}<br>
+        <strong>Speech-to-Text Service:</strong> ${speechToTextService}<br>
+        <strong>Hearing Loop Available:</strong> ${hearingLoopAvailable}<br>
+        <strong>Other Specified Adjustments:</strong> ${otherAdjustments}<br><br>
 
         <strong>Accessibility Requirements:</strong> ${
           accessRequirements || "Not selected"
@@ -350,17 +350,24 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 });
 
 document.getElementById("copyBtn").addEventListener("click", function () {
-  const output = document.getElementById("output").innerText; // Use innerText or textContent to avoid copying HTML tags
+  // Get the HTML content from the output div
+  const output = document.getElementById("output").innerHTML;
 
-  // Modern way to copy to clipboard
-  navigator.clipboard
-    .writeText(output)
-    .then(function () {
-      alert("Event details copied to clipboard!");
-    })
-    .catch(function (err) {
-      console.error("Failed to copy: ", err);
-    });
+  // Create a plain text version by replacing HTML tags
+  const plainText = output
+    .replace(/<br\s*\/?>/gi, "\n") // Convert <br> tags to new lines
+    .replace(/<\/?strong>/gi, "") // Remove <strong> tags for bold text
+    .replace(/<\/?[^>]+(>|$)/g, ""); // Strip all remaining HTML tags
+
+  // Find the textarea where the text should be copied
+  const textArea = document.getElementById("copiedData"); // Assuming your textarea has this ID
+  textArea.value = plainText; // Set the value of the textarea to the plain text
+
+  // Optional: If you want to provide user feedback
+  const feedbackElement = document.getElementById("feedback");
+  feedbackElement.classList.remove("d-none", "alert-danger");
+  feedbackElement.classList.add("alert-success");
+  feedbackElement.innerHTML = "Event details copied to textarea!";
 });
 
 // PDF button
