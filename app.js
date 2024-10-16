@@ -517,10 +517,32 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
 document.getElementById("emailBtn").addEventListener("click", function () {
   const output = document.getElementById("output").innerText;
-  const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
-    output
-  )}`;
-  window.location.href = mailtoLink;
+
+  // Get the image input
+  const imageInput = document.getElementById("eventImage");
+  const file = imageInput.files[0];
+
+  if (file && file.type.startsWith("image/")) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const base64Image = event.target.result;
+
+      // Create a link to the base64 image in the email body
+      const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
+        output
+      )}%0D%0A%0D%0AView the event image: ${base64Image}`;
+
+      // Open the email client with the body containing the base64 image link
+      window.location.href = mailtoLink;
+    };
+    reader.readAsDataURL(file); // Read the file as a base64 string
+  } else {
+    // If no image is provided, just send the email without the image
+    const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
+      output
+    )}`;
+    window.location.href = mailtoLink;
+  }
 });
 
 document.getElementById("clearBtn").addEventListener("click", function () {
@@ -876,33 +898,4 @@ function copyToTextarea() {
   document.getElementById("copiedData").value = formData;
 }
 
-// Chatobot
-document.getElementById("send-button").addEventListener("click", function () {
-  let userInput = document.getElementById("user-input").value;
-  let chatbotMessages = document.getElementById("chatbot-messages");
-
-  if (userInput.trim() === "") return; // Prevent sending empty messages
-
-  // Display user question
-  let userMessage = document.createElement("div");
-  userMessage.classList.add("alert", "alert-primary");
-  userMessage.textContent = `You: ${userInput}`;
-  chatbotMessages.appendChild(userMessage);
-
-  // Simulate chatbot response
-  let botMessage = document.createElement("div");
-  botMessage.classList.add("alert", "alert-secondary");
-  botMessage.textContent = `Bot: Here's how to make your event accessible...`;
-  chatbotMessages.appendChild(botMessage);
-
-  // Clear input after sending
-  document.getElementById("user-input").value = "";
-});
-
-document.getElementById("reset-button").addEventListener("click", function () {
-  // Clear the input field and the chatbot messages
-  document.getElementById("user-input").value = "";
-  document.getElementById("chatbot-messages").innerHTML = ""; // Clear chat history
-});
-
-// End chatbot
+// Search box for ccontent on page

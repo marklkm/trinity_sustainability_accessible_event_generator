@@ -8,15 +8,6 @@ body {
 }
 
 
-/* Chatbot styling */
-
-#chatbot-body {
-  height: 300px;
-  overflow-y: auto;
-}
-
-
-
 /* Skip link */
 
 .skip-link {
