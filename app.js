@@ -517,32 +517,10 @@ document.getElementById("pdfBtn").addEventListener("click", function () {
 
 document.getElementById("emailBtn").addEventListener("click", function () {
   const output = document.getElementById("output").innerText;
-
-  // Get the image input
-  const imageInput = document.getElementById("eventImage");
-  const file = imageInput.files[0];
-
-  if (file && file.type.startsWith("image/")) {
-    const reader = new FileReader();
-    reader.onload = function (event) {
-      const base64Image = event.target.result;
-
-      // Create a link to the base64 image in the email body
-      const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
-        output
-      )}%0D%0A%0D%0AView the event image: ${base64Image}`;
-
-      // Open the email client with the body containing the base64 image link
-      window.location.href = mailtoLink;
-    };
-    reader.readAsDataURL(file); // Read the file as a base64 string
-  } else {
-    // If no image is provided, just send the email without the image
-    const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
-      output
-    )}`;
-    window.location.href = mailtoLink;
-  }
+  const mailtoLink = `mailto:?subject=Event Details&body=${encodeURIComponent(
+    output
+  )}`;
+  window.location.href = mailtoLink;
 });
 
 document.getElementById("clearBtn").addEventListener("click", function () {
