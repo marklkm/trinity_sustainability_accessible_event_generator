@@ -359,37 +359,29 @@
 
         <form id="eventForm" novalidate>
           <!-- input for Event Name -->
+          <!-- Input for Event Name -->
           <div class="mb-3">
             <label for="eventName" class="form-label"
-              >Event Name <span class="text-secondary">(required)</span></label
+              >Event Name (required)</label
             >
-            <input
-              type="text"
-              class="form-control"
-              id="eventName"
-              aria-describedby="eventNameHelp"
-              aria-required="true"
-              required
-            />
-            <div id="eventNameHelp" class="form-text">
-              Enter the name of the event.
-            </div>
+            <input type="text" class="form-control" id="eventName" required />
+            <div class="invalid-feedback">Event name is required.</div>
           </div>
 
           <!-- Event Description -->
           <div class="mb-3">
-            <label for="eventDescription" class="form-label"
-              >Event Description
-              <span class="text-secondary">(required)</span></label
-            >
-            <textarea
+            <label for="eventDescription" class="form-label">
+              Event Description
+              <span class="text-secondary">(required)</span>
+            </label>
+            <input
+              type="text"
               class="form-control"
               id="eventDescription"
-              rows="3"
               aria-describedby="eventDescriptionHelp"
               aria-required="true"
               required
-            ></textarea>
+            />
             <div id="eventDescriptionHelp" class="form-text">
               Provide a brief description of the event.
             </div>
@@ -436,20 +428,16 @@
           <!-- input for Event Organiser Email -->
           <div class="mb-3">
             <label for="organiserEmail" class="form-label"
-              >Event Organiser Email
-              <span class="text-secondary">(required)</span></label
+              >Organiser Email (required)</label
             >
             <input
               type="email"
-              placeholder="your@email.com"
               class="form-control"
               id="organiserEmail"
-              aria-describedby="organiserEmailHelp"
-              aria-required="true"
               required
             />
-            <div id="organiserEmailHelp" class="form-text">
-              Please enter a valid email address for the event organiser.
+            <div class="invalid-feedback">
+              Please provide a valid email address.
             </div>
           </div>
 

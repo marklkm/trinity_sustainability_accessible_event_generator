@@ -439,3 +439,11 @@ p, label, .form-check-label {
   color: #4caf50; /* Custom color for the button text */
   border-color: #4caf50; /* Custom border color */
 }
+
+/* invalid input */
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: green;
+}
