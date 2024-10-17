@@ -421,12 +421,13 @@ p, label, .form-check-label {
 }
 
 #backToTopBtn {
-  bottom: 80px;
+  bottom: 120px; /* Increased gap from bottom */
 }
 
 #scrollToBottomBtn {
-  bottom: 20px;
+  bottom: 20px; /* Position for scroll to bottom button */
 }
+
 
 
 /* Navbar */
