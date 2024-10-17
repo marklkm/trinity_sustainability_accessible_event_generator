@@ -157,6 +157,12 @@ body {
   font-size: 2rem !important; /* Ensures the font size overrides default Bootstrap styles */
 }
 
+/* Apply large font mode to nav links */
+nav.large-font a.nav-link {
+  font-size: 0.94rem !important; /* Increases the font size for nav links */
+}
+
+
 .text-primary {
   color: #0569b9 !important; /* Set the desired primary color */
 }
