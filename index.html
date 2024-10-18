@@ -222,8 +222,11 @@
           practices like zero waste and eco-friendly products. Users can input
           event details, generate a PDF, and follow guidelines for inclusivity
           and sustainability. It emphasises feedback collection to improve event
-          planning. Your feedback and suggestions are highly valuable as we
-          continue to improve this tool.
+          planning.
+        </p>
+        <p>
+          Your feedback and suggestions are highly valuable as we continue to
+          improve this tool.
           <a
             href="https://forms.office.com/e/d9cUE1Lzs0"
             target="_blank"
@@ -239,6 +242,7 @@
           <p>Click the button below to reveal more information:</p>
           <div class="container mt-4">
             <button
+              id="toggleButton"
               class="btn btn-accessible"
               type="button"
               data-bs-toggle="collapse"
@@ -3293,6 +3297,20 @@
         });
     </script>
     <!-- end test code -->
+
+    <!-- collapsible section button -->
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const infoBox = document.getElementById("infoBox");
+
+      infoBox.addEventListener("shown.bs.collapse", function () {
+        toggleButton.textContent = "Collapse Information";
+      });
+
+      infoBox.addEventListener("hidden.bs.collapse", function () {
+        toggleButton.textContent = "Toggle More Information";
+      });
+    </script>
 
     <script src="app.js"></script>
 
