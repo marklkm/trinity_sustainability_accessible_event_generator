@@ -90,10 +90,9 @@ a:hover {
 
   /* High contrast mode styles */
 /* High Contrast Mode */
-
 .high-contrast {
-  background-color: #000;
-  color: #fff;
+  background-color: #000; /* Black background for high contrast */
+  color: #fff; /* White text for strong contrast */
 }
 
 .high-contrast a {
@@ -101,23 +100,23 @@ a:hover {
 }
 
 .high-contrast a:hover {
-  color: #b38f00; /* Darker yellow on hover for consistency */
+  color: #e6b800; /* Slightly lighter yellow for hover */
 }
 
-
 .high-contrast .list-group-item {
-  background-color: #333; /* Dark background for list items */
-  color: #fff; /* White text */
+  background-color: #333; /* Dark grey background for list items */
+  color: #fff; /* White text for strong contrast */
 }
 
 .high-contrast .heading-primary {
-  color: #00ff00; /* Bright green headings */
+  color: #00cc00; /* Less bright green for better contrast */
 }
 
 .high-contrast .btn-success {
-  background-color: #ffcc00; /* High contrast button */
-  color: #000;
+  background-color: #b38f00; /* Darker yellow button background */
+  color: #000; /* Black text on button */
 }
+
 
 
 /* form note */
