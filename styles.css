@@ -97,12 +97,13 @@ a:hover {
 }
 
 .high-contrast a {
-  color: #ffcc00; /* Yellow for high contrast links */
+  color: #b38f00; /* Darker yellow for better contrast */
 }
 
-.high-contrast a:hover  {
-  color: #ffcc00; /* Yellow for high contrast links */
+.high-contrast a:hover {
+  color: #b38f00; /* Darker yellow on hover for consistency */
 }
+
 
 .high-contrast .list-group-item {
   background-color: #333; /* Dark background for list items */
