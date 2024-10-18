@@ -394,12 +394,12 @@
           class="alert alert-info alert-dismissible fade show mt-4 p-3"
           role="alert"
           aria-live="polite"
-          style="border: 2px solid #0056b3"
+          style="border: 2px solid #0056b3; background-color: #f0f8ff"
         >
           <strong>Note:</strong> Fields with a
-          <span style="color: #d9534f; font-weight: bold">red border</span> need
+          <span style="color: #a94442; font-weight: bold">red border</span> need
           to be completed. Fields with a
-          <span style="color: #5cb85c; font-weight: bold">green border</span>
+          <span style="color: #3c763d; font-weight: bold">green border</span>
           are complete.
           <button
             type="button"
@@ -434,6 +434,10 @@
               aria-required="true"
               required
             />
+            <small id="eventDescriptionHelp" class="form-text text-muted">
+              Please provide a brief description of the event. This information
+              will help users understand the event's purpose.
+            </small>
             <div class="invalid-feedback">Event Description is required.</div>
           </div>
 
@@ -450,6 +454,10 @@
               aria-required="true"
               required
             />
+            <!-- Descriptive text element with matching ID -->
+            <small id="eventLocationHelp" class="form-text text-muted">
+              Please provide the full address or location of the event.
+            </small>
             <div class="invalid-feedback">Event Location is required.</div>
           </div>
 
@@ -466,6 +474,10 @@
               aria-required="true"
               required
             />
+            <!-- Descriptive text element with matching ID -->
+            <small id="organiserNameHelp" class="form-text text-muted">
+              Please enter the full name of the event organiser.
+            </small>
             <div class="invalid-feedback">
               Event Organiser Name is required.
             </div>
