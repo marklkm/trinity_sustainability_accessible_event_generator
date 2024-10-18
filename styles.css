@@ -117,9 +117,13 @@ a:hover {
   color: #000; /* Black text on button */
 }
 
-/* High contrast color for form-text text-muted */
 .high-contrast .form-text.text-muted {
   color: #cccccc !important; /* Light gray for better contrast */
+}
+
+/* High Contrast for Subheading */
+.high-contrast .subheading-secondary {
+  color: #ff9900; /* Bright orange for subheading in high contrast mode */
 }
 
 
