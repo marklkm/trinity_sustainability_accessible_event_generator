@@ -355,6 +355,40 @@
           </div>
         </section>
 
+        <!-- Accessible Alerts -->
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+          id="alert-red"
+          aria-live="assertive"
+          style="display: none"
+        >
+          <strong>Error:</strong> Please fill out the required fields
+          highlighted in red.
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+          id="alert-green"
+          aria-live="polite"
+          style="display: none"
+        >
+          <strong>Success:</strong> All required fields are complete.
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+
         <h3 class="text-primary mt-3 mb-3">Event Details</h3>
 
         <form id="eventForm" novalidate>
@@ -364,7 +398,7 @@
               >Event Name (required)</label
             >
             <input type="text" class="form-control" id="eventName" required />
-            <div class="invalid-feedback">Event name is required.</div>
+            <div class="invalid-feedback">Event Name is required.</div>
           </div>
 
           <!-- Event Description -->
@@ -380,9 +414,7 @@
               aria-required="true"
               required
             />
-            <div id="eventDescriptionHelp" class="form-text">
-              Provide a brief description of the event.
-            </div>
+            <div class="invalid-feedback">Event Description is required.</div>
           </div>
 
           <!-- input for Event Location -->
@@ -398,9 +430,7 @@
               aria-required="true"
               required
             />
-            <div id="eventLocationHelp" class="form-text">
-              Enter the location of the event.
-            </div>
+            <div class="invalid-feedback">Event Location is required.</div>
           </div>
 
           <!-- input for Event Organiser Name with tooltip -->
@@ -416,8 +446,8 @@
               aria-required="true"
               required
             />
-            <div id="organiserNameHelp" class="form-text">
-              Enter the name of the person organising the event.
+            <div class="invalid-feedback">
+              Event Organiser Name is required.
             </div>
           </div>
 
@@ -455,6 +485,7 @@
               Please enter the time in the following format, e.g.,
               <strong>10:00 AM</strong> or <strong>10:00 PM</strong>.
             </div>
+            <div class="invalid-feedback">Event Start Time is required.</div>
           </div>
 
           <!-- input for Event End Time -->
@@ -474,6 +505,7 @@
               Please enter the time in the following format, e.g.,
               <strong>10:00 AM</strong> or <strong>10:00 PM</strong>.
             </div>
+            <div class="invalid-feedback">Event End Time is required.</div>
           </div>
 
           <!-- input for Event Start Date -->
@@ -493,6 +525,7 @@
               Enter the start date of the event in the format
               <strong>mm/dd/yyyy</strong>.
             </div>
+            <div class="invalid-feedback">Event Start Date is required.</div>
           </div>
 
           <!-- input for Event End Date -->
@@ -512,6 +545,7 @@
               Enter the end date of the event in the format
               <strong>mm/dd/yyyy</strong>.
             </div>
+            <div class="invalid-feedback">Event End Date is required.</div>
           </div>
 
           <!-- radio buttons for Online Event with tooltip -->
@@ -3526,6 +3560,29 @@
         });
       });
     </script>
+
+    <!-- test code -->
+
+    <script>
+      // Validation and Alert Handling
+      document
+        .getElementById("eventForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var form = event.target;
+
+          if (form.checkValidity() === false) {
+            document.getElementById("alert-red").style.display = "block";
+            document.getElementById("alert-green").style.display = "none";
+          } else {
+            document.getElementById("alert-green").style.display = "block";
+            document.getElementById("alert-red").style.display = "none";
+          }
+
+          form.classList.add("was-validated");
+        });
+    </script>
+    <!-- end test code -->
 
     <script src="app.js"></script>
 
