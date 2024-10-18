@@ -424,16 +424,17 @@
           <!-- input for Event Organiser Email -->
           <div class="mb-3">
             <label for="organiserEmail" class="form-label"
-              >Organiser Email (required)</label
+              >Event Organiser Email (required)</label
             >
             <input
               type="email"
               class="form-control"
               id="organiserEmail"
+              placeholder="your@email.com"
               required
             />
             <div class="invalid-feedback">
-              Please provide a valid email address.
+              Please enter a valid email address.
             </div>
           </div>
 
@@ -3489,6 +3490,38 @@
             mainContent.style.fontFamily = "OpenDyslexic, sans-serif"; // Apply dyslexia-friendly font
             this.textContent = "Disable Dyslexia-Friendly Font";
             this.setAttribute("aria-pressed", "true");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Select the form
+      const form = document.getElementById("eventForm");
+
+      // Listen for form submission
+      form.addEventListener("submit", function (event) {
+        // Prevent the form from submitting if validation fails
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        // Add the 'was-validated' class to trigger the Bootstrap validation styles
+        form.classList.add("was-validated");
+      });
+
+      // Validate each input when the user interacts with it
+      const inputs = form.querySelectorAll("input");
+
+      inputs.forEach((input) => {
+        input.addEventListener("input", function () {
+          if (input.checkValidity()) {
+            input.classList.remove("is-invalid");
+            input.classList.add("is-valid");
+          } else {
+            input.classList.remove("is-valid");
+            input.classList.add("is-invalid");
           }
         });
       });

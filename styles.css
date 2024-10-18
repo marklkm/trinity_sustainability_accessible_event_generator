@@ -139,6 +139,7 @@ body {
 #maincontent.large-font textarea, 
 #maincontent.large-font span, 
 #maincontent.large-font .form-text, 
+#maincontent.large-font .invalid-feedback,
 #maincontent.large-font .form-control { /* Targeting Bootstrap buttons */
   font-size: 2rem !important; /* Adjust size as needed */
 
@@ -453,4 +454,9 @@ input:invalid {
 }
 input:valid {
   border-color: green;
+}
+
+.invalid-feedback {
+  color: #d63384 !important;
+  font-size:1.25rem !important;
 }
