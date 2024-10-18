@@ -117,6 +117,11 @@ a:hover {
   color: #000; /* Black text on button */
 }
 
+/* High contrast color for form-text text-muted */
+.high-contrast .form-text.text-muted {
+  color: #cccccc !important; /* Light gray for better contrast */
+}
+
 
 
 /* form note */
