@@ -174,14 +174,14 @@
           </h2>
           <button
             id="toggleContrast"
-            class="btn btn-secondary mt-3 mb-3"
+            class="btn btn-secondary mt-3 mb-3 me-3"
             aria-pressed="false"
           >
             Toggle High Contrast
           </button>
           <button
             id="toggleFontSize"
-            class="btn btn-secondary mt-3 mb-3"
+            class="btn btn-secondary mt-3 mb-3 me-3"
             aria-pressed="false"
           >
             Increase Font Size
@@ -202,20 +202,6 @@
         </div>
 
         <!-- Google Irish Translation -->
-        <div class="container mt-4 d-flex justify-content-center">
-          <!-- Accessible translation button -->
-          <button
-            id="translateButton"
-            class="btn btn-primary"
-            onclick="toggleTranslation()"
-            aria-label="Translate page to Irish"
-          >
-            Translate to Irish
-          </button>
-
-          <!-- Google Translate Element (Hidden) -->
-          <div id="google_translate_element" style="display: none"></div>
-        </div>
 
         <!-- End of Google Irish Translation -->
       </section>
@@ -2972,19 +2958,19 @@
                 PDF document (Optional).</small
               >
             </div>
-            <button type="button" class="btn btn-primary" id="submitBtn">
+            <button type="button" class="btn btn-primary me-3" id="submitBtn">
               Submit
             </button>
             <div id="successMessage" class="mt-3 alert alert-success d-none">
               Form has been successfully submitted!
             </div>
-            <button type="button" class="btn btn-warning" id="clearBtn">
+            <button type="button" class="btn btn-warning me-3" id="clearBtn">
               Clear All Fields
             </button>
             <!-- Accessible Button to Refresh Page -->
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary me-3"
               id="refreshPageButton"
               aria-label="Refresh the page"
               onclick="location.reload()"
@@ -3001,10 +2987,10 @@
           ></div>
           <div class="mt-4" id="output"></div>
           <div class="mt-4">
-            <button class="btn btn-secondary mt-1" id="copyBtn">
+            <button class="btn btn-secondary mt-1 me-3" id="copyBtn">
               Copy to Clipboard
             </button>
-            <button class="btn btn-secondary mt-1" id="pdfBtn">
+            <button class="btn btn-secondary mt-1 me-3" id="pdfBtn">
               Save as PDF
             </button>
             <button class="btn btn-secondary mt-1" id="emailBtn">
@@ -3385,32 +3371,9 @@
       });
     </script>
 
-    <!-- Google Irish Translation -->
-    <script>
-      function toggleTranslation() {
-        const translateButton = document.getElementById("translateButton");
-        const currentLang = document.querySelector(".goog-te-combo").value;
+    <!-- Google Irish Translation Script -->
 
-        // Check current language and toggle between Irish and English
-        if (currentLang === "en") {
-          document.querySelector(".goog-te-combo").value = "ga"; // Translate to Irish
-          translateButton.innerText = "Translate to English"; // Change button text
-          translateButton.setAttribute(
-            "aria-label",
-            "Translate page to English"
-          );
-        } else {
-          document.querySelector(".goog-te-combo").value = "en"; // Translate to English
-          translateButton.innerText = "Translate to Irish"; // Change button text
-          translateButton.setAttribute("aria-label", "Translate page to Irish");
-        }
-
-        // Trigger the change event to activate translation
-        document
-          .querySelector(".goog-te-combo")
-          .dispatchEvent(new Event("change"));
-      }
-    </script>
+    <!-- End Google Irish Translation Script -->
 
     <script src="app.js"></script>
 
