@@ -156,27 +156,40 @@
           <h2 class="subheading-secondary">
             Trinity's one and only event generator
           </h2>
-          <button
-            id="toggleContrast"
-            class="btn btn-secondary mt-3 mb-3 me-3"
-            aria-pressed="false"
-          >
-            Toggle High Contrast
-          </button>
-          <button
-            id="toggleFontSize"
-            class="btn btn-secondary mt-3 mb-3 me-3"
-            aria-pressed="false"
-          >
-            Increase Font Size
-          </button>
-          <button
-            id="toggleDyslexiaFont"
-            class="btn btn-secondary mt-3 mb-3"
-            aria-pressed="false"
-          >
-            Toggle Dyslexia-Friendly Font
-          </button>
+          <div class="row justify-content-center text-center">
+            <!-- Toggle High Contrast Button -->
+            <div class="col-12 col-md-auto mb-2">
+              <button
+                id="toggleContrast"
+                class="btn btn-secondary w-100"
+                aria-pressed="false"
+              >
+                Toggle High Contrast
+              </button>
+            </div>
+
+            <!-- Increase Font Size Button -->
+            <div class="col-12 col-md-auto mb-2">
+              <button
+                id="toggleFontSize"
+                class="btn btn-secondary w-100"
+                aria-pressed="false"
+              >
+                Increase Font Size
+              </button>
+            </div>
+
+            <!-- Toggle Dyslexia-Friendly Font Button -->
+            <div class="col-12 col-md-auto mb-2">
+              <button
+                id="toggleDyslexiaFont"
+                class="btn btn-secondary w-100"
+                aria-pressed="false"
+              >
+                Toggle Dyslexia-Friendly Font
+              </button>
+            </div>
+          </div>
 
           <div id="google_translate_element" style="display: none"></div>
           <h2 class="text-primary mt-3 mb-3 dyslexia-friendly-heading">
@@ -2942,25 +2955,53 @@
                 PDF document (Optional).</small
               >
             </div>
-            <button type="button" class="btn btn-primary me-3" id="submitBtn">
-              Submit
-            </button>
-            <div id="successMessage" class="mt-3 alert alert-success d-none">
-              Form has been successfully submitted!
+            <div class="row">
+              <!-- Submit Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button
+                  type="button"
+                  class="btn btn-primary w-100"
+                  id="submitBtn"
+                >
+                  Submit
+                </button>
+              </div>
+
+              <!-- Success Message -->
+              <div class="col-12">
+                <div
+                  id="successMessage"
+                  class="mt-3 alert alert-success d-none"
+                >
+                  Form has been successfully submitted!
+                </div>
+              </div>
+
+              <!-- Clear All Fields Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button
+                  type="button"
+                  class="btn btn-warning w-100"
+                  id="clearBtn"
+                >
+                  Clear All Fields
+                </button>
+              </div>
+
+              <!-- Refresh Page Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button
+                  type="button"
+                  class="btn btn-primary w-100"
+                  id="refreshPageButton"
+                  aria-label="Refresh the page"
+                  onclick="location.reload()"
+                >
+                  <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                  Refresh Page
+                </button>
+              </div>
             </div>
-            <button type="button" class="btn btn-warning me-3" id="clearBtn">
-              Clear All Fields
-            </button>
-            <!-- Accessible Button to Refresh Page -->
-            <button
-              type="button"
-              class="btn btn-primary me-3"
-              id="refreshPageButton"
-              aria-label="Refresh the page"
-              onclick="location.reload()"
-            >
-              Refresh Page
-            </button>
           </form>
           <div
             id="feedback"
@@ -2970,15 +3011,28 @@
           ></div>
           <div class="mt-4" id="output"></div>
           <div class="mt-4">
-            <button class="btn btn-secondary mt-1 me-3" id="copyBtn">
-              Copy to Clipboard
-            </button>
-            <button class="btn btn-secondary mt-1 me-3" id="pdfBtn">
-              Save as PDF
-            </button>
-            <button class="btn btn-secondary mt-1" id="emailBtn">
-              Send to Email
-            </button>
+            <div class="row">
+              <!-- Copy to Clipboard Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button class="btn btn-secondary w-100" id="copyBtn">
+                  Copy to Clipboard
+                </button>
+              </div>
+
+              <!-- Save as PDF Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button class="btn btn-secondary w-100" id="pdfBtn">
+                  Save as PDF
+                </button>
+              </div>
+
+              <!-- Send to Email Button -->
+              <div class="col-12 col-md-auto mb-2">
+                <button class="btn btn-secondary w-100" id="emailBtn">
+                  Send to Email
+                </button>
+              </div>
+            </div>
           </div>
           <section class="container mt-4">
             <label for="copiedData" class="form-label">Copied Form Data</label>
