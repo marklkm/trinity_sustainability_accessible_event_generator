@@ -387,6 +387,17 @@ p, label, .form-check-label {
 }
 
 
+/* for X on the note for red and green border */
+/* Custom styles for the close button on small screens */
+@media (max-width: 576px) {
+  .alert .btn-close {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+
 /* main search box */
   /* Center for small screens, right-align for larger screens */
   @media (max-width: 768px) {
