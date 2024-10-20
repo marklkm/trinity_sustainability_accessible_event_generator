@@ -3261,17 +3261,6 @@
     <!-- Accessibility Buttons Contrast and Text Size -->
 
     <!-- Back to Top Button -->
-    <!-- Back to Top Button -->
-    <button
-      id="backToTopBtn"
-      onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
-      class="btn btn-primary position-fixed bottom-0 end-0 m-3"
-      role="button"
-      aria-label="Back to Top"
-      style="display: none"
-    >
-      ↑ Back to Top
-    </button>
 
     <!-- Dyslexic font script -->
 
@@ -3394,26 +3383,6 @@
     </script>
 
     <!-- Back To Top button Script -->
-    <script>
-      // Add scroll event listener to window
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        const backToTopBtn = document.getElementById("backToTopBtn");
-
-        // Show the button if the user scrolls down 200px from the top
-        if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-          backToTopBtn.style.display = "block"; // Show the button
-        } else {
-          backToTopBtn.style.display = "none"; // Hide the button
-        }
-      }
-    </script>
 
     <!-- End Back To Top button Script -->
 
