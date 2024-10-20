@@ -1,10 +1,11 @@
 /* Default Styles */
 html, body {
   font-family: "Arial", "Verdana", "Helvetica Neue", sans-serif;
-  font-size: 1.25rem; /* Base font size in rem for scalability */
+  font-size: 16px; /* Base font size in rem for scalability */
   color: #000; /* Black text for high contrast */
   background-color: #fff; /* White background for high contrast */
-  line-height: 1.6; /* Larger line-height for readability */
+  line-height: 1.25; /* Larger line-height for readability */
+  letter-spacing: .3px;
   height: 100%;
   margin: 0;
   display: flex;
