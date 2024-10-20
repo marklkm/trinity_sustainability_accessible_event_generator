@@ -387,6 +387,22 @@ p, label, .form-check-label {
 }
 
 
+/* main search box */
+  /* Center for small screens, right-align for larger screens */
+  @media (max-width: 768px) {
+    .search-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .search-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
 /*  Search Box */
 /* Custom styles for higher contrast */
 .btn-success {
