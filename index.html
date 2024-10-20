@@ -259,7 +259,6 @@
         <div class="container mt-4 mb-4">
           <h2>More Information on Planning and Booking Events</h2>
           <p id="form-note" class="alert alert-primary mt-3 mb-3">
-            <i class="bi bi-chevron-down fs-3" aria-hidden="true"></i>
             Click the button below to reveal more information:
           </p>
           <div class="container mt-4">
@@ -3200,7 +3199,7 @@
       </div>
     </main>
 
-    <footer class="mt-6">
+    <footer class="mt-4">
       <div class="text-center">
         <!-- Add the image -->
         <img
@@ -3261,50 +3260,18 @@
 
     <!-- Accessibility Buttons Contrast and Text Size -->
 
-    <!-- back to top buttons -->
-    <script>
-      // Function to scroll to the top of the page
-      function topFunction() {
-        // For Chrome, Firefox, IE, and Opera
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // Function to scroll to the bottom of the page
-      function bottomFunction() {
-        // For Chrome, Firefox, IE, and Opera
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: "smooth",
-        });
-      }
-
-      // Show or hide the "Scroll to Top" button depending on the scroll position
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        const backToTopBtn = document.getElementById("backToTopBtn");
-        const scrollToBottomBtn = document.getElementById("scrollToBottomBtn");
-
-        // Show "Scroll to Top" button when you scroll down 100px from the top of the document
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          backToTopBtn.style.display = "block";
-        } else {
-          backToTopBtn.style.display = "none";
-        }
-
-        // Show "Scroll to Bottom" button when you're not at the bottom
-        if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
-          scrollToBottomBtn.style.display = "block";
-        } else {
-          scrollToBottomBtn.style.display = "none";
-        }
-      }
-    </script>
+    <!-- Back to Top Button -->
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+      class="btn btn-primary position-fixed bottom-0 end-0 m-3"
+      role="button"
+      aria-label="Back to Top"
+      style="display: none"
+    >
+      ↑ Back to Top
+    </button>
 
     <!-- Dyslexic font script -->
 
@@ -3426,9 +3393,29 @@
       });
     </script>
 
-    <!-- Google Irish Translation Script -->
+    <!-- Back To Top button Script -->
+    <script>
+      // Add scroll event listener to window
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-    <!-- End Google Irish Translation Script -->
+      function scrollFunction() {
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Show the button if the user scrolls down 200px from the top
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          backToTopBtn.style.display = "block"; // Show the button
+        } else {
+          backToTopBtn.style.display = "none"; // Hide the button
+        }
+      }
+    </script>
+
+    <!-- End Back To Top button Script -->
 
     <script src="app.js"></script>
 

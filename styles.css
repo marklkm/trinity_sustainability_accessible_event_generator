@@ -1,10 +1,20 @@
 /* Default Styles */
-body {
+html, body {
   font-family: "Arial", "Verdana", "Helvetica Neue", sans-serif;
-  font-size: 2rem; /* Base font size in rem for scalability */
+  font-size: 1.25rem; /* Base font size in rem for scalability */
   color: #000; /* Black text for high contrast */
   background-color: #fff; /* White background for high contrast */
-  line-height: 1.6; /* Slightly larger line-height for readability */
+  line-height: 1.6; /* Larger line-height for readability */
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+/* Body Content Container */
+.content {
+  flex: 1; /* Makes the content expand and take up available space */
 }
 
 
