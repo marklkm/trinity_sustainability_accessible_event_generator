@@ -3263,24 +3263,14 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const toggleContrastBtn = document.getElementById("toggleContrast");
+        //const toggleContrastBtn = document.getElementById("toggleContrast");
         const toggleFontSizeBtn = document.getElementById("toggleFontSize");
         const toggleDyslexiaFontBtn =
           document.getElementById("toggleDyslexiaFont");
-        const mainContent = document.getElementById("maincontent");
+        const mainContent = document.getElementById("maincontent"); // Get the main content area
         const body = document.body;
 
-        // Toggle High Contrast Mode
-        toggleContrastBtn.addEventListener("click", function () {
-          body.classList.toggle("high-contrast"); // Toggle high contrast on the entire body
-          this.textContent = body.classList.contains("high-contrast")
-            ? "Normal Contrast"
-            : "Toggle High Contrast";
-          this.setAttribute(
-            "aria-pressed",
-            body.classList.contains("high-contrast")
-          );
-        });
+        // Toggle High Contrast
 
         // Toggle Large Font Size
         toggleFontSizeBtn.addEventListener("click", function () {
@@ -3296,6 +3286,7 @@
 
         // Toggle Dyslexia-Friendly Font
         toggleDyslexiaFontBtn.addEventListener("click", function () {
+          // Toggle the dyslexia-friendly font for the maincontent area
           if (mainContent.style.fontFamily === "OpenDyslexic, sans-serif") {
             mainContent.style.fontFamily = ""; // Reset to default font
             this.textContent = "Enable Dyslexia-Friendly Font";
