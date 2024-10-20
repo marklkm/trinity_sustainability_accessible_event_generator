@@ -387,9 +387,13 @@ p, label, .form-check-label {
 }
 
 
-/* for X on the note for red and green border */
 /* Custom styles for the close button on small screens */
 @media (max-width: 576px) {
+  .alert {
+    position: relative; /* Make sure the parent element is relatively positioned */
+    padding-right: 40px; /* Add padding to the right to make room for the close button */
+  }
+
   .alert .btn-close {
     position: absolute;
     bottom: 10px;
