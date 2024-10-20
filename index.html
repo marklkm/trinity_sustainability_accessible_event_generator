@@ -44,6 +44,19 @@
         box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5); /* Visible focus state for accessibility */
       }
     </style>
+    <style>
+      .scroll-button {
+        position: fixed;
+        right: 20px;
+        z-index: 1000;
+      }
+      #scrollTopBtn {
+        bottom: 80px;
+      }
+      #scrollBottomBtn {
+        bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Skip to Content Link for better keyboard navigation -->
@@ -133,7 +146,7 @@
             class="form-control"
             type="search"
             id="searchInput"
-            placeholder="Search TCD"
+            placeholder="Search TCD Website"
             aria-label="Search input"
             name="tcdsearchq"
           />
@@ -199,10 +212,6 @@
             <i class="bi bi-universal-access" aria-hidden="true"></i>
           </h2>
         </div>
-
-        <!-- Google Irish Translation -->
-
-        <!-- End of Google Irish Translation -->
       </section>
       <div class="mt-3 mb-3">
         <img
@@ -215,22 +224,7 @@
           class="d-none d-md-block"
         />
       </div>
-      <button
-        onclick="topFunction()"
-        id="backToTopBtn"
-        aria-label="Scroll to top"
-        class="btn btn-primary"
-      >
-        ↑
-      </button>
-      <button
-        onclick="bottomFunction()"
-        id="scrollToBottomBtn"
-        aria-label="Scroll to bottom"
-        class="btn btn-primary"
-      >
-        ↓
-      </button>
+
       <div class="container mt-3 mb-3">
         <p>
           <strong>The Accessibility & Sustainability Event Generator</strong>
@@ -502,14 +496,6 @@
             need to be completed. Fields with a
             <span style="color: #3c763d; font-weight: bold">green border</span>
             are complete.
-
-            <!-- Close button -->
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"
-            ></button>
           </div>
 
           <h3 class="text-primary mt-3 mb-3">Event Details</h3>
@@ -3199,6 +3185,26 @@
       </div>
     </main>
 
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollTopBtn"
+      class="btn btn-primary scroll-button"
+      onclick="scrollToTop()"
+      aria-label="Scroll to top of page"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scroll to Bottom Button -->
+    <button
+      id="scrollBottomBtn"
+      class="btn btn-primary scroll-button"
+      onclick="scrollToBottom()"
+      aria-label="Scroll to bottom of page"
+    >
+      <i class="bi bi-arrow-down"></i>
+    </button>
+
     <footer class="mt-4">
       <div class="text-center">
         <!-- Add the image -->
@@ -3383,6 +3389,21 @@
     </script>
 
     <!-- Back To Top button Script -->
+
+    <script>
+      // Function to scroll to the top
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Function to scroll to the bottom
+      function scrollToBottom() {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+    </script>
 
     <!-- End Back To Top button Script -->
 

@@ -17,8 +17,6 @@ html, body {
   flex: 1; /* Makes the content expand and take up available space */
 }
 
-
-
 a:hover {
   outline: 2px solid #0056b3; /* Provides a visible focus outline */
 }
@@ -167,7 +165,7 @@ a:hover {
 #maincontent.large-font .form-text, 
 #maincontent.large-font .invalid-feedback,
 #maincontent.large-font .form-control { /* Targeting Bootstrap buttons */
-  font-size: 2rem !important; /* Adjust size as needed */
+  font-size: 1.75rem !important; /* Adjust size as needed */
 
 }
 
@@ -181,7 +179,7 @@ a:hover {
 #maincontent.large-font .btn,
 #maincontent.large-font .text-primary,
 #maincontent.large-font .text-secondary {
-  font-size: 2rem !important; /* Ensures the font size overrides default Bootstrap styles */
+  font-size: 1.75rem !important; /* Ensures the font size overrides default Bootstrap styles */
 }
 
 /* Apply large font mode to nav links */
