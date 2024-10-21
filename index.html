@@ -173,6 +173,15 @@
           </h2>-->
           <div class="row justify-content-center text-center">
             <!-- Toggle High Contrast Button -->
+            <div class="col-12 col-md-auto mb-2">
+              <button
+                id="toggleContrast"
+                class="btn btn-secondary w-100"
+                aria-pressed="false"
+              >
+                Toggle High Contrast
+              </button>
+            </div>
 
             <!-- Increase Font Size Button -->
             <div class="col-12 col-md-auto mb-2">
@@ -3263,7 +3272,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        //const toggleContrastBtn = document.getElementById("toggleContrast");
+        const toggleContrastBtn = document.getElementById("toggleContrast");
         const toggleFontSizeBtn = document.getElementById("toggleFontSize");
         const toggleDyslexiaFontBtn =
           document.getElementById("toggleDyslexiaFont");
@@ -3271,6 +3280,16 @@
         const body = document.body;
 
         // Toggle High Contrast
+        toggleContrastBtn.addEventListener("click", function () {
+          body.classList.toggle("high-contrast"); // Toggle high contrast on the body
+          this.textContent = body.classList.contains("high-contrast")
+            ? "Normal Contrast"
+            : "Toggle High Contrast";
+          this.setAttribute(
+            "aria-pressed",
+            body.classList.contains("high-contrast")
+          );
+        });
 
         // Toggle Large Font Size
         toggleFontSizeBtn.addEventListener("click", function () {
