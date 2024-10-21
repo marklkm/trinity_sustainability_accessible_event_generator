@@ -149,6 +149,15 @@ a:hover {
   border-color: #ffcc00;
 }
 
+/* High Contrast Placeholder */
+.high-contrast input::placeholder,
+.high-contrast textarea::placeholder,
+.high-contrast #maincontent input::placeholder,
+.high-contrast #maincontent textarea::placeholder {
+  color: #fff; /* White placeholder text for better contrast */
+  opacity: 1; /* Ensure full opacity for placeholder */
+}
+
 /* High Contrast for Navigation */
 .high-contrast nav,
 .high-contrast #maincontent nav {
@@ -168,6 +177,7 @@ a:hover {
 .high-contrast #maincontent .text-muted {
   color: #fff !important; /* White text for better contrast */
 }
+
 
 
 
