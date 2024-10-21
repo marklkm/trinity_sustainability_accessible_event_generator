@@ -178,6 +178,22 @@ a:hover {
   color: #fff !important; /* White text for better contrast */
 }
 
+/* High Contrast for Navigation Items */
+.high-contrast .nav-item,
+.high-contrast #maincontent .nav-item {
+  color: #00ff00; /* Bright green for nav items */
+}
+
+.high-contrast .nav-item a,
+.high-contrast #maincontent .nav-item a {
+  color: #00ff00; /* Bright green links in nav items */
+}
+
+.high-contrast .nav-item a:hover,
+.high-contrast #maincontent .nav-item a:hover {
+  color: #ffcc00; /* Yellow on hover */
+}
+
 
 
 
